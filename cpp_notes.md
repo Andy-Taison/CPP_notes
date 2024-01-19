@@ -144,6 +144,10 @@ C++ Boilerplate:
 [Reference](https://cplusplus.com/doc/tutorial/variables/)  
 [Type casting reference](https://cplusplus.com/doc/tutorial/typecasting/)  
 
+`const <type> VAR = val;` - Variables declared `const` are constants and cannot be modified once initialised. Typically declare `VAR` in **capitals** to denote constant. Note this is different to `#define` constants which are preprocessor directives, `const` are program constants  
+
+`static` [(storage specifier)](https://en.cppreference.com/w/cpp/language/storage_duration) - The storage for the object is allocated when the program begins and deallocated when the program ends. Only one instance of the object exists  
+
 `sizeof(<type>)` - will return data type size in bytes 
 
 `#include <limits.h>` - Library which contains functions such as `INT_MAX` and `LONG_MIN` to retrieve min and max values  
@@ -427,7 +431,7 @@ e.g.
 &emsp;&emsp;`<type> <attribute>;`  - Another way to define private attribute  
 &emsp;`public:`  
 &emsp;&emsp;`<type> <attribute>;`  - Define public attribute  
-&emsp;&emsp;`<return_type> <method_name>(<type optional_params>) { return <code>;}`  - Declare public inline method  
+&emsp;&emsp;`<return_type> <method_name>(<type optional_params>) { return <code>;}`  - Declare public **inline** method  
 &emsp;&emsp;`<return_type> <method_name>(<type optional_params>);`  - Declare public **normal (not-inline)** method  
 `} object_names;` - Object_names are optional  
 * Defines a class with public and private attributes  
@@ -435,6 +439,12 @@ e.g.
 * `private` attributes can only be accessed from inside the class (or by other members of the class)  
 * If access specifier is not specified or members (attributes) are declared before the specifier, then those members will be `private` by default  
 * Inline methods are good for simple methods, otherwise better to use normal not-inline methods where only the declaration is included and the actual definition comes later outside the class (see below)  
+* **`static`** `type` `attribute;` - [attributes declared `static`](https://en.cppreference.com/w/cpp/language/static) declares members that are not bound to class instances (one variable/method for all). Note `static` is different outside a class (which means stays in memory after lifetime of function)  
+* Most classes should include a **`toString`** method, which should return a string representation of the object (probably consisting of the members):  
+e.g.  
+&emsp;`std::string Class_name::toString(){`  
+&emsp;&emsp;`return <string_attribute(s)> ...;`  
+`}`  
   
 <br>  
 
@@ -443,6 +453,8 @@ e.g.
 `<return_type> <Class_name>::<method_name>(<type optional_params>) {`  
 &emsp;`//code`  
 `}`  
+
+`obj.method();` - Call function
 * Defining a normal (not-inline) method outside the class.  
 * Note **private members (attributes) ARE accessible** within this method  
 * Can define multiple times for **method overloading**, however must declare all methods with the varying parameters/return types in the class  
@@ -455,7 +467,7 @@ e.g.
 **Define outside class:**  
 `<Class_name>::<Class_name>(<type optional_params>) {`  
 &emsp;`//code`  
-`}`  
+`};`  
 **OR define in class:**  
 `class Example{`  
 &emsp;&emsp;`int private_number_attribute;`  
@@ -466,7 +478,7 @@ e.g.
 &emsp;`Example() {`  
 &emsp;&emsp;`this->private_number_attribute = 5;`  
 &emsp;`}`  
-`}`  
+`};`  
 * **Must declare in class** even if defining outside  
 * Defines **constructor** which is automatically called whenever a new object of this class is created  
 * Optional to include a constructor at all  
@@ -485,7 +497,7 @@ If empty parenthesis are used, this **WILL NOT** call the default constructor
 **Define outside class:**  
 `<Class_name>::~<Class_name>() {`  
 &emsp;`//code`  
-`}`  
+`};`  
 **OR define in class:**  
 `class Example{`  
 &emsp;&emsp;`...`  
@@ -497,7 +509,7 @@ If empty parenthesis are used, this **WILL NOT** call the default constructor
 &emsp;`~Example() {`  
 &emsp;&emsp;`// code`  
 &emsp;`}`  
-`}`  
+`};`  
 * Optional  
 * **Must declare in class** even if defining outside  
 * Note tilde `~`  
@@ -513,6 +525,79 @@ If empty parenthesis are used, this **WILL NOT** call the default constructor
 `<var>.<attribute> = <val>;` - Set a public attribute value  
 
 `<var>.<attribute>;` - Access public attribute  
+
+`Class(type var) : const_attribute(val) { //code }` - constant members can be set in constructor. Note `:` (member initiliser list) and is set between `()` and `{}`  
+
+`Class(type var) : Parent(param), attribute(val) {this->another_way_attribute = val;}` - Calls parent constructor as well as sets own members `attribute` value (shown multiple ways) - This way of setting members (using the member initiliser list `': attr(val),...'` is **REQUIRED** <u>if using other objects inside a class</u>   
+
+<br>  
+
+##### <u>Inheritence</u>  
+
+[Reference](https://cplusplus.com/doc/tutorial/inheritance/)  
+
+`class <Derived_class_name> : <access_specifier> <Parent_class_name> {`  
+&emsp;`// code`  
+`};`  
+* Can inherit from multiple classes at once by comma seperating:  
+&emsp;`class <Derived> : <access1> <Parent1>, <access2> <Parent2>,... {...};`
+* `derived_class` (child) will have access to all members and methods of `parent_class` as per the `access_specifier`:  
+
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border: 1px solid #000; text-align: center;"><strong>Access</strong></td>
+    <td style="border: 1px solid #000; text-align: center;"><strong><code>public</code></strong></td>
+    <td style="border: 1px solid #000; text-align: center;"><strong><code>protected</code></strong></td>
+    <td style="border: 1px solid #000; text-align: center;"><strong><code>private</code></strong></td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #000; text-align: center;">Members of the same class</td>
+    <td style="border: 1px solid #000; background-color: #D0E0D0; text-align: center;">Yes</td>
+    <td style="border: 1px solid #000; background-color: #D0E0D0; text-align: center;">Yes</td>
+    <td style="border: 1px solid #000; background-color: #D0E0D0; text-align: center;">Yes</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #000; text-align: center;">Members of the derived class (child)</td>
+    <td style="border: 1px solid #000; background-color: #D0E0D0; text-align: center;">Yes</td>
+    <td style="border: 1px solid #000; background-color: #D0E0D0; text-align: center;">Yes</td>
+    <td style="border: 1px solid #000; text-align: center;">No</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #000; text-align: center;">Not members</td>
+    <td style="border: 1px solid #000; background-color: #D0E0D0; text-align: center;">Yes</td>
+    <td style="border: 1px solid #000; text-align: center;">No</td>
+    <td style="border: 1px solid #000; text-align: center;">No</td>
+  </tr>
+</table>
+
+* Polymorphism (taking many forms), is when a class overwrites inherited members (attributes or methods) so when different objects call a member using the same name (interface) e.g. `.print()` or `.set_values(5, 6)`, the output will be differnt based on the object  
+* In principle, a publicly derived class inherits access to every member of a base class except:  
+
+  * its constructors and its destructor  
+  * its assignment operator members (operator=)  
+  * its friends  
+  * its private members  
+
+##### <u>Friend Functions</u>  
+
+[Reference](https://cplusplus.com/doc/tutorial/inheritance/)  
+
+`class Class_name {`  
+&emsp;`private:`  
+&emsp;&emsp;`type member;`  
+&emsp;`public:`  
+&emsp;&emsp;`friend return_type func_name(Class_name &obj);`  
+`};`  
+
+`return_type func_name(Class_name &obj) {`  
+&emsp;`obj.member;` - Access objects private member  
+`}`  
+
+`func_name(obj);` - Calls function  
+* Friend functions allow syntax to be chosen (note difference to calling normal method)  
+* Useful for when multiple (different) classes require similar functionality to access private or protected members of each  
+* NOTE - Friendship functions/classes **are NOT inherited**  
+* Functions or classes declared as `friend` can access `private` and `protected` members without being a class member themselves  
 
 
 ---  

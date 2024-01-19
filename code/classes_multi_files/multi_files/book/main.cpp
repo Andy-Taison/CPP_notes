@@ -20,6 +20,7 @@ int main(int argc, char const* argv[]) {
 
     std::cout << "Calculated price (popularity 7): " << myBook.calculatePrice(7) << std::endl;
     std::cout << "Calculated price (popularity 3): " << myBook.calculatePrice(3) << std::endl;
+
     
 
     return 0;
