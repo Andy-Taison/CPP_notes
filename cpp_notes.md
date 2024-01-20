@@ -227,6 +227,62 @@ e.g.
 
 ---  
 
+### <u>Pointers</u>  
+
+[Reference](https://cplusplus.com/doc/tutorial/pointers/)  
+
+`type *pointer_var;` - Declare a pointer  
+
+`pointer_var = &var;` - Set pointer variable to store the address of var using **address-of operator** `&`  
+
+`val_var = *pointer_var;` - Sets `val_var` to store the **value** that `pointer_var` points to using **dereference operator** `*` (NOT same as pointer declaration)  
+
+`a[5]` is equivalent to `*(a+5)` - Arrays are similar to pointers (they point to the first address in the array). The square brackets (offset operator) dereference the variable they follow. Both examples here offset the address by the  index passed  
+
+`++pointer;` - Increments the pointer **by the <u>size</u> of the <u>data type</u> it points to**  
+
+<br>  
+
+**Incrementing:**  
+|Syntax|Explination|
+|:--:|:--:|
+|*p++|Same as *(p++):<br>Increment pointer, and dereference unincremented address|
+|*++p|Same as *(++p):<br>Increment pointer, and dereference incremented address|
+|++*p|Same as ++(*p):<br>Dereference pointer, and increment the value it points to|
+|(*p)++|Dereference pointer, and post-increment the value it points to| 
+
+<br>   
+
+`int x = 10;`  
+`const int *p = &x;`  
+* `p` points to x, but because it is declared `const`, it can read the value stored in `x`, but NOT modify it  
+
+<br>  
+
+`void *p;`  
+* Void pointers point to a value that has no type (and thus also an undetermined length and undetermined dereferencing properties)  
+* Any address in a void pointer **needs to be transformed** into some other pointer type that points to a concrete data type before being dereferenced  
+* Useful in functions  
+
+<br>  
+
+`int * p;` - Uninitialized pointer  
+`int myarray[10];`  
+`int * q = myarray+20;` - Element out of bounds  
+* Uninitialised pointers and pointers set to point to a value outside of an array (out of bounds) are **invalid pointers**. Accessing such a pointer causes undefined behavior, ranging from an error during runtime to accessing some random value  
+
+<br>  
+
+`int *p = 0;`  
+`int *q = nullptr;`  
+`int *r = NULL;` - Older syntax  
+`p` will now output `0`  
+`p == q` will output `1`  
+* **Null pointers** explicitly point to nowhere  
+* All null pointers compare equal to other null pointers  
+
+---  
+
 ### <u>Maths</u>
 
 [Reference](https://cplusplus.com/reference/cmath/)  
@@ -572,6 +628,19 @@ If empty parenthesis are used, this **WILL NOT** call the default constructor
 
 * Similar to classes, however by default, members have **public access** (where classes are private by default)  
 * Generally used to declare plain data structures, can also be used to declare classes that have member functions  
+
+<br>  
+
+##### <u>Templates</u>  
+
+[Reference](https://cplusplus.com/doc/tutorial/functions2/#templates)  
+
+`template <class T>`  
+`T func_name(T var1, T var2) {`  
+&emsp;`// body using var1 and var2`  
+`}`  
+* Avoids the need for multiple overloaded functions to define function to be used with different types but same body  
+* `T` is a class name variable, and can be named as you wish, though `T` is common  
 
 <br>  
 
