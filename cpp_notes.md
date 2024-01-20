@@ -15,6 +15,22 @@
 * Runs compiled file
 * Can compile and run in one line using `&&`  
 
+##### <u>Makefiles</u>  
+
+`target_rule: dependencies_list`  
+&emsp;&emsp;`tab_indented_commands`  
+e.g.:  
+`output: main.o Vector.o`  
+&emsp;&emsp;`g++ main.o Vector.o -o output`  
+* Makefiles make compilation easy by calling `make`  
+* **Filename** should be `Makefile`  
+* A list of rules followed by dependencies and below should be tab indented commands to run  
+* Makefiles check modification times of the files involved and only executes commands to bring target up to date based on dependencies  
+* Each object file dependencie should have its own rule for compiling  
+* It is also good practice to have a rule for `clean` which should remove the output files (but would require calling separately with `make clean`)  
+* CMakeList files can be used to configure and automatically build make files absracting away platform specific details  
+
+
 ---  
 
 ### <u>Include Libraries/Files</u>  
@@ -263,6 +279,9 @@ e.g.
 
 `std::stoi(<string>);` Converts string to integer  
 
+`#include <string>`  
+`std::to_string(int_val);` Converts int to string  
+
 ---  
 
 ### <u>Control Statements & Flow</u>  
@@ -444,7 +463,19 @@ e.g.
 e.g.  
 &emsp;`std::string Class_name::toString(){`  
 &emsp;&emsp;`return <string_attribute(s)> ...;`  
-`}`  
+&emsp;`}`  
+  * Convert int to string: 
+&emsp;`#include <string>`  
+&emsp;`std::to_string(int_var);`  
+  * This should still be used as a normal function `obj.toString();`  
+  
+&emsp;&emsp;A **better way** would be to use operator overloading for the output stream (must be implemented as a non-member function):  
+&emsp;&emsp;`friend std::ostream &operator<<(std::ostream &os, const <Class> &obj) {`  
+&emsp;&emsp;&emsp;`os << class.attr;`  
+&emsp;&emsp;&emsp;`return os;`  
+&emsp;&emsp;`}`  
+&emsp;&emsp;Now the object can be inserted directly into `std::cout << obj;`  
+
   
 <br>  
 
@@ -598,6 +629,44 @@ If empty parenthesis are used, this **WILL NOT** call the default constructor
 * Useful for when multiple (different) classes require similar functionality to access private or protected members of each  
 * NOTE - Friendship functions/classes **are NOT inherited**  
 * Functions or classes declared as `friend` can access `private` and `protected` members without being a class member themselves  
+
+<br>  
+
+##### <u>Operator Overloading</u>  
+
+[Reference](https://cplusplus.com/doc/tutorial/templates/)  
+
+* Define behaviour for operators  
+
+`class Class_name {`  
+&emsp;`// Declarations`  
+&emsp;`...`  
+&emsp;`Class_return operator sign(const Class &var) {`  
+&emsp;&emsp;`Class temp_var;`  
+&emsp;&emsp;`temp.attr = this->attr sign var.attr;`  
+&emsp;&emsp;`return temp;`  
+&emsp;`}`  
+`};`  
+* Above shows an example declared as **member function**  
+* `Class_return` is the return type of the function, which will most likely be an instance of the class  
+* `sign` should be replaced with the operator e.g. `+` or `-`  
+* `&var` refers to the second object (operand)  
+
+`Class_return operator sign(const Class &var1, const Class &var2) {`  
+&emsp;`Class temp;`  
+&emsp;`temp.attr = var1.attr sign var2.attr;`  
+&emsp;`return temp;`  
+`}`  
+* Above shows an example declared as a **non-member function**, here both objects must be passed to the function  
+
+<br>
+
+After declaring the functions, both member and non-member functions can be used as follows:  
+&emsp;`Class var(attr_val);` - instantiate obj (assuming constructor to set attribute)  
+&emsp;`Class var2(attr_val);` - instantiate 2nd obj  
+&emsp;`Class result_var;` - instantiate obj to store result (assuming constructor which takes no params)  
+&emsp;**`result_var = var + var2;`**  
+* Example using `+` operator  
 
 
 ---  
