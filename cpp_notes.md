@@ -113,12 +113,12 @@ C++ Boilerplate:
 
 ### <u>Namespaces</u>  
 
-[Reference](https://cplusplus.com/doc/tutorial/namespaces/)  
+[Reference](https://cplusplus.com/doc/tutorial/namespaces/#namespace)  
 
 `using namespace std;`
 * Can be included as shown at top of file, however **more common to use `std::`** in front of `cout` and `endl`, as `using namespace std;` **can cause issues** if libraries are also using the namespace  
 
-<u>Custom Namespaces</u>  
+##### <u>Custom Namespaces</u>  
 
 `namespace <custom_name> {`  
 &emsp;`<return_type> <function_name>(<type1> <param1>, <type2> <param2>...) {`  
@@ -189,6 +189,8 @@ OR
 `using <new_type_name> = <existing_type>;`  
 * Identifying types by a different name  
 * New aliase can be used same as regular types  
+
+<br>  
 
 ### <u>#define (Macros)</u>  
 [Reference](https://cplusplus.com/doc/tutorial/preprocessor/)  
@@ -288,7 +290,7 @@ e.g.
 
 [Control tutorial](https://cplusplus.com/doc/tutorial/control/) 
 
-#### <u>If Statement</u>
+##### <u>If Statement</u>
 
 
 `if(<condition>){`  
@@ -301,13 +303,13 @@ e.g.
 
 <br>
 
-#### <u>Ternary Operator</u>  
+##### <u>Ternary Operator</u>  
 
 `<variable> = <condition> ? expression_true : expression_false;`  
 
 <br>
 
-#### <u>Switch Statement</u>  
+##### <u>Switch Statement</u>  
 
 `switch(expression) {`  
 &emsp;`case constant1:`  
@@ -326,16 +328,16 @@ e.g.
   
 <br>
 
-#### <u>Comparison & Logic Operators:</u>  
+##### <u>Comparison & Logic Operators:</u>  
 `==`  equals  
 `>=`  greater than or equals  
 `!=`  not equal  
 `&&`  AND  
 `||`  OR  
 
-#### <u>Jump Statements</u>  
+##### <u>Jump Statements</u>  
 
-[Control tutorial](https://cplusplus.com/doc/tutorial/control/) 
+[Control tutorial](https://cplusplus.com/doc/tutorial/control/#jumps) 
 
 `break;` - Leaves loop  
 
@@ -349,9 +351,9 @@ e.g.
 
 ### <u>Loops</u>  
 
-[Control tutorial](https://cplusplus.com/doc/tutorial/control/) 
+[Control tutorial](https://cplusplus.com/doc/tutorial/control/#loops) 
 
-#### <u>For</u>  
+##### <u>For</u>  
 
 `for(<start>; <until>; <increment>) {`  
 &emsp;`// code`  
@@ -366,14 +368,14 @@ e.g.
 * Iterates an array  
 * Can be combined with break and continue statements  
 
-#### <u>For Each</u>  
+##### <u>For Each</u>  
 
 `for(<type> <var> : <array>) {`  
 &emsp;`std::cout << <var> << std::endl;`  
 `}`  
 * Outputs each element `<var>` of array  
 
-#### <u>While</u>  
+##### <u>While</u>  
 
 `while(<condition_true>){`  
 &emsp;`// code`  
@@ -381,7 +383,7 @@ e.g.
 * Executes loop while condition is true  
 * May not execute at all  
 
-#### <u>Do</u>  
+##### <u>Do</u>  
 
 `do{`  
 &emsp;`// code`  
@@ -418,13 +420,13 @@ e.g.
 `}`  
 * Can allow a function to accept a container e.g. `std::vector<T>` with any type by specifying a template with `typename`
 
-#### <u>Function Overloading</u>  
+##### <u>Function Overloading</u>  
 * Define function multiple times with same function name but **<u>different parameters</u>** (**different number of params** and/or **different types**, can also have **different return type**)  
 * Allows function to change behaviour when different arguments passed in (different numbers)  
 
 <br>  
 
-#### <u>Lambda Functions</u>  
+##### <u>Lambda Functions</u>  
 
 `[capture_clause](parameters) -> return_type { method }`  
 * Unnamed function - used once  
@@ -437,7 +439,7 @@ e.g.
 
 ---  
 
-### <u>Classes</u>  
+### <u>Classes & Struts</u>  
 
 [Reference](https://cplusplus.com/doc/tutorial/classes/)  
 [Reference2](https://cplusplus.com/doc/tutorial/templates/)  
@@ -475,7 +477,6 @@ e.g.
 &emsp;&emsp;&emsp;`return os;`  
 &emsp;&emsp;`}`  
 &emsp;&emsp;Now the object can be inserted directly into `std::cout << obj;`  
-
   
 <br>  
 
@@ -494,6 +495,8 @@ e.g.
 <br>  
 
 ##### <u>Constructor</u>  
+
+[Reference](https://cplusplus.com/doc/tutorial/classes2/)  
 
 **Define outside class:**  
 `<Class_name>::<Class_name>(<type optional_params>) {`  
@@ -523,7 +526,7 @@ If empty parenthesis are used, this **WILL NOT** call the default constructor
 
 ##### <u>Destructor</u>  
 
-[Reference](https://cplusplus.com/doc/tutorial/classes2/)  
+[Reference](https://cplusplus.com/doc/tutorial/classes2/#destructor)  
 
 **Define outside class:**  
 `<Class_name>::~<Class_name>() {`  
@@ -563,9 +566,18 @@ If empty parenthesis are used, this **WILL NOT** call the default constructor
 
 <br>  
 
-##### <u>Inheritence</u>  
+##### <u>Structs</u>  
 
-[Reference](https://cplusplus.com/doc/tutorial/inheritance/)  
+[Reference](https://cplusplus.com/doc/tutorial/classes/#struct_and_union)  
+
+* Similar to classes, however by default, members have **public access** (where classes are private by default)  
+* Generally used to declare plain data structures, can also be used to declare classes that have member functions  
+
+<br>  
+
+##### <u>Inheritance</u>  
+
+[Reference](https://cplusplus.com/doc/tutorial/inheritance/#inheritance)  
 
 `class <Derived_class_name> : <access_specifier> <Parent_class_name> {`  
 &emsp;`// code`  
@@ -608,6 +620,8 @@ If empty parenthesis are used, this **WILL NOT** call the default constructor
   * its assignment operator members (operator=)  
   * its friends  
   * its private members  
+
+<br>  
 
 ##### <u>Friend Functions</u>  
 
@@ -673,7 +687,7 @@ After declaring the functions, both member and non-member functions can be used 
 
 ### <u>Enums</u>  
 
-[Reference](https://cplusplus.com/doc/tutorial/other_data_types/)  
+[Reference](https://cplusplus.com/doc/tutorial/other_data_types/#enumerated_types)  
 
 `enum <Enum_name> {`  
 &emsp;`<ITEM1>,` - has value 0  
@@ -728,6 +742,7 @@ After declaring the functions, both member and non-member functions can be used 
 `std::srand(time(0))` - sets seed to generate a different random number every second  
 `std::rand()` - Generates random number  
 `std::rand() % 10` - Defines random numbers between 0 and **9** (+ 1 if wanting 1 - 10)  
+**Alternatively** use `<random>` library - [See here](https://cplusplus.com/reference/random/)
 
 ---  
 
@@ -750,7 +765,7 @@ After declaring the functions, both member and non-member functions can be used 
 
 <br>  
 
-#### <u>STL Arrays</u>  
+##### <u>STL Arrays</u>  
 [Reference](https://cplusplus.com/reference/array/array/)  
 * Standard template library arrays  
   
@@ -779,7 +794,7 @@ e.g.
 * Swaps elements of arr1 with arr2 and vice-versa  
 
 
-#### <u>STL Vectors</u>  
+##### <u>STL Vectors</u>  
 [Reference](https://cplusplus.com/reference/vector/vector/)  
 * Vectors are like arrays but know their size  
 
