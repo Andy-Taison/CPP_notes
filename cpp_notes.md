@@ -2,6 +2,67 @@
 
 [Reference](https://cplusplus.com/reference/)  
 
+
+| <td colspan="3"><center><b><h3><a name="table-of-contents" id="table-of-contents"></a>Table of contents</h3></b></center> | | |
+|:---:|:---:|:---:|
+| **1.** | [**Comments**](#comments) | a |
+| **2.** | [**Another Section**](#another-section) | b |
+
+
+
+
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#Python-Quick-Reference)  
+
+---  
+
+### <u>Comments</u>  
+
+`// Single line comment`  
+
+<br>  
+
+`/*`  
+&emsp;`Multi`  
+&emsp;`Line`  
+&emsp;`Comment`  
+`*/`  
+
+<br>  
+
+`/**`  
+&emsp;`* Documentation Comments`  
+&emsp;`* Optional additional information types shown below:`  
+&emsp;`* `  
+&emsp;`* @param param1 Description of parameter 1`  
+&emsp;`* @param param2 Description of parameter 2`  
+&emsp;`* `  
+&emsp;`* @return Description of return value`  
+&emsp;`* `  
+&emsp;`* @brief Brief description of the code element`    
+&emsp;`* Note detailed descriptions are just comments`  
+&emsp;`* following the * and can span multiple lines`  
+&emsp;`* `  
+&emsp;`* @throws SomeExceptionType Description of when the function may throw`  
+&emsp;`* `  
+ &emsp;`* @code` - Example usage of code  
+&emsp;`* MyObject obj;`  
+&emsp;`* obj.initialize();`  
+&emsp;`* obj.doSomething();`  
+&emsp;`* @endcode`  
+&emsp;`* `  
+&emsp;`* @pre Preconditions or requirements before calling the function`  
+&emsp;`* @post Postconditions or guarantees after the function is called`  
+&emsp;`* `  
+&emsp;`* @note Additional notes or remarks`  
+&emsp;`* @attention Important information that needs special attention`  
+&emsp;`* `  
+&emsp;`* @see OtherFunction() Link to another function or documentation`  
+&emsp;`* @see SomeClass Link to another class`  
+`*/`  
+
+* Using documentation comments for functions, classes and programs can be useful as this can generate tool tips. Software can also be used to automatically generate documentation from these comments  
+
 ---  
 
 ### <u>Compile</u>
@@ -30,7 +91,6 @@ e.g.:
 * It is also good practice to have a rule for `clean` which should remove the output files (but would require calling separately with `make clean`)  
 * CMakeList files can be used to configure and automatically build make files absracting away platform specific details  
 
-
 ---  
 
 ### <u>Include Libraries/Files</u>  
@@ -56,7 +116,6 @@ e.g.:
 * Define functions in `.cpp` file and **ensure to include** `#include "header_filename.hpp"` at top  
 * When compiling, need to compile **all** `cpp` files (not header files):  
 &emsp;`g++ file1.cpp file2.cpp -o output && .\output`  
-
 
 ---  
 
@@ -224,7 +283,6 @@ e.g.
 `#elif condition_true` - Similar to else if  
 `#endif` - Ends directive   
 
-
 ---  
 
 ### <u>Pointers</u>  
@@ -236,6 +294,8 @@ e.g.
 `pointer_var = &var;` - Set pointer variable to store the address of var using **address-of operator** `&`  
 
 `val_var = *pointer_var;` - Sets `val_var` to store the **value** that `pointer_var` points to using **dereference operator** `*` (NOT same as pointer declaration)  
+
+`pointer->member;` - Access members of an object through a pointer to that object using the arrow operator `->`  
 
 `a[5]` is equivalent to `*(a+5)` - Arrays are similar to pointers (they point to the first address in the array). The square brackets (offset operator) dereference the variable they follow. Both examples here offset the address by the  index passed  
 
@@ -281,6 +341,89 @@ e.g.
 * **Null pointers** explicitly point to nowhere  
 * All null pointers compare equal to other null pointers  
 
+<br>  
+
+##### <u>Dynamic Memory</u>  
+
+[Reference](https://cplusplus.com/doc/tutorial/dynamic/)  
+[`<new>` Dynamic Memory Header Reference](https://cplusplus.com/reference/new/)  
+
+`pointer = new type(val);`  
+* Allocates memory to contain one single element of type `type` on the **heap**, you are responsible for memory management (a regular varaible would be allocated on the stack and memory management would be handled automatically)    
+* Useful if when you need memory that persists beyond the scope of the current block  
+* Defining `(val)` is optional when declaring the pointer, could be defined later  
+  
+<br>  
+
+`pointer = new type[number_of_elements];`  
+* Allocate a block (an array) of elements of type `type`, where number_of_elements is an integer value representing the amount of these  
+* Normal arrays size must be defined with a constant expression, whereas dynamic allocation using keyword `new` allows for a **variable to be used for the size**  
+  
+<br>  
+
+> Dynamic allocations **MUST be <u>deleted</u>** after use:  
+&emsp;`delete pointer;` - Releases the memory of a single element allocated using `new`  
+&emsp;`delete[] pointer;` -  Releases the memory allocated for arrays of elements using new and a size in brackets  
+
+<br>  
+
+##### Check allocation successful:  
+
+* If allocation fails, exception `std::bad_alloc` will be thrown. This should be handled appropriately (**<u>preferred</u> method for checking successful allocation**):  
+&emsp;`try {`  
+&emsp;&emsp;`pointer = new type[size];` - Dynamically allocate  
+&emsp;&emsp;`// other code`  
+&emsp;`} catch (const std::bad_alloc &e) {`  
+&emsp;&emsp;`std::cerr << "Error: " << e.what() << std::endl;`  
+&emsp;&emsp;`return 1;`  
+&emsp;`}`  
+&emsp;`delete[] pointer;` - Free memory block  
+* Alternatively (Note this **may not work in some environments**. An exception may still be thrown), a simpler method (**but less efficient** since it implies explicitly checking the pointer value returned after each and every allocation) is to use `std::nothrow`:  
+&emsp;`include<new>`
+&emsp;`pointer = new (std::nothrow) type[size];`  
+&emsp;`if(pointer == nullptr) {`  
+&emsp;&emsp;`// Error assigning memory. Take measures`  
+&emsp;`}`  
+
+<br>  
+
+> Functions `malloc`, `calloc`, `realloc` and `free`, defined in the header `<cstdlib>` (known as `<stdlib.h>` in C) are still availiable in C++, however these should **NOT be mixed** with memory allocated with `new` as may not be compatible  
+
+<br>  
+
+### <u>Smart Pointers</u>  
+
+[Reference](https://cplusplus.com/reference/memory/)  
+
+* Smart pointers manage memory allocation  
+
+<br>  
+
+##### <u>Unique Pointers</u>  
+
+`#include <memory>`  
+
+`std::unique_ptr<type> pointer_var = std::make_unique<type>(val/var);`  
+* Creates a unique pointer  
+* `val/var` is optional and only required if pointing to a specific pre-declared object or passing a specific value to the object constructor  
+* Unique pointers are a one-to-one relationship and grants exclusive ownership  
+* Unique pointers cannot be copied, although ownership can be moved:  
+&emsp;`std::unique_ptr<type> pointer_var2 = std::move(original_pointer_var);`  
+* The unique pointer will be deleted and freed once the object is deleted (such as exiting its scope)  
+
+<br>  
+
+##### <u>Shared Pointers</u>  
+
+`#include <memory>`  
+
+`std::shared_ptr<type> pointer_var1 = std::make_shared<type>(val/var);`  
+`std::shared_ptr<type> pointer_var2 = pointer_var1;`  
+* Creates a shared pointer  
+* `pointer_var2` also points to the object that `pointer_var1` points to  
+* `val/var` is optional and only required if pointing to a specific pre-declared object or passing a specific value to the object constructor  
+* The pointer is only deleted once **all shared pointers** to that object have been deleted (exited scope)  
+
 ---  
 
 ### <u>Maths</u>
@@ -301,8 +444,8 @@ e.g.
 
 ### <u>Strings</u>  
 
-[String reference documentation](https://cplusplus.com/reference/string/)  
-[String class](https://cplusplus.com/reference/string/string/)  
+[Library Reference](https://cplusplus.com/reference/string/)  
+[Class Reference](https://cplusplus.com/reference/string/string/)  
 
 * Most methods below can be combined,  
 &emsp;e.g.  
@@ -374,8 +517,8 @@ e.g.
 &emsp;`case constant2:`  
 &emsp;&emsp;`group-of-statments-2;`  
 &emsp;&emsp;`break;`  
-&emsp;`.`  
-&emsp;`.`  
+&emsp;`...`  
+&emsp;`...`  
 &emsp;`default:`  
 &emsp;&emsp;`default-group-of-statments;`  
 * Note switch is limited to compare its evaluated expression against labels that are **constant expressions**. It is <u>not possible to use variables</u> as labels or ranges  
@@ -445,7 +588,6 @@ e.g.
 &emsp;`// code`  
 `} while (<condition_true>);`  
 * Executes at least once, checks condition after executing  
-
 
 ---  
 
@@ -615,32 +757,11 @@ If empty parenthesis are used, this **WILL NOT** call the default constructor
 `<var>.<attribute> = <val>;` - Set a public attribute value  
 
 `<var>.<attribute>;` - Access public attribute  
+`pointer->attribute;` - Access attributes (members) of an object through a pointer to that object with the arrow operator `->`  
 
 `Class(type var) : const_attribute(val) { //code }` - constant members can be set in constructor. Note `:` (member initiliser list) and is set between `()` and `{}`  
 
 `Class(type var) : Parent(param), attribute(val) {this->another_way_attribute = val;}` - Calls parent constructor as well as sets own members `attribute` value (shown multiple ways) - This way of setting members (using the member initiliser list `': attr(val),...'` is **REQUIRED** <u>if using other objects inside a class</u>   
-
-<br>  
-
-##### <u>Structs</u>  
-
-[Reference](https://cplusplus.com/doc/tutorial/classes/#struct_and_union)  
-
-* Similar to classes, however by default, members have **public access** (where classes are private by default)  
-* Generally used to declare plain data structures, can also be used to declare classes that have member functions  
-
-<br>  
-
-##### <u>Templates</u>  
-
-[Reference](https://cplusplus.com/doc/tutorial/functions2/#templates)  
-
-`template <class T>`  
-`T func_name(T var1, T var2) {`  
-&emsp;`// body using var1 and var2`  
-`}`  
-* Avoids the need for multiple overloaded functions to define function to be used with different types but same body  
-* `T` is a class name variable, and can be named as you wish, though `T` is common  
 
 <br>  
 
@@ -751,6 +872,30 @@ After declaring the functions, both member and non-member functions can be used 
 &emsp;**`result_var = var + var2;`**  
 * Example using `+` operator  
 
+<br>  
+
+##### <u>Templates</u>  
+
+[Reference](https://cplusplus.com/doc/tutorial/functions2/#templates)  
+
+`template <class T>`  
+`T func_name(T var1, T var2) {`  
+&emsp;`// body using var1 and var2`  
+`}`  
+* Avoids the need for multiple overloaded functions to define function to be used with different types but same body  
+* `T` is a class name variable, and can be named as you wish, though `T` is common  
+
+<br>  
+
+### <u>Structs</u>  
+
+[Reference](https://cplusplus.com/doc/tutorial/classes/#struct_and_union)  
+
+`struct Struct_name {`  
+&emsp;`// Code`  
+`};`  
+* Similar to classes, however by default, members have **public access** (where classes are private by default)  
+* Generally used to declare plain data structures, can also be used to declare classes that have member functions  
 
 ---  
 
@@ -787,6 +932,7 @@ After declaring the functions, both member and non-member functions can be used 
 &emsp;`// Code`  
 `} catch (<type> <err_variable>) {`  
 &emsp;`// Handle error`  
+&emsp;`std::cerr << "Error: << e.what() << std::endl;` - Output error  
 `}`  
 
 `// Other code`  
@@ -798,7 +944,8 @@ After declaring the functions, both member and non-member functions can be used 
 
 ### <u>Time</u>  
 
-[Reference](https://cplusplus.com/reference/ctime/time)  
+[Library Reference](https://cplusplus.com/reference/ctime/)  
+[Function Reference](https://cplusplus.com/reference/ctime/time)  
 
 `#include <ctime>` - includes time library  
 `time(0)` - number of seconds passed since 1st Jan 1970  
@@ -816,6 +963,8 @@ After declaring the functions, both member and non-member functions can be used 
 ---  
 
 ### <u>Arrays</u>  
+
+> To use dynamic arrays (with **variables as size**), see dynamic memory above  
 
 `<type> <arr_var>[<size>] = {<item1>, <item2>, ...};` - Declare array and populate  
 * Declaring size of array is optional  
@@ -835,7 +984,8 @@ After declaring the functions, both member and non-member functions can be used 
 <br>  
 
 ##### <u>STL Arrays</u>  
-[Reference](https://cplusplus.com/reference/array/array/)  
+[Library Reference](https://cplusplus.com/reference/array/)  
+[Class Reference](https://cplusplus.com/reference/array/array/)  
 * Standard template library arrays  
   
 `#include <array>`  
@@ -864,7 +1014,8 @@ e.g.
 
 
 ##### <u>STL Vectors</u>  
-[Reference](https://cplusplus.com/reference/vector/vector/)  
+[Library Reference](https://cplusplus.com/reference/vector/)  
+[Class Reference](https://cplusplus.com/reference/vector/vector/)  
 * Vectors are like arrays but know their size  
 
 `std::vector<type> var = {item1, item2, ...};`  
@@ -919,7 +1070,8 @@ e.g.
 
 ### <u>Sets</u>  
 
-[Reference](https://cplusplus.com/reference/set/set/)  
+[Library Reference](https://cplusplus.com/reference/set/)  
+[Class Reference](https://cplusplus.com/reference/set/set/)  
 
 `#include <set>`  
 
@@ -942,7 +1094,8 @@ Iterating:
 
 ### <u>Tuples</u>  
 
-[Reference](https://cplusplus.com/reference/tuple/tuple)  
+[Library Reference](https://cplusplus.com/reference/tuple/)  
+[Class Reference](https://cplusplus.com/reference/tuple/tuple)  
 
 * Object capable of holding collection of elements (different types)  
 
@@ -970,7 +1123,8 @@ OR
 
 ### <u>Maps (Dictionaries)</u>  
 
-[Reference](https://cplusplus.com/reference/map/map/)  
+[Library Reference](https://cplusplus.com/reference/map/)  
+[Class Reference](https://cplusplus.com/reference/map/map)  
 
 `#include <map>`  
 
@@ -1076,3 +1230,36 @@ e.g.
 |std::ios::ate|Set the initial position at the end of the file<br>If this flag is not set, the initial position is the beginning of the file|
 |std::ios::app|All output operations are performed at the end of the file, appending the content to the current content of the file|
 |std::ios::trunc|If the file is opened for output operations and it already existed, its previous content is deleted and replaced by the new one|
+
+---  
+
+### <u>Threads</u>  
+
+[Reference](https://cplusplus.com/reference/thread/)  
+
+`#include <thread>`  
+
+`std::thread thread_var(callable, arg1, arg2...);`  
+
+* Creates a thread which starts to execute the `callable`  
+* `callable` can be a function, function pointer, lambdas, objects with a callable behaviour. `arg1 ...` are objects with move semantics (that can be moved into the thread) that are arguments for the callable function  
+
+`thread_var.join();`  
+* Main thread waits for `thread_var` to finish its execution before continuing  
+* This is **important to include**  
+
+`std::this_thread::get_id();`  
+* Returns threads ID  
+
+`#include <chrono>`  
+
+`std::this_thread::sleep_for(std::chrono::seconds(number_of_seconds));`  
+* Pauses thread for specified time  
+
+<br>  
+
+> Note to run a program containing threads, may need an updated version of gcc. Additionally **may** need to pass flag when compiling:  
+> `g++ -pthread program.cpp`  
+> flag `-lpthread` may be required instead  
+
+---  

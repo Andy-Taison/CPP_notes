@@ -1,3 +1,7 @@
+/*
+Demonstrating pointers and dynamic memory
+*/
+
 #include <iostream>
 
 // A function which creates a copy of the variable passed and so will not affect original
@@ -39,7 +43,8 @@ int main(int argc, char const* argv[]) {
     // Pointer y set to point at arr (address of first element)
     int *y = arr;
 
-    std::cout << "\narr[2] = " << arr[2] << ", *y+2 = " << *y+2 << std::endl;
+    std::cout << "\narr[2] = " << arr[2] << ", equivalent to *y+2 or *(y+2) = " << *y+2 << std::endl;
+    std::cout << "This does not affect the original pointer, *y = " << *y << std::endl;
 
     // Different ways to increment
     std::cout << "\n*y++ dereferences pointer and then incremements pointer: " << *y++ << std::endl;
@@ -73,6 +78,63 @@ int main(int argc, char const* argv[]) {
 
     change_point(&j);
     std::cout << "Value of j after calling function which uses pointer to variable (required passing in as address-of): " << j << std::endl;
+
+
+    // ------------------
+    // Dynamic memory
+
+    // Single element
+    // Dynamic allocation for an integer
+    // This would persist beyond the scope of the current block, and you are responsible for managing the memory
+    int* dynamicInt = new int(42);
+
+    // Use the dynamically allocated integer
+    std::cout << "\nDynamically allocated integer: " << *dynamicInt << std::endl;
+
+    // Don't forget to release the allocated memory
+    delete dynamicInt;
+
+
+
+
+    // Dynamic block (array)
+    // Declare variables
+    int i,n;
+    int *p;
+
+    std::cout << "How many numbers would you like to type? (enter 1 billion to throw error) ";
+    std::cin >> i;
+
+    try {
+        // Define dynamic pointer
+        p = new int[i];
+
+        // Populates array based on user input
+        for (n=0; n<i; n++) {
+            std::cout << "Enter number: ";
+            std::cin >> p[n];
+        }
+
+        std::cout << "You have entered: ";
+
+        // Iterates array
+        for (n=0; n<i; n++) {
+            std::cout << p[n] << ", ";
+        }
+
+    } catch (const std::bad_alloc &e) {
+        // Allocation failed, handle the exception
+        std::cerr << "Error caught: " << e.what() << std::endl;
+
+        // Handle the failure appropriately
+        return 1;
+    }
+
+    
+    // Frees memory block
+    delete[] p;
+
+    std::cout << "\nMemory freed" << std::endl;
 
     return 0;
 }
