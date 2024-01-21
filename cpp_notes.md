@@ -3,7 +3,7 @@
 [Reference](https://cplusplus.com/reference/)  
 
 
-|Table of contents|||
+|<td colspan=3><center>Table of contents</center>|||
 |:---:|:---:|:---:|
 | **1.** | [**Comments**](#Comments) | a |
 | **2.** | [**Compile**](#compile) | b |  
