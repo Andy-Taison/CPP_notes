@@ -3,17 +3,39 @@
 [Reference](https://cplusplus.com/reference/)  
 
 
-|<td colspan=3><center>Table of contents</center>|||
+### <center>Table of Contents</center>  
+|Item|Heading|   Sub Contents|
 |:---:|:---:|:---:|
-| **1.** | [**Comments**](#Comments) | a |
-| **2.** | [**Compile**](#compile) | b |  
+| **1.** | [Comments](#Comments) | Single,<br>Multi,<br>Document |
+| **2.** | [Compile](#compile) | Compiling,<br>Makefiles |
+| **3.** | [Include Libraries/Files](#include-librariesfiles) | #include,<br>Custom Header Files |
+| **4.** | [Command Line Arguments](#command-line-arguments) | argc,<br>argv |
+| **5.** | [Outputs](#outputs) | cout,<br>printf |
+| **6.** | [User Input](#user-input) | cin,<br>get,<br>getline |
+| **7.** | [Namespaces](#namespaces) | Using namespace,<br>Namespace Functions |
+| **8.** | [Scopes](#scopes) | Global,<br>Local |
+| **9.** | [Data Types](#data-types) | const,<br>static,<br>Data Types List,<br>Aliases,<br>#define (Macros),<br>Conditional Inclusions |
+| **10.** | [Pointers](#pointers) | Declare,<br>Address-of-Operator,<br>Dereference Operator,<br>Incrementing,<br>Const Pointers,<br>Invalid Pointers,<br>Null Pointers,<br>Dynamic Memory,<br>Checking Allocation,<br>Smart Pointers |  
+| **11.** | [Maths](#maths) | cmath |
+| **12.** | [Strings](#strings) | String Methods |
+| **13.** | [Control Statements & Flow](#control-statements--flow) | If,<br>Ternary Operator,<br>Switch,<br>Comparison & Logic Operators,<br>Jump |
+| **14.** | [Loops](#loops) | For,<br>For Each,<br>While,<br>Do |
+| **15.** | [Functions](#functions) | Function Declaration,<br>Function Overloading,<br>Lambda Functions |
+| **16.** | [Classes & Struts](#classes--struts) | Class Definition,<br>Inline Methods,<br>Static Members,<br>toString,<br>Normal (Not-inline) Methods,<br>Constructor,<br>Destructor,<br>Instantiation & Member Access,<br>Inheritance,<br>Polymorphism,<br>Friend Functions,<br>Operator Overloading,<br>Templates,<br>Structs |
+| **17.** | [Enums](#enums) | |
+| **18.** | [Error Handling](#error-handling) | Throw,<br>Try..Catch |
+| **19.** | [Time](#time) | Time,<br>Random Numbers |
+| **20.** | [Arrays](#arrays) | Standard arrays,<br>STL Arrays,<br>STL Vectors |
+| **21.** | [Sets](#sets) | |
+| **22.** | [Tuples](#tuples) | |
+| **23.** | [Maps (Dictionaries)](#maps-dictionaries) | |
+| **24.** | [Algorithms Library](#algorithms-library) | Sort |
+| **25.** | [Working With Files](#working-with-files) | Writing,<br>Reading,<br>Modes |
+| **26.** | [Threads](#threads) | |
 
+<br>
 
-
-
-
-
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#Python-Quick-Reference)  
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)    
 
 ---  
 
@@ -64,6 +86,10 @@
 
 * Using documentation comments for functions, classes and programs can be useful as this can generate tool tips. Software can also be used to automatically generate documentation from these comments  
 
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)    
+
 ---  
 
 ### <u>Compile</u>
@@ -92,6 +118,10 @@ e.g.:
 * It is also good practice to have a rule for `clean` which should remove the output files (but would require calling separately with `make clean`)  
 * CMakeList files can be used to configure and automatically build make files absracting away platform specific details  
 
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+
 ---  
 
 ### <u>Include Libraries/Files</u>  
@@ -118,6 +148,10 @@ e.g.:
 * When compiling, need to compile **all** `cpp` files (not header files):  
 &emsp;`g++ file1.cpp file2.cpp -o output && .\output`  
 
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+
 ---  
 
 ### <u>Command Line Arguments</u>
@@ -140,6 +174,10 @@ C++ Boilerplate:
 * `argc` = **number** of arguments passed in, note the executable is always passed in as first argument  
 * Access arguments by indexing `argv` (0 indexed). Note other things are passed in (environment variables and such). So if index more than custom passed in, then may return something unexpected  
 
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+
 ---  
 
 ### <u>Outputs</u>  
@@ -153,6 +191,10 @@ C++ Boilerplate:
 `printf("Hello %i", <int data>);`
 * c method to output to console  
 * Can be used to pass data into the output  
+
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
 
 ---  
 
@@ -168,6 +210,10 @@ C++ Boilerplate:
 * Gets line of user input and stores in variable  
 * Part of string library `#include <string>`  
 * Note if used after `cin` has already been used, then must first **ignore whats already in the buffer** `std::cin.ignore();`
+
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
 
 ---  
 
@@ -201,6 +247,10 @@ C++ Boilerplate:
 * If an identifier is not declared in an explicit namespace, it is part of the implicit global namespace. In general, **try to avoid making declarations at global scope when possible**, except for the entry point main Function, which is required to be in the global namespace.  
 * To explicitly qualify a global identifier, use the scope resolution operator with no name, as in `::SomeFunction(x);`. This will differentiate the identifier from anything with the same name in any other namespace  
 
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+
 ---  
 
 ### <u>Scopes</u>  
@@ -212,6 +262,10 @@ C++ Boilerplate:
 * Variables must be defined with **`<type>`** or variables previously defined will be overwritten  
 
 `::<global>` - Use global variable even when local defined  
+
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
 
 ---  
 
@@ -283,6 +337,10 @@ e.g.
 `#else`  - Similar to regular else  
 `#elif condition_true` - Similar to else if  
 `#endif` - Ends directive   
+
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
 
 ---  
 
@@ -425,6 +483,10 @@ e.g.
 * `val/var` is optional and only required if pointing to a specific pre-declared object or passing a specific value to the object constructor  
 * The pointer is only deleted once **all shared pointers** to that object have been deleted (exited scope)  
 
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+
 ---  
 
 ### <u>Maths</u>
@@ -440,6 +502,10 @@ e.g.
 `ceil(x)`  = rounds **up**  
 `fmax(x, y)`  = returns highest value  
 `fmin(x, y)`  = returns lowest value  
+
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
 
 ---  
 
@@ -483,6 +549,10 @@ e.g.
 
 `#include <string>`  
 `std::to_string(int_val);` Converts int to string  
+
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
 
 ---  
 
@@ -547,6 +617,10 @@ e.g.
 &emsp;`//code`  
 &emsp;`(optional_condition) goto myLabel;` - Keyword `goto` jumps to label specified  
 
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+
 ---  
 
 ### <u>Loops</u>  
@@ -589,6 +663,10 @@ e.g.
 &emsp;`// code`  
 `} while (<condition_true>);`  
 * Executes at least once, checks condition after executing  
+
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
 
 ---  
 
@@ -635,6 +713,10 @@ e.g.
 &emsp;`[=]` : capture all external variables by value   
 &emsp;`[a, &b]` : mixture, capture a by value and b by reference
 &emsp;`[]` : Empty capture clause can only access variables which are local to it  
+
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
 
 ---  
 
@@ -898,6 +980,10 @@ After declaring the functions, both member and non-member functions can be used 
 * Similar to classes, however by default, members have **public access** (where classes are private by default)  
 * Generally used to declare plain data structures, can also be used to declare classes that have member functions  
 
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+
 ---  
 
 ### <u>Enums</u>  
@@ -921,6 +1007,10 @@ After declaring the functions, both member and non-member functions can be used 
 * Enums are good to represent error codes as well as colour values  
 * Can be combined with switch or if statments  
 
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+
 ---  
 
 ### <u>Error Handling</u>  
@@ -941,6 +1031,10 @@ After declaring the functions, both member and non-member functions can be used 
 * Can chain catch blocks for different error types  
 * `catch(...)` can be used to catch all (majority) of errors, but bad practice  
 
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+
 ---  
 
 ### <u>Time</u>  
@@ -960,6 +1054,10 @@ After declaring the functions, both member and non-member functions can be used 
 `std::rand()` - Generates random number  
 `std::rand() % 10` - Defines random numbers between 0 and **9** (+ 1 if wanting 1 - 10)  
 **Alternatively** use `<random>` library - [See here](https://cplusplus.com/reference/random/)
+
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
 
 ---  
 
@@ -1067,6 +1165,10 @@ e.g.
 `}`  
 * Outputs nested vector values  
 
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+
 ---  
 
 ### <u>Sets</u>  
@@ -1090,6 +1192,10 @@ Iterating:
 `var.erase(ele);` - Removes element from set  
 
 `var.find(ele);` - Searches container `var` and returns an iterator to it if found, otherwise returns iterator to `set::end` (theoretical  element that would follow the last element in the set container)  
+
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
 
 ---  
 
@@ -1119,6 +1225,10 @@ OR
 `tuple1.swap(tuple2);` - Swaps elements of `tuple1` with `tuple2` so long as tuples are **same length and types**  
 
 `std::tuple<type1, type2,...> var = std::tuple_cat(tuple1, tuple2,...);` - Concatenates tuples into a single tuple. **Types must match order**  
+
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
 
 ---  
 
@@ -1158,6 +1268,10 @@ OR
 * Iterate map **values** by changing `i->first` to **`i->second`**  
 * `auto` deduces type, can be better to use `std::map<key_type, value_type>::iterator var` to control type used  
 
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+
 ---  
 
 ### <u>Algorithms Library</u>  
@@ -1175,6 +1289,10 @@ e.g.
 &emsp;`std::sort(vector.begin(), vector.end());`  
 * Modifies original variable  
 * `comparator` is **optional**, can be a function (incl lambdas) or strut/object  
+
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
 
 ---  
 
@@ -1232,6 +1350,10 @@ e.g.
 |std::ios::app|All output operations are performed at the end of the file, appending the content to the current content of the file|
 |std::ios::trunc|If the file is opened for output operations and it already existed, its previous content is deleted and replaced by the new one|
 
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+
 ---  
 
 ### <u>Threads</u>  
@@ -1262,5 +1384,9 @@ e.g.
 > Note to run a program containing threads, may need an updated version of gcc. Additionally **may** need to pass flag when compiling:  
 > `g++ -pthread program.cpp`  
 > flag `-lpthread` may be required instead  
+
+<br>
+
+[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
 
 ---  
