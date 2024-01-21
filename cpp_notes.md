@@ -3,10 +3,11 @@
 [Reference](https://cplusplus.com/reference/)  
 
 
-| <td colspan="3"><center><b><h3><a name="table-of-contents" id="table-of-contents"></a>Table of contents</h3></b></center> | | |
+|Table of contents|||
 |:---:|:---:|:---:|
-| **1.** | [**Comments**](#comments) | a |
-| **2.** | [**Another Section**](#another-section) | b |
+| **1.** | [**Comments**](#Comments) | a |
+| **2.** | [**Compile**](#compile) | b |  
+
 
 
 
