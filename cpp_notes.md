@@ -7,35 +7,35 @@
 |Item|Heading|   Sub Contents|
 |:---:|:---:|:---:|
 | **1.** | [Comments](#Comments) | Single,<br>Multi,<br>Document |
-| **2.** | [Compile](#compile) | Compiling,<br>Makefiles |
-| **3.** | [Include Libraries/Files](#include-librariesfiles) | #include,<br>Custom Header Files |
+| **2.** | [Compile](#compile) | [Compiling,](#compile)<br>[Makefiles](#makefiles) |
+| **3.** | [Include Libraries/Files](#include-librariesfiles) | [#include,](#include-librariesfiles)<br>[Custom Header Files](#custom-header-files) |
 | **4.** | [Command Line Arguments](#command-line-arguments) | argc,<br>argv |
 | **5.** | [Outputs](#outputs) | cout,<br>printf |
 | **6.** | [User Input](#user-input) | cin,<br>get,<br>getline |
-| **7.** | [Namespaces](#namespaces) | Using namespace,<br>Namespace Functions |
+| **7.** | [Namespaces](#namespaces) | [Using namespace,](#namespaces)<br>[Namespace Functions](#custom-namespaces) |
 | **8.** | [Scopes](#scopes) | Global,<br>Local |
-| **9.** | [Data Types](#data-types) | const,<br>static,<br>Data Types List,<br>Aliases,<br>#define (Macros),<br>Conditional Inclusions |
-| **10.** | [Pointers](#pointers) | Declare,<br>Address-of-Operator,<br>Dereference Operator,<br>Incrementing,<br>Const Pointers,<br>Invalid Pointers,<br>Null Pointers,<br>Dynamic Memory,<br>Checking Allocation,<br>Smart Pointers |  
+| **9.** | [Data Types](#data-types) | [const,](#data-types)<br>[static,](#data-types)<br>[Data Types List,](#data-types)<br>[Aliases,](#aliases)<br>[#define (Macros)](#define-macros),<br>[Conditional Inclusions](#conditional-inclusions) |
+| **10.** | [Pointers](#pointers) | [Declare,](#pointers)<br>[Address-of-Operator,](#pointers)<br>[Dereference Operator,](#pointers)<br>[Incrementing,](#incrementing)<br>[Const Pointers,](#constant-pointers)<br>[Void Pointers,](#void-pointers)<br>[Invalid Pointers,](#invalid-pointers)<br>[Null Pointers,](#null-pointers)<br>[Dynamic Memory,](#dynamic-memory)<br>[Checking Allocation,](#check-allocation-successful)<br>[Smart Pointers](#smart-pointers) |  
 | **11.** | [Maths](#maths) | cmath |
 | **12.** | [Strings](#strings) | String Methods |
-| **13.** | [Control Statements & Flow](#control-statements--flow) | If,<br>Ternary Operator,<br>Switch,<br>Comparison & Logic Operators,<br>Jump |
-| **14.** | [Loops](#loops) | For,<br>For Each,<br>While,<br>Do |
-| **15.** | [Functions](#functions) | Function Declaration,<br>Function Overloading,<br>Lambda Functions |
-| **16.** | [Classes & Struts](#classes--struts) | Class Definition,<br>Inline Methods,<br>Static Members,<br>toString,<br>Normal (Not-inline) Methods,<br>Constructor,<br>Destructor,<br>Instantiation & Member Access,<br>Inheritance,<br>Polymorphism,<br>Friend Functions,<br>Operator Overloading,<br>Templates,<br>Structs |
+| **13.** | [Control Statements & Flow](#control-statements--flow) | [If,](#if-statement)<br>[Ternary Operator,](#ternary-operator)<br>[Switch,](#switch-statement)<br>[Comparison & Logic Operators,](#comparison--logic-operators)<br>[Jump](#jump-statements) |
+| **14.** | [Loops](#loops) | [For,](#for)<br>[For Each,](#for-each)<br>[While,](#while)<br>[Do](#do) |
+| **15.** | [Functions](#functions) | [Function Declaration,](#functions)<br>[Function Overloading,](#function-overloading)<br>[Lambda Functions](#lambda-functions) |
+| **16.** | [Classes & Struts](#classes--struts) | [Class Definition,](#class-definition--inline-methods)<br>[Inline Methods,](#class-definition--inline-methods)<br>[Static Members,](#class-definition--inline-methods)<br>[toString,](#class-definition--inline-methods)<br>[Normal (Not-inline) Methods,](#normal-not-inline-methods)<br>[Constructor,](#constructor)<br>[Destructor,](#destructor)<br>[Instantiation & Member Access,](#instantiation--member-access)<br>[Inheritance,](#inheritance)<br>[Polymorphism,](#inheritance)<br>[Friend Functions,](#friend-functions)<br>[Operator Overloading,](#operator-overloading)<br>[Templates,](#templates)<br>[Structs](#structs) |
 | **17.** | [Enums](#enums) | |
 | **18.** | [Error Handling](#error-handling) | Throw,<br>Try..Catch |
-| **19.** | [Time](#time) | Time,<br>Random Numbers |
-| **20.** | [Arrays](#arrays) | Standard arrays,<br>STL Arrays,<br>STL Vectors |
+| **19.** | [Time](#time) | [Time,](#time)<br>[Random Numbers](#random-numbers) |
+| **20.** | [Arrays](#arrays) | [Standard arrays,](#arrays)<br>[STL Arrays,](#stl-arrays)<br>[STL Vectors](#stl-vectors) |
 | **21.** | [Sets](#sets) | |
 | **22.** | [Tuples](#tuples) | |
 | **23.** | [Maps (Dictionaries)](#maps-dictionaries) | |
-| **24.** | [Algorithms Library](#algorithms-library) | Sort |
-| **25.** | [Working With Files](#working-with-files) | Writing,<br>Reading,<br>Modes |
+| **24.** | [Algorithms Library](#algorithms-library) | [Algorithms Lib,](#algorithms-library)<br>[Sort](#sort) |
+| **25.** | [Working With Files](#working-with-files) | [Writing,](#working-with-files)<br>[Reading,](#working-with-files)<br>[Modes](#modes) |
 | **26.** | [Threads](#threads) | |
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)    
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -88,7 +88,7 @@
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)    
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -120,7 +120,7 @@ e.g.:
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -150,7 +150,7 @@ e.g.:
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -176,7 +176,7 @@ C++ Boilerplate:
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -194,7 +194,7 @@ C++ Boilerplate:
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -213,7 +213,7 @@ C++ Boilerplate:
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -249,7 +249,7 @@ C++ Boilerplate:
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -265,7 +265,7 @@ C++ Boilerplate:
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -340,7 +340,7 @@ e.g.
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -362,7 +362,7 @@ e.g.
 
 <br>  
 
-**Incrementing:**  
+##### Incrementing:  
 |Syntax|Explination|
 |:--:|:--:|
 |*p++|Same as *(p++):<br>Increment pointer, and dereference unincremented address|
@@ -372,11 +372,15 @@ e.g.
 
 <br>   
 
+##### Constant Pointers  
+
 `int x = 10;`  
 `const int *p = &x;`  
 * `p` points to x, but because it is declared `const`, it can read the value stored in `x`, but NOT modify it  
 
 <br>  
+
+##### Void Pointers  
 
 `void *p;`  
 * Void pointers point to a value that has no type (and thus also an undetermined length and undetermined dereferencing properties)  
@@ -385,12 +389,16 @@ e.g.
 
 <br>  
 
+##### Invalid Pointers  
+
 `int * p;` - Uninitialized pointer  
 `int myarray[10];`  
 `int * q = myarray+20;` - Element out of bounds  
 * Uninitialised pointers and pointers set to point to a value outside of an array (out of bounds) are **invalid pointers**. Accessing such a pointer causes undefined behavior, ranging from an error during runtime to accessing some random value  
 
 <br>  
+
+##### Null Pointers  
 
 `int *p = 0;`  
 `int *q = nullptr;`  
@@ -485,7 +493,7 @@ e.g.
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -505,7 +513,7 @@ e.g.
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -552,7 +560,7 @@ e.g.
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -619,7 +627,7 @@ e.g.
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -666,7 +674,7 @@ e.g.
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -716,7 +724,7 @@ e.g.
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -982,7 +990,7 @@ After declaring the functions, both member and non-member functions can be used 
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -1009,7 +1017,7 @@ After declaring the functions, both member and non-member functions can be used 
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -1033,7 +1041,7 @@ After declaring the functions, both member and non-member functions can be used 
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -1057,7 +1065,7 @@ After declaring the functions, both member and non-member functions can be used 
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -1167,7 +1175,7 @@ e.g.
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -1195,7 +1203,7 @@ Iterating:
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -1228,7 +1236,7 @@ OR
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -1270,7 +1278,7 @@ OR
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -1292,7 +1300,7 @@ e.g.
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -1352,7 +1360,7 @@ e.g.
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -1387,6 +1395,6 @@ e.g.
 
 <br>
 
-[<p style="text-align: right;">**⬆ Table of Contents ⬆**</p>](#cpp-notes)  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
