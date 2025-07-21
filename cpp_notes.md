@@ -18,20 +18,22 @@
 | **10.** | [Pointers](#pointers) | [Declare,](#pointers)<br>[Address-of-Operator,](#pointers)<br>[Dereference Operator,](#pointers)<br>[Incrementing,](#incrementing)<br>[Const Pointers,](#constant-pointers)<br>[Void Pointers,](#void-pointers)<br>[Invalid Pointers,](#invalid-pointers)<br>[Null Pointers,](#null-pointers)<br>[Dynamic Memory,](#dynamic-memory)<br>[Checking Allocation,](#check-allocation-successful)<br>[Smart Pointers](#smart-pointers) |  
 | **11.** | [Maths](#maths) | cmath |
 | **12.** | [Strings](#strings) | String Methods |
-| **13.** | [Control Statements & Flow](#control-statements--flow) | [If,](#if-statement)<br>[Ternary Operator,](#ternary-operator)<br>[Switch,](#switch-statement)<br>[Comparison & Logic Operators,](#comparison--logic-operators)<br>[Jump](#jump-statements) |
-| **14.** | [Loops](#loops) | [For,](#for)<br>[For Each,](#for-each)<br>[While,](#while)<br>[Do](#do) |
-| **15.** | [Functions](#functions) | [Function Declaration,](#functions)<br>[Function Overloading,](#function-overloading)<br>[Lambda Functions](#lambda-functions) |
-| **16.** | [Classes & Struts](#classes--struts) | [Class Definition,](#class-definition--inline-methods)<br>[Inline Methods,](#class-definition--inline-methods)<br>[Static Members,](#class-definition--inline-methods)<br>[toString,](#class-definition--inline-methods)<br>[Normal (Not-inline) Methods,](#normal-not-inline-methods)<br>[Constructor,](#constructor)<br>[Destructor,](#destructor)<br>[Instantiation & Member Access,](#instantiation--member-access)<br>[Inheritance,](#inheritance)<br>[Polymorphism,](#inheritance)<br>[Friend Functions,](#friend-functions)<br>[Operator Overloading,](#operator-overloading)<br>[Templates,](#templates)<br>[Structs](#structs) |
-| **17.** | [Enums](#enums) | |
-| **18.** | [Error Handling](#error-handling) | Throw,<br>Try..Catch |
-| **19.** | [Time](#time) | [Time,](#time)<br>[Random Numbers](#random-numbers) |
-| **20.** | [Arrays](#arrays) | [Standard arrays,](#arrays)<br>[STL Arrays,](#stl-arrays)<br>[STL Vectors](#stl-vectors) |
-| **21.** | [Sets](#sets) | |
-| **22.** | [Tuples](#tuples) | |
-| **23.** | [Maps (Dictionaries)](#maps-dictionaries) | |
-| **24.** | [Algorithms Library](#algorithms-library) | [Algorithms Lib,](#algorithms-library)<br>[Sort](#sort) |
-| **25.** | [Working With Files](#working-with-files) | [Writing,](#working-with-files)<br>[Reading,](#working-with-files)<br>[Modes](#modes) |
-| **26.** | [Threads](#threads) | |
+| **13.** | [Lists](#lists) | |
+| **14.** | [Dictionaries / Maps](#dictionaries--maps) | |
+| **15.** | [Control Statements & Flow](#control-statements--flow) | [If,](#if-statement)<br>[Ternary Operator,](#ternary-operator)<br>[Switch,](#switch-statement)<br>[Comparison & Logic Operators,](#comparison--logic-operators)<br>[Jump](#jump-statements) |
+| **16.** | [Loops](#loops) | [For,](#for)<br>[For Each,](#for-each)<br>[While,](#while)<br>[Do](#do) |
+| **17.** | [Functions](#functions) | [Function Declaration,](#functions)<br>[Function Overloading,](#function-overloading)<br>[Lambda Functions](#lambda-functions) |
+| **18.** | [Classes & Struts](#classes--struts) | [Class Definition,](#class-definition--inline-methods)<br>[Inline Methods,](#class-definition--inline-methods)<br>[Static Members,](#class-definition--inline-methods)<br>[toString,](#class-definition--inline-methods)<br>[Normal (Not-inline) Methods,](#normal-not-inline-methods)<br>[Constructor,](#constructor)<br>[Destructor,](#destructor)<br>[Instantiation & Member Access,](#instantiation--member-access)<br>[Inheritance,](#inheritance)<br>[Polymorphism,](#inheritance)<br>[Friend Functions,](#friend-functions)<br>[Operator Overloading,](#operator-overloading)<br>[Templates,](#templates)<br>[Structs](#structs) |
+| **19.** | [Enums](#enums) | |
+| **20.** | [Error Handling](#error-handling) | Throw,<br>Try..Catch |
+| **21.** | [Time](#time) | [Time,](#time)<br>[Random Numbers](#random-numbers) |
+| **22.** | [Arrays](#arrays) | [Standard arrays,](#arrays)<br>[STL Arrays,](#stl-arrays)<br>[STL Vectors](#stl-vectors) |
+| **23.** | [Sets](#sets) | |
+| **24.** | [Tuples](#tuples) | |
+| **25.** | [Maps (Dictionaries)](#maps-dictionaries) | |
+| **26.** | [Algorithms Library](#algorithms-library) | [Algorithms Lib,](#algorithms-library)<br>[Sort](#sort) |
+| **27.** | [Working With Files](#working-with-files) | [Writing,](#working-with-files)<br>[Reading,](#working-with-files)<br>[Modes](#modes) |
+| **28.** | [Threads](#threads) | |
 
 <br>
 
@@ -157,7 +159,7 @@ e.g.:
 ### <u>Command Line Arguments</u>
 
 C++ Boilerplate:
-`#include <iostream>`  - if using input/output 
+`#include <iostream>`  - if using input/output (`cout` / `cin` / `cerr` etc.)  
 
 `// Define any functions`  
 
@@ -191,6 +193,13 @@ C++ Boilerplate:
 `printf("Hello %i", <int data>);`
 * c method to output to console  
 * Can be used to pass data into the output  
+* Must specify type:  
+
+|Type|Symbol|Note|
+|:--:|:--:|:--:|
+|int|`%i`||
+|float|`%f`||
+|string|`%s`|Must first convert to character using `c_str()`: `printf("%s", var.c_str());`|
 
 <br>
 
@@ -257,7 +266,7 @@ C++ Boilerplate:
 
 [Reference](https://cplusplus.com/doc/tutorial/namespaces/)  
 
-`Global` - Variables defined outside functions at top of file are accessible anywhere within the file  
+`Global` - Variables defined outside functions at top of file (typically below the includes) are accessible anywhere within the file. Common practice is to proceed global variable names with `g_`  
 `Local` - Variables defined within a function are only accessible within that function, these **will take priority over global variables**  
 * Variables must be defined with **`<type>`** or variables previously defined will be overwritten  
 
@@ -288,8 +297,8 @@ C++ Boilerplate:
 |String|std::string myName = "Andy";|"Dave"|Must use double quotes|24||
 |Int|int age = 24;|5||4|2 147 483 647|
 |Long Long|long long num = 2257483647;||long also availiable, but appears to behave similar to int|8|9 223 372 036 854 775 807|
-|Float|float num = 3.14159;|||4||
-|Double|double x = 5.234245252525;||longer number|8||
+|Float|float num = 3.14159;||Up to 7 decimal places|4||
+|Double|double x = 5.234245252525;||longer number - up to 15 decimal places|8||
 |Unsigned|unsigned int y = 2;||Unsigned cannot be negative, but allows for twice the largest value of the number type used<br>Assigning to -1 will return the largest value|||
 |Boolean|bool old = false;|||1||
 
@@ -375,8 +384,8 @@ e.g.
 ##### Constant Pointers  
 
 `int x = 10;`  
-`const int *p = &x;`  
-* `p` points to x, but because it is declared `const`, it can read the value stored in `x`, but NOT modify it  
+`const int* p = &x;` - non-constant pointer to constant integer: `p` points to x, but because it is declared `const`, it can read the value stored in `x`, but NOT modify it  
+`int* const p = &x;` - constant pointer to non-constant integer  
 
 <br>  
 
@@ -522,6 +531,8 @@ e.g.
 [Library Reference](https://cplusplus.com/reference/string/)  
 [Class Reference](https://cplusplus.com/reference/string/string/)  
 
+`#include <string>`  
+
 * Most methods below can be combined,  
 &emsp;e.g.  
 &emsp;`std::string str = "there is some other";`  
@@ -561,6 +572,42 @@ e.g.
 <br>
 
 [⬆ Table of Contents ⬆](#cpp-notes)    
+
+---  
+
+### <u>Lists</u>  
+
+Ordered sequence of variables of **the same type**.  
+
+`#include <list>`  
+`list<type> var({ele1, ele2...});`  
+
+* Need to loop through a list to print elements. (use `for(type val : var){}`)  
+
+`var.push_front(ele)` add element to beginning of list  
+`var.push_back(ele)` add element to end of list  
+`var.insert(position_to_insert, args)`  `args` can either be a value, or number of values to insert then the value to fill with, or iterator start and end positions (e.g. another list)  
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)
+
+---  
+
+### <u>Dictionaries / Maps</u>  
+
+`#include <map>`  
+`map<key_type, value_type> var;`  
+
+`var[key] = value;` Add item  
+
+* Loop through to print items:  
+  &emsp;`for (auto item : var) {`  
+  &emsp;&emsp;`cout << "key: " << item.first << " value: " \<< item.second;}`
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)
 
 ---  
 
@@ -682,7 +729,7 @@ e.g.
 
 [Reference](https://cplusplus.com/doc/tutorial/functions/)  
 
-* Can be good practice and **more efficient** to pass references to a function, rather than using parameters. This is due to parameters cause a copy to be made. 
+* Can be good practice and **more efficient** to pass references to a function (`&var`), rather than using parameters. This is due to parameters cause a copy to be made. 
 * Though reference parameter functions are typically perceived as functions to modify the arguments passed, solution...
 * Can define reference (parameters) as constansts `const` guaranteeing function will not modify arguments  
 * For **short functions**, can reduce overhead by using `inline` in front of function definition. This does not affect the function mechanism, but inserts the function at each call by compiler instead of using more expensive jumps and stacking arguments  
