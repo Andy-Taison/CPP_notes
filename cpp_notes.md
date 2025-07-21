@@ -27,13 +27,14 @@
 | **19.** | [Enums](#enums) | |
 | **20.** | [Error Handling](#error-handling) | Throw,<br>Try..Catch |
 | **21.** | [Time](#time) | [Time,](#time)<br>[Random Numbers](#random-numbers) |
-| **22.** | [Arrays](#arrays) | [Standard arrays,](#arrays)<br>[STL Arrays,](#stl-arrays)<br>[STL Vectors](#stl-vectors) |
+| **22.** | [Arrays](#arrays) | [Standard arrays,](#arrays)<br>[STL Arrays,](#stl-arrays)<br>[STL Vectors](#stl-vectors)<br>[Sort](#sort) |
 | **23.** | [Sets](#sets) | |
-| **24.** | [Tuples](#tuples) | |
-| **25.** | [Maps (Dictionaries)](#maps-dictionaries) | |
-| **26.** | [Algorithms Library](#algorithms-library) | [Algorithms Lib,](#algorithms-library)<br>[Sort](#sort) |
-| **27.** | [Working With Files](#working-with-files) | [Writing,](#working-with-files)<br>[Reading,](#working-with-files)<br>[Modes](#modes) |
-| **28.** | [Threads](#threads) | |
+| **24.** | [Pairs](#pairs) | |
+| **25.** | [Tuples](#tuples) | |
+| **26.** | [Maps (Dictionaries)](#maps-dictionaries) | |
+| **27.** | [Algorithms Library](#algorithms-library) | [Algorithms Lib,](#algorithms-library)<br>[Sort](#sort) |
+| **28.** | [Working With Files](#working-with-files) | [Writing,](#working-with-files)<br>[Reading,](#working-with-files)<br>[Modes](#modes) |
+| **29.** | [Threads](#threads) | |
 
 <br>
 
@@ -596,14 +597,37 @@ Ordered sequence of variables of **the same type**.
 
 ### <u>Dictionaries / Maps</u>  
 
+##### Maps:
+* Sorted by key  
+  
 `#include <map>`  
-`map<key_type, value_type> var;`  
+`std::map<key_type, value_type> var;`  
 
 `var[key] = value;` Add item  
 
+`std::map<key_type, value_type> var = { {key1, val1}, {key2, val2}... };` Add items when initialising  
+
+Access:  
+`var[key];`  
+`var.at(key);` - safer, throws exception when not found  
+
 * Loop through to print items:  
   &emsp;`for (auto item : var) {`  
-  &emsp;&emsp;`cout << "key: " << item.first << " value: " \<< item.second;}`
+  &emsp;&emsp;`std::cout << "key: " << item.first << " value: " \<< item.second;}`
+
+Remove:  
+`var.erase(key);` - removes key if present  
+`var.clear();` - empties map  
+
+`var.size();` - number of key-value pairs  
+`var.empty();` - returns true if empty  
+
+##### Unordered map:
+Use `unordered_map` for **faster lookups and don't care about ordering:  
+
+`#include <unordered_map>`  
+`std::unordered_map<key_type, value_type> var;`  
+
 
 <br>
 
@@ -884,7 +908,7 @@ If empty parenthesis are used, this **WILL NOT** call the default constructor
 * **Must declare in class** even if defining outside  
 * Note tilde `~`  
 * Called at **end of objects life**  
-* Useful for cleanup (espcially if dynamic memory was used)  
+* Useful for cleanup (**especially if dynamic memory was used**)  
 
 <br>  
 
@@ -1172,6 +1196,8 @@ e.g.
 [Class Reference](https://cplusplus.com/reference/vector/vector/)  
 * Vectors are like arrays but know their size  
 
+`#include <vector>`  
+
 `std::vector<type> var = {item1, item2, ...};`  
 e.g.  
 &emsp;`std::vector<int> data = {1, 4, 5, 6};`  
@@ -1220,6 +1246,22 @@ e.g.
 `}`  
 * Outputs nested vector values  
 
+##### <u>Sort</u>  
+* Used to sort elements in a container (usually vector or array)  
+* Sorts by **ascending order** by default using the `<` operator  
+* Note: may not preserve the relative order of equal elements. Use `std::stable_sort` if that’s important  
+* Works only on random-access iterators (i.e. NOT lists)  
+
+`#include <algorithm>`  
+
+`std::sort(var.begin(), var.end());`  
+
+Custom sorting:  
+`std::sort(var.begin(), var.end(), [](int a, int b) {`  
+&emsp;`return a > b;`  
+`});`  
+* Example shows reversing default comparison  
+
 <br>
 
 [⬆ Table of Contents ⬆](#cpp-notes)    
@@ -1251,6 +1293,26 @@ Iterating:
 <br>
 
 [⬆ Table of Contents ⬆](#cpp-notes)    
+
+---  
+
+### <u>Pairs</u>  
+
+* A container to hold two related values of **possibly different types**  
+
+`std::pair<type1, type2> var = {ele1, ele2};`  
+OR  
+`auto var = std::make_pair(ele1, ele2);`  
+
+Access:  
+`var.first;`
+`var.second;`  
+
+Can use comparison operators for two pairs, it will **compare first elements**, if they are equal it then compares the second elements  
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)   
 
 ---  
 
@@ -1336,8 +1398,9 @@ OR
 
 <br>  
 
-#### <u>Sort</u>  
+<u>Sort</u>  
 [Sort reference](https://cplusplus.com/reference/algorithm/sort/)  
+Also see [Sort](#sort)
 
 `std::sort(iterator_first, iterator_last, comparator);` - Sorts iterator (object pointing to some element in a range of elements) in ascending order from first to last  
 e.g.
