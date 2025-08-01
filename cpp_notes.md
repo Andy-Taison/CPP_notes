@@ -8,7 +8,7 @@
 |:---:|:---:|:---:|
 | **1.** | [Comments](#comments) | Single,<br>Multi,<br>Document |
 | **2.** | [Compile](#compile) | [Compiling,](#compile)<br>[Makefiles](#makefiles) |
-| **3.** | [Include Libraries/Files](#include-librariesfiles) | [#include,](#include-librariesfiles)<br>[Custom Header Files](#custom-header-files) |
+| **3.** | [Include Libraries/Files](#include-librariesfiles) | [#include,](#include-librariesfiles)<br>[Custom Header Files](#custom-header-files)<br>[bits/stdc++.h](#bitsstdch) |
 | **4.** | [Command Line Arguments](#command-line-arguments) | argc,<br>argv |
 | **5.** | [Outputs](#outputs) | cout,<br>printf |
 | **6.** | [User Input](#user-input) | cin,<br>get,<br>getline |
@@ -16,25 +16,24 @@
 | **8.** | [Scopes](#scopes) | Global,<br>Local |
 | **9.** | [Data Types](#data-types) | [const,](#data-types)<br>[static,](#data-types)<br>[Data Types List,](#data-types)<br>[Aliases,](#aliases)<br>[#define (Macros)](#define-macros),<br>[Conditional Inclusions](#conditional-inclusions) |
 | **10.** | [Pointers](#pointers) | [Declare,](#pointers)<br>[Address-of-Operator,](#pointers)<br>[Dereference Operator,](#pointers)<br>[Incrementing,](#incrementing)<br>[Const Pointers,](#constant-pointers)<br>[Void Pointers,](#void-pointers)<br>[Invalid Pointers,](#invalid-pointers)<br>[Null Pointers,](#null-pointers)<br>[Dynamic Memory,](#dynamic-memory)<br>[Checking Allocation,](#check-allocation-successful)<br>[Smart Pointers](#smart-pointers) |  
-| **11.** | [Maths](#maths) | cmath |
-| **12.** | [Strings](#strings) | String Methods |
+| **11.** | [Strings](#strings) | String Methods |
+| **12.** | [Arrays](#arrays) | [Standard arrays,](#arrays)<br>[STL Arrays,](#stl-arrays)<br>[STL Vectors](#stl-vectors)<br>[Sort](#sort) |
 | **13.** | [Lists](#lists) | |
-| **14.** | [Dictionaries / Maps](#dictionaries--maps) | |
-| **15.** | [Control Statements & Flow](#control-statements--flow) | [If,](#if-statement)<br>[Ternary Operator,](#ternary-operator)<br>[Switch,](#switch-statement)<br>[Comparison & Logic Operators,](#comparison--logic-operators)<br>[Jump](#jump-statements) |
-| **16.** | [Loops](#loops) | [For,](#for)<br>[For Each,](#for-each)<br>[While,](#while)<br>[Do](#do) |
-| **17.** | [Functions](#functions) | [Function Declaration,](#functions)<br>[Function Overloading,](#function-overloading)<br>[Lambda Functions](#lambda-functions) |
-| **18.** | [Classes & Struts](#classes--struts) | [Class Definition,](#class-definition--inline-methods)<br>[Inline Methods,](#class-definition--inline-methods)<br>[Static Members,](#class-definition--inline-methods)<br>[toString,](#class-definition--inline-methods)<br>[Normal (Not-inline) Methods,](#normal-not-inline-methods)<br>[Constructor,](#constructor)<br>[Destructor,](#destructor)<br>[Instantiation & Member Access,](#instantiation--member-access)<br>[Inheritance,](#inheritance)<br>[Polymorphism,](#inheritance)<br>[Friend Functions,](#friend-functions)<br>[Operator Overloading,](#operator-overloading)<br>[Templates,](#templates)<br>[Structs](#structs) |
-| **19.** | [Enums](#enums) | |
-| **20.** | [Error Handling](#error-handling) | Throw,<br>Try..Catch |
-| **21.** | [Time](#time) | [Time,](#time)<br>[Random Numbers](#random-numbers) |
-| **22.** | [Arrays](#arrays) | [Standard arrays,](#arrays)<br>[STL Arrays,](#stl-arrays)<br>[STL Vectors](#stl-vectors)<br>[Sort](#sort) |
-| **23.** | [Sets](#sets) | |
-| **24.** | [Pairs](#pairs) | |
-| **25.** | [Tuples](#tuples) | |
-| **26.** | [Maps (Dictionaries)](#maps-dictionaries) | |
-| **27.** | [Algorithms Library](#algorithms-library) | [Algorithms Lib,](#algorithms-library)<br>[Sort](#sort) |
-| **28.** | [Working With Files](#working-with-files) | [Writing,](#working-with-files)<br>[Reading,](#working-with-files)<br>[Modes](#modes) |
-| **29.** | [Threads](#threads) | |
+| **14.** | [Maps (Dictionaries)](#maps-dictionaries) | |
+| **15.** | [Sets](#sets) | |
+| **16.** | [Pairs](#pairs) | |
+| **17.** | [Tuples](#tuples) | |
+| **18.** | [Algorithms Library](#algorithms-library) | [Algorithms Lib,](#algorithms-library)<br>[Sort](#sort) |
+| **19.** | [Maths](#maths) | cmath |
+| **20.** | [Control Statements & Flow](#control-statements--flow) | [If,](#if-statement)<br>[Ternary Operator,](#ternary-operator)<br>[Switch,](#switch-statement)<br>[Comparison & Logic Operators,](#comparison--logic-operators)<br>[Jump](#jump-statements) |
+| **21.** | [Loops](#loops) | [For,](#for)<br>[For Each,](#for-each)<br>[While,](#while)<br>[Do](#do) |
+| **22.** | [Functions](#functions) | [Function Declaration,](#functions)<br>[Function Overloading,](#function-overloading)<br>[Lambda Functions](#lambda-functions) |
+| **23.** | [Classes & Struts](#classes--struts) | [Class Definition,](#class-definition--inline-methods)<br>[Inline Methods,](#class-definition--inline-methods)<br>[Static Members,](#class-definition--inline-methods)<br>[toString,](#class-definition--inline-methods)<br>[Normal (Not-inline) Methods,](#normal-not-inline-methods)<br>[Constructor,](#constructor)<br>[Destructor,](#destructor)<br>[Instantiation & Member Access,](#instantiation--member-access)<br>[Inheritance,](#inheritance)<br>[Polymorphism,](#inheritance)<br>[Friend Functions,](#friend-functions)<br>[Operator Overloading,](#operator-overloading)<br>[Templates,](#templates)<br>[Structs](#structs) |
+| **24.** | [Enums](#enums) | |
+| **25.** | [Error Handling](#error-handling) | Throw,<br>Try..Catch |
+| **26.** | [Time](#time) | [Time,](#time)<br>[Random Numbers](#random-numbers) |
+| **27.** | [Working With Files](#working-with-files) | [Writing,](#working-with-files)<br>[Reading,](#working-with-files)<br>[Modes](#modes) |
+| **28.** | [Threads](#threads) | |
 
 <br>
 
@@ -152,6 +151,15 @@ e.g.:
 &emsp;`g++ file1.cpp file2.cpp -o output && .\output`  
 
 <br>
+
+##### bits/stdc++.h
+
+`#include <bits/stdc++.h>`  
+* GCC-specific header file that includes **almost all standard libraries**
+* Useful in coding competitions and quick testing
+* **Not recommended for production code** (not portable, slows down compile time)
+
+<br>  
 
 [⬆ Table of Contents ⬆](#cpp-notes)    
 
@@ -368,7 +376,7 @@ e.g.
 
 `a[5]` is equivalent to `*(a+5)` - Arrays are similar to pointers (they point to the first address in the array). The square brackets (offset operator) dereference the variable they follow. Both examples here offset the address by the  index passed  
 
-`++pointer;` - Increments the pointer **by the size of the data type it points to**  
+`++pointer;` - Increments the pointer **by the <u>size</u> of the <u>data type</u> it points to**  
 
 <br>  
 
@@ -438,7 +446,7 @@ e.g.
   
 <br>  
 
-> Dynamic allocations **MUST be deleted** after use:  
+> Dynamic allocations **MUST be <u>deleted</u>** after use:  
 &emsp;`delete pointer;` - Releases the memory of a single element allocated using `new`  
 &emsp;`delete[] pointer;` -  Releases the memory allocated for arrays of elements using new and a size in brackets  
 
@@ -446,7 +454,7 @@ e.g.
 
 ##### Check allocation successful:  
 
-* If allocation fails, exception `std::bad_alloc` will be thrown. This should be handled appropriately (**preferred method for checking successful allocation**):  
+* If allocation fails, exception `std::bad_alloc` will be thrown. This should be handled appropriately (**<u>preferred</u> method for checking successful allocation**):  
 &emsp;`try {`  
 &emsp;&emsp;`pointer = new type[size];` - Dynamically allocate  
 &emsp;&emsp;`// other code`  
@@ -507,26 +515,6 @@ e.g.
 
 ---  
 
-### Maths
-
-[Reference](https://cplusplus.com/reference/cmath/)  
-
-`#include <cmath>`  
-
-`pow(x, y)`  = **x<sup>y</sup>**  
-`sqrt(x)`  = **$\sqrt{x}$**  
-`round(x)`  = rounds x to **nearest** int  
-`floor(x)`  = rounds **down**  
-`ceil(x)`  = rounds **up**  
-`fmax(x, y)`  = returns highest value  
-`fmin(x, y)`  = returns lowest value  
-
-<br>
-
-[⬆ Table of Contents ⬆](#cpp-notes)    
-
----  
-
 ### Strings  
 
 [Library Reference](https://cplusplus.com/reference/string/)  
@@ -576,6 +564,135 @@ e.g.
 
 ---  
 
+### Arrays  
+
+> To use dynamic arrays (with **variables as size**), see [dynamic memory](#dynamic-memory) above  
+
+`<type> <arr_var>[<size>] = {<item1>, <item2>, ...};` - Declare array and populate  
+* Declaring size of array is optional  
+
+`<arr_var>[<index>];` - Access items by index  
+
+`sizeof(<arr_var>) / sizeof(*<arr_var>);` - Get size of array (number of items)  
+
+`<type> <arr_var>[][<size>] = {`  
+&emsp;`{<item> ...},`  
+&emsp;`{<item> ...}`  
+`};`  
+* Declare & populate nested array  
+* Size of outer array is optional, however **required for nested**  
+* Access nested items `<arr_var>[<row_index>][<col_index>];`  
+
+<br>  
+
+##### STL Arrays  
+[Library Reference](https://cplusplus.com/reference/array/)  
+[Class Reference](https://cplusplus.com/reference/array/array/)  
+* Standard template library arrays  
+  
+`#include <array>`  
+
+`std::array<type, size> var = {item1, item2, ...};`  
+e.g.  
+&emsp;`std::array<int, 4> ages = {55, 27, 35, 40};`  
+* Declary an array using STL lib  
+
+`<var>.front();`  
+* First ele of array  
+
+`<var>.back();`  
+* Last ele of array  
+
+`<var>.at(<index>);`  
+* Access element at index  
+* Can still use regular indexing  
+* This protects against trying to access an **index which does not exist** as will abort  
+
+`<var>.fill(<value>);`  
+* Populates every element in array with value passed  
+
+`<arr1>.swap(<arr2>);`  
+* Swaps elements of arr1 with arr2 and vice-versa  
+
+
+##### STL Vectors  
+[Library Reference](https://cplusplus.com/reference/vector/)  
+[Class Reference](https://cplusplus.com/reference/vector/vector/)  
+* Vectors are like arrays but know their size  
+
+`#include <vector>`  
+
+`std::vector<type> var = {item1, item2, ...};`  
+e.g.  
+&emsp;`std::vector<int> data = {1, 4, 5, 6};`  
+* Can be used with standard 'for each' loop  
+
+`var[index];`  
+* Access element at index  
+* If out of bounds will return 1 (or address), but not throw an error  
+* If want error when out of bounds, use `var.at(index);`  
+
+`<var>.front();`  
+* First ele of array  
+
+`<var>.back();`  
+* Last ele of array  
+
+`var.push_back(<item>);`  
+* Appends item to var  
+
+`var.size();`  
+* Returns vector length  
+
+`var.resize(<new_size>)`  
+* Resizes vector and initialises new items as 0  
+
+`var.assign(<new_size>, <initialise_to_value>);`  
+* Resizes vector to `new_size` and initialises each to value passed  
+
+`var.clear();`  
+* Destroys elements and clears array (size = 0)  
+
+`var.empty();`  
+* Checks if array is empty (size == 0, NOT items == 0), returns 1 if true  
+
+`std::vector<std::vector<type>> var = {`  
+&emsp;`{item1, item2, ...},`  
+&emsp;`{item1},`  
+&emsp;`...`  
+`};`  
+* Nested vectors do not need to be of same size  
+
+`for(std::vector<type> v : var) {`  
+&emsp;`for(<type> var : v) {`  
+&emsp;&emsp;`std::cout << var << std::endl;`  
+&emsp;`}`  
+`}`  
+* Outputs nested vector values  
+
+##### Sort  
+Also see [Algorithms library](#algorithms-library) for more details  
+* Used to sort elements in a container (usually vector or array)  
+* Sorts by **ascending order** by default using the `<` operator  
+* Note: may not preserve the relative order of equal elements. Use `std::stable_sort` if that’s important  
+* Works only on random-access iterators (i.e. NOT lists)  
+
+`#include <algorithm>`  
+
+`std::sort(var.begin(), var.end());`  
+
+Custom sorting:  
+`std::sort(var.begin(), var.end(), [](int a, int b) {`  
+&emsp;`return a > b;`  
+`});`  
+* Example shows reversing default comparison  
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)    
+
+---  
+
 ### Lists  
 
 Ordered sequence of variables of **the same type**.  
@@ -595,43 +712,178 @@ Ordered sequence of variables of **the same type**.
 
 ---  
 
-### Dictionaries / Maps  
+### Maps (Dictionaries)  
 
-##### Maps:
-* Sorted by key  
-  
+[Library Reference](https://cplusplus.com/reference/map/)  
+[Class Reference](https://cplusplus.com/reference/map/map)  
+
 `#include <map>`  
-`std::map<key_type, value_type> var;`  
 
-`var[key] = value;` Add item  
+`std::map<key_type, value_type> var = {`  
+&emsp;`{key1, val},`  
+&emsp;`{key2, val},`  
+&emsp;`...`  - Last key/val pair is not followed by comma  
+`};`    
+* Map **keys** are **ordered** and **unique**  
+* **Sorted by key**  
 
 `std::map<key_type, value_type> var = { {key1, val1}, {key2, val2}... };` Add items when initialising  
 
 Access:  
-`var[key];`  
+`var[key];` - Access value, will output default value of 0 if does not exist    
 `var.at(key);` - safer, throws exception when not found  
 
-* Loop through to print items:  
-  &emsp;`for (auto item : var) {`  
-  &emsp;&emsp;`std::cout << "key: " << item.first << " value: " \<< item.second;}`
+`var[key] = val;` - Add new key value pair or change value  
+`var.insert(std::pair<key_type, val_type>(key, val));` - First checks if key exists before inserting pair, does nothing if it does exist  
+
+`var.size();` - number of key-value pairs  
+`var.empty();` - returns true if empty, 0 = false, 1 = true  
+`var.find(key);` - Searches container `var` for `key` and returns an iterator to it if found, otherwise returns iterator to `map::end` (theoretical  element that would follow the last element in the map container)  
 
 Remove:  
 `var.erase(key);` - removes key if present  
 `var.clear();` - empties map  
 
-`var.size();` - number of key-value pairs  
-`var.empty();` - returns true if empty  
+Iterate:
+Loop through to print items:  
+  &emsp;`for (auto item : var) {`  
+  &emsp;&emsp;`std::cout << "key: " << item.first << " value: " \<< item.second;}`
 
-##### Unordered map:
-Use `unordered_map` for **faster lookups and don't care about ordering:  
-
-`#include <unordered_map>`  
-`std::unordered_map<key_type, value_type> var;`  
-
+OR:
+`for(auto i = var.begin(); i != var.end(); i++) {`  
+&emsp;`... i->first ...;` - Outputs map key, do something with it  
+`}`  
+* Iterates map **keys**  
+* Iterate map **values** by changing `i->first` to **`i->second`**  
+* `auto` deduces type, can be better to use `std::map<key_type, value_type>::iterator var` to control type used  
 
 <br>
 
-[⬆ Table of Contents ⬆](#cpp-notes)
+[⬆ Table of Contents ⬆](#cpp-notes)    
+
+---  
+
+### Sets  
+
+[Library Reference](https://cplusplus.com/reference/set/)  
+[Class Reference](https://cplusplus.com/reference/set/set/)  
+
+`#include <set>`  
+
+`std::set<type> var = {ele1, ele2, ...};`  
+* Sets are **ordered**  
+* Sets are **unique**  
+
+Iterating:
+`for(auto i = var.begin(); i != var.end(); i++) {`  
+&emsp;`std::cout << *i << std::endl;`  - Note dereference operator
+`}`  
+* `auto` deduces type, can be better to use `std::set<type>::iterator var` to control type used  
+* `begin()` and `end()` methods return an iterator to first element in set and **past-the-end** element respectfully  
+
+`var.erase(ele);` - Removes element from set  
+
+`var.find(ele);` - Searches container `var` and returns an iterator to it if found, otherwise returns iterator to `set::end` (theoretical  element that would follow the last element in the set container)  
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)    
+
+---  
+
+### Pairs  
+
+* A container to hold two related values of **possibly different types**  
+
+`std::pair<type1, type2> var = {ele1, ele2};`  
+OR  
+`auto var = std::make_pair(ele1, ele2);`  
+
+Access:  
+`var.first;`
+`var.second;`  
+
+Can use comparison operators for two pairs, it will **compare first elements**, if they are equal it then compares the second elements  
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)   
+
+---  
+
+### Tuples  
+
+[Library Reference](https://cplusplus.com/reference/tuple/)  
+[Class Reference](https://cplusplus.com/reference/tuple/tuple)  
+
+* Object capable of holding collection of elements (different types)  
+
+`#include <tuple>`  
+
+`std::tuple<type1, type2,...> var(ele1, ele2,...);`  
+OR
+`std::tuple<type1, type2,...> var;`  
+`var = std::make_tuple(ele1, ele2,...);`
+* Declare a tuple  
+* Types must be in order corresponding elements are in  
+  
+`std::get<index>(var);` - Get value from tuple at index specified  
+
+`std::get<index>(var) = new_ele;` - Reassigns value at index, must be **same type**  
+
+`std::tie(var1, var2,...) = tuple;` - Unpacks `tuple` contents to variables as per element positions  
+[Tie reference](https://cplusplus.com/reference/tuple/tie/)  
+
+`tuple1.swap(tuple2);` - Swaps elements of `tuple1` with `tuple2` so long as tuples are **same length and types**  
+
+`std::tuple<type1, type2,...> var = std::tuple_cat(tuple1, tuple2,...);` - Concatenates tuples into a single tuple. **Types must match order**  
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)    
+
+---  
+
+### Algorithms Library  
+
+[Reference](https://cplusplus.com/reference/algorithm/)  
+* Collection of functions especially designed to be used on ranges of elements (sorting, merging, min/max, various tests ect.)  
+
+<br>  
+
+<u>Sort</u>  
+[Sort reference](https://cplusplus.com/reference/algorithm/sort/)  
+Also see [Sort](#sort)
+
+`std::sort(iterator_first, iterator_last, comparator);` - Sorts iterator (object pointing to some element in a range of elements) in ascending order from first to last  
+e.g.
+&emsp;`std::sort(vector.begin(), vector.end());`  
+* Modifies original variable  
+* `comparator` is **optional**, can be a function (incl lambdas) or strut/object  
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)    
+
+---  
+
+### Maths
+
+[Reference](https://cplusplus.com/reference/cmath/)  
+
+`#include <cmath>`  
+
+`pow(x, y)`  = **x<sup>y</sup>**  
+`sqrt(x)`  = **$\sqrt{x}$**  
+`round(x)`  = rounds x to **nearest** int  
+`floor(x)`  = rounds **down**  
+`ceil(x)`  = rounds **up**  
+`fmax(x, y)`  = returns highest value  
+`fmin(x, y)`  = returns lowest value  
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
 ---  
 
@@ -671,7 +923,7 @@ Use `unordered_map` for **faster lookups and don't care about ordering:
 &emsp;`...`  
 &emsp;`default:`  
 &emsp;&emsp;`default-group-of-statments;`  
-* Note switch is limited to compare its evaluated expression against labels that are **constant expressions**. It is not possible to use variables as labels or ranges  
+* Note switch is limited to compare its evaluated expression against labels that are **constant expressions**. It is <u>not possible to use variables</u> as labels or ranges  
 * `expression` must be an int  
 * `default` is optional  
   
@@ -777,7 +1029,7 @@ Use `unordered_map` for **faster lookups and don't care about ordering:
 * Can allow a function to accept a container e.g. `std::vector<T>` with any type by specifying a template with `typename`
 
 ##### Function Overloading  
-* Define function multiple times with same function name but **different parameters** (**different number of params** and/or **different types**, can also have **different return type**)  
+* Define function multiple times with same function name but **<u>different parameters</u>** (**different number of params** and/or **different types**, can also have **different return type**)  
 * Allows function to change behaviour when different arguments passed in (different numbers)  
 
 <br>  
@@ -923,7 +1175,7 @@ If empty parenthesis are used, this **WILL NOT** call the default constructor
 
 `Class(type var) : const_attribute(val) { //code }` - constant members can be set in constructor. Note `:` (member initiliser list) and is set between `()` and `{}`  
 
-`Class(type var) : Parent(param), attribute(val) {this->another_way_attribute = val;}` - Calls parent constructor as well as sets own members `attribute` value (shown multiple ways) - This way of setting members (using the member initiliser list `': attr(val),...'` is **REQUIRED** if using other objects inside a class   
+`Class(type var) : Parent(param), attribute(val) {this->another_way_attribute = val;}` - Calls parent constructor as well as sets own members `attribute` value (shown multiple ways) - This way of setting members (using the member initiliser list `': attr(val),...'`) is **REQUIRED** <u>if using other objects inside a class</u>   
 
 <br>  
 
@@ -1133,280 +1385,6 @@ After declaring the functions, both member and non-member functions can be used 
 `std::rand()` - Generates random number  
 `std::rand() % 10` - Defines random numbers between 0 and **9** (+ 1 if wanting 1 - 10)  
 **Alternatively** use `<random>` library - [See here](https://cplusplus.com/reference/random/)
-
-<br>
-
-[⬆ Table of Contents ⬆](#cpp-notes)    
-
----  
-
-### Arrays  
-
-> To use dynamic arrays (with **variables as size**), see dynamic memory above  
-
-`<type> <arr_var>[<size>] = {<item1>, <item2>, ...};` - Declare array and populate  
-* Declaring size of array is optional  
-
-`<arr_var>[<index>];` - Access items by index  
-
-`sizeof(<arr_var>) / sizeof(*<arr_var>);` - Get size of array (number of items)  
-
-`<type> <arr_var>[][<size>] = {`  
-&emsp;`{<item> ...},`  
-&emsp;`{<item> ...}`  
-`};`  
-* Declare & populate nested array  
-* Size of outer array is optional, however **required for nested**  
-* Access nested items `<arr_var>[<row_index>][<col_index>];`  
-
-<br>  
-
-##### STL Arrays  
-[Library Reference](https://cplusplus.com/reference/array/)  
-[Class Reference](https://cplusplus.com/reference/array/array/)  
-* Standard template library arrays  
-  
-`#include <array>`  
-
-`std::array<type, size> var = {item1, item2, ...};`  
-e.g.  
-&emsp;`std::array<int, 4> ages = {55, 27, 35, 40};`  
-* Declary an array using STL lib  
-
-`<var>.front();`  
-* First ele of array  
-
-`<var>.back();`  
-* Last ele of array  
-
-`<var>.at(<index>);`  
-* Access element at index  
-* Can still use regular indexing  
-* This protects against trying to access an **index which does not exist** as will abort  
-
-`<var>.fill(<value>);`  
-* Populates every element in array with value passed  
-
-`<arr1>.swap(<arr2>);`  
-* Swaps elements of arr1 with arr2 and vice-versa  
-
-
-##### STL Vectors  
-[Library Reference](https://cplusplus.com/reference/vector/)  
-[Class Reference](https://cplusplus.com/reference/vector/vector/)  
-* Vectors are like arrays but know their size  
-
-`#include <vector>`  
-
-`std::vector<type> var = {item1, item2, ...};`  
-e.g.  
-&emsp;`std::vector<int> data = {1, 4, 5, 6};`  
-* Can be used with standard 'for each' loop  
-
-`var[index];`  
-* Access element at index  
-* If out of bounds will return 1 (or address), but not throw an error  
-* If want error when out of bounds, use `var.at(index);`  
-
-`<var>.front();`  
-* First ele of array  
-
-`<var>.back();`  
-* Last ele of array  
-
-`var.push_back(<item>);`  
-* Appends item to var  
-
-`var.size();`  
-* Returns vector length  
-
-`var.resize(<new_size>)`  
-* Resizes vector and initialises new items as 0  
-
-`var.assign(<new_size>, <initialise_to_value>);`  
-* Resizes vector to `new_size` and initialises each to value passed  
-
-`var.clear();`  
-* Destroys elements and clears array (size = 0)  
-
-`var.empty();`  
-* Checks if array is empty (size == 0, NOT items == 0), returns 1 if true  
-
-`std::vector<std::vector<type>> var = {`  
-&emsp;`{item1, item2, ...},`  
-&emsp;`{item1},`  
-&emsp;`...`  
-`};`  
-* Nested vectors do not need to be of same size  
-
-`for(std::vector<type> v : var) {`  
-&emsp;`for(<type> var : v) {`  
-&emsp;&emsp;`std::cout << var << std::endl;`  
-&emsp;`}`  
-`}`  
-* Outputs nested vector values  
-
-##### Sort  
-* Used to sort elements in a container (usually vector or array)  
-* Sorts by **ascending order** by default using the `<` operator  
-* Note: may not preserve the relative order of equal elements. Use `std::stable_sort` if that’s important  
-* Works only on random-access iterators (i.e. NOT lists)  
-
-`#include <algorithm>`  
-
-`std::sort(var.begin(), var.end());`  
-
-Custom sorting:  
-`std::sort(var.begin(), var.end(), [](int a, int b) {`  
-&emsp;`return a > b;`  
-`});`  
-* Example shows reversing default comparison  
-
-<br>
-
-[⬆ Table of Contents ⬆](#cpp-notes)    
-
----  
-
-### Sets  
-
-[Library Reference](https://cplusplus.com/reference/set/)  
-[Class Reference](https://cplusplus.com/reference/set/set/)  
-
-`#include <set>`  
-
-`std::set<type> var = {ele1, ele2, ...};`  
-* Sets are **ordered**  
-* Sets are **unique**  
-
-Iterating:
-`for(auto i = var.begin(); i != var.end(); i++) {`  
-&emsp;`std::cout << *i << std::endl;`  - Note dereference operator
-`}`  
-* `auto` deduces type, can be better to use `std::set<type>::iterator var` to control type used  
-* `begin()` and `end()` methods return an iterator to first element in set and **past-the-end** element respectfully  
-
-`var.erase(ele);` - Removes element from set  
-
-`var.find(ele);` - Searches container `var` and returns an iterator to it if found, otherwise returns iterator to `set::end` (theoretical  element that would follow the last element in the set container)  
-
-<br>
-
-[⬆ Table of Contents ⬆](#cpp-notes)    
-
----  
-
-### Pairs  
-
-* A container to hold two related values of **possibly different types**  
-
-`std::pair<type1, type2> var = {ele1, ele2};`  
-OR  
-`auto var = std::make_pair(ele1, ele2);`  
-
-Access:  
-`var.first;`
-`var.second;`  
-
-Can use comparison operators for two pairs, it will **compare first elements**, if they are equal it then compares the second elements  
-
-<br>
-
-[⬆ Table of Contents ⬆](#cpp-notes)   
-
----  
-
-### Tuples  
-
-[Library Reference](https://cplusplus.com/reference/tuple/)  
-[Class Reference](https://cplusplus.com/reference/tuple/tuple)  
-
-* Object capable of holding collection of elements (different types)  
-
-`#include <tuple>`  
-
-`std::tuple<type1, type2,...> var(ele1, ele2,...);`  
-OR
-`std::tuple<type1, type2,...> var;`  
-`var = std::make_tuple(ele1, ele2,...);`
-* Declare a tuple  
-* Types must be in order corresponding elements are in  
-  
-`std::get<index>(var);` - Get value from tuple at index specified  
-
-`std::get<index>(var) = new_ele;` - Reassigns value at index, must be **same type**  
-
-`std::tie(var1, var2,...) = tuple;` - Unpacks `tuple` contents to variables as per element positions  
-[Tie reference](https://cplusplus.com/reference/tuple/tie/)  
-
-`tuple1.swap(tuple2);` - Swaps elements of `tuple1` with `tuple2` so long as tuples are **same length and types**  
-
-`std::tuple<type1, type2,...> var = std::tuple_cat(tuple1, tuple2,...);` - Concatenates tuples into a single tuple. **Types must match order**  
-
-<br>
-
-[⬆ Table of Contents ⬆](#cpp-notes)    
-
----  
-
-### Maps (Dictionaries)  
-
-[Library Reference](https://cplusplus.com/reference/map/)  
-[Class Reference](https://cplusplus.com/reference/map/map)  
-
-`#include <map>`  
-
-`std::map<key_type, value_type> var = {`  
-&emsp;`{key1, val},`  
-&emsp;`{key2, val},`  
-&emsp;`...`  - Last key/val pair is not followed by comma  
-`};`    
-* Map **keys** are **ordered** and **unique**  
-
-`var.size();` - Returns number of key/value pairs  
-
-`var[key];` - Access value, will output default value of 0 if does not exist  
-
-`var[key] = val;` - Add new key value pair or change value  
-`var.insert(std::pair<key_type, val_type>(key, val));` - First checks if key exists before inserting pair, does nothing if it does exist  
-
-`var.erase(key);` - Destroys key/value pair reducing map size  
-
-`var.clear();` - Destroys all key/value pairs  
-
-`var.empty();` - Checks if map is empty, 0 = false, 1 = true  
-
-`var.find(key);` - Searches container `var` for `key` and returns an iterator to it if found, otherwise returns iterator to `map::end` (theoretical  element that would follow the last element in the map container)  
-
-`for(auto i = var.begin(); i != var.end(); i++) {`  
-&emsp;`... i->first ...;` - Outputs map key, do something with it  
-`}`  
-* Iterates map **keys**  
-* Iterate map **values** by changing `i->first` to **`i->second`**  
-* `auto` deduces type, can be better to use `std::map<key_type, value_type>::iterator var` to control type used  
-
-<br>
-
-[⬆ Table of Contents ⬆](#cpp-notes)    
-
----  
-
-### Algorithms Library  
-
-[Reference](https://cplusplus.com/reference/algorithm/)  
-* Collection of functions especially designed to be used on ranges of elements (sorting, merging, min/max, various tests ect.)  
-
-<br>  
-
-Sort  
-[Sort reference](https://cplusplus.com/reference/algorithm/sort/)  
-Also see [Sort](#sort)
-
-`std::sort(iterator_first, iterator_last, comparator);` - Sorts iterator (object pointing to some element in a range of elements) in ascending order from first to last  
-e.g.
-&emsp;`std::sort(vector.begin(), vector.end());`  
-* Modifies original variable  
-* `comparator` is **optional**, can be a function (incl lambdas) or strut/object  
 
 <br>
 
