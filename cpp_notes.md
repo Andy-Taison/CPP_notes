@@ -7,33 +7,36 @@
 |Item|Heading|   Sub Contents|
 |:---:|:---:|:---:|
 | **1.** | [Comments](#comments) | Single,<br>Multi,<br>Document |
-| **2.** | [Compile](#compile) | [Compiling,](#compile)<br>[Makefiles](#makefiles) |
-| **3.** | [Include Libraries/Files](#include-librariesfiles) | [#include,](#include-librariesfiles)<br>[Custom Header Files](#custom-header-files)<br>[bits/stdc++.h](#bitsstdch) |
+| **2.** | [Compile](#compile) | [Compiling](#compile),<br>[Makefiles](#makefiles),<br>[CMake Basics](#cmake-basics) |
+| **3.** | [Include Libraries/Files](#include-librariesfiles) | [#include](#include-librariesfiles),<br>[Custom Header Files](#custom-header-files),<br>[bits/stdc++.h](#bitsstdch) |
 | **4.** | [Command Line Arguments](#command-line-arguments) | argc,<br>argv |
 | **5.** | [Outputs](#outputs) | cout,<br>printf |
 | **6.** | [User Input](#user-input) | cin,<br>get,<br>getline |
-| **7.** | [Namespaces](#namespaces) | [Using namespace,](#namespaces)<br>[Namespace Functions](#custom-namespaces) |
+| **7.** | [Namespaces](#namespaces) | [Using namespace](#namespaces),<br>[Namespace Functions](#custom-namespaces) |
 | **8.** | [Scopes](#scopes) | Global,<br>Local |
-| **9.** | [Data Types](#data-types) | [const,](#data-types)<br>[static,](#data-types)<br>[Data Types List,](#data-types)<br>[Aliases,](#aliases)<br>[#define (Macros)](#define-macros),<br>[Conditional Inclusions](#conditional-inclusions) |
-| **10.** | [Pointers](#pointers) | [Declare,](#pointers)<br>[Address-of-Operator,](#pointers)<br>[Dereference Operator,](#pointers)<br>[Incrementing,](#incrementing)<br>[Const Pointers,](#constant-pointers)<br>[Void Pointers,](#void-pointers)<br>[Invalid Pointers,](#invalid-pointers)<br>[Null Pointers,](#null-pointers)<br>[Dynamic Memory,](#dynamic-memory)<br>[Checking Allocation,](#check-allocation-successful)<br>[Smart Pointers](#smart-pointers) |  
+| **9.** | [Data Types](#data-types) | [const](#const-keyword),<br>[static](#static-keyword),<br>[auto Keyword](#auto-keyword),<br>[Type Promotion](#type-promotion-and-conversion),<br>[sizeof()](#sizeof),<br>[Data Types List](#data-types),<br>[Finding the Type of an Object (typeid)](#finding-the-type-of-an-object-typeid),<br>[Aliases](#aliases),<br>[#define (Macros)](#define-macros),<br>[Conditional Inclusions](#conditional-inclusions) |
+| **10.** | [Pointers](#pointers) | [Declare](#pointers),<br>[Address-of-Operator](#pointers),<br>[Dereference Operator](#pointers),<br>[Incrementing](#incrementing),<br>[Const Pointers](#constant-pointers),<br>[Void Pointers](#void-pointers),<br>[Invalid Pointers](#invalid-pointers),<br>[Null Pointers](#null-pointers),<br>[Dynamic Memory](#dynamic-memory),<br>[Checking Allocation](#check-allocation-successful),<br>[Smart Pointers](#smart-pointers) |  
 | **11.** | [Strings](#strings) | String Methods |
-| **12.** | [Arrays](#arrays) | [Standard arrays,](#arrays)<br>[STL Arrays,](#stl-arrays)<br>[STL Vectors](#stl-vectors)<br>[Sort](#sort) |
+| **12.** | [Arrays](#arrays) | [Standard arrays](#arrays),<br>[STL Arrays](#stl-arrays),<br>[STL Vectors](#stl-vectors),<br>[Sort](#sort) |
 | **13.** | [Lists](#lists) | |
-| **14.** | [Maps (Dictionaries)](#maps-dictionaries) | |
+| **14.** | [Maps (Dictionaries)](#maps-dictionaries) | [Maps](#maps-dictionaries),<br>[Multimaps](#multimaps) |
 | **15.** | [Sets](#sets) | |
 | **16.** | [Pairs](#pairs) | |
 | **17.** | [Tuples](#tuples) | |
-| **18.** | [Algorithms Library](#algorithms-library) | [Algorithms Lib,](#algorithms-library)<br>[Sort](#sort) |
+| **18.** | [Algorithms Library](#algorithms-library) | [Algorithms List](#algorithms-library) |
 | **19.** | [Maths](#maths) | cmath |
-| **20.** | [Control Statements & Flow](#control-statements--flow) | [If,](#if-statement)<br>[Ternary Operator,](#ternary-operator)<br>[Switch,](#switch-statement)<br>[Comparison & Logic Operators,](#comparison--logic-operators)<br>[Jump](#jump-statements) |
-| **21.** | [Loops](#loops) | [For,](#for)<br>[For Each,](#for-each)<br>[While,](#while)<br>[Do](#do) |
-| **22.** | [Functions](#functions) | [Function Declaration,](#functions)<br>[Function Overloading,](#function-overloading)<br>[Lambda Functions](#lambda-functions) |
-| **23.** | [Classes & Struts](#classes--struts) | [Class Definition,](#class-definition--inline-methods)<br>[Inline Methods,](#class-definition--inline-methods)<br>[Static Members,](#class-definition--inline-methods)<br>[toString,](#class-definition--inline-methods)<br>[Normal (Not-inline) Methods,](#normal-not-inline-methods)<br>[Constructor,](#constructor)<br>[Destructor,](#destructor)<br>[Instantiation & Member Access,](#instantiation--member-access)<br>[Inheritance,](#inheritance)<br>[Polymorphism,](#inheritance)<br>[Friend Functions,](#friend-functions)<br>[Operator Overloading,](#operator-overloading)<br>[Templates,](#templates)<br>[Structs](#structs) |
-| **24.** | [Enums](#enums) | |
-| **25.** | [Error Handling](#error-handling) | Throw,<br>Try..Catch |
-| **26.** | [Time](#time) | [Time,](#time)<br>[Random Numbers](#random-numbers) |
-| **27.** | [Working With Files](#working-with-files) | [Writing,](#working-with-files)<br>[Reading,](#working-with-files)<br>[Modes](#modes) |
-| **28.** | [Threads](#threads) | |
+| **20.** | [Control Statements & Flow](#control-statements--flow) | [If](#if-statement),<br>[Ternary Operator](#ternary-operator),<br>[Switch](#switch-statement),<br>[Comparison & Logic Operators](#comparison--logic-operators),<br>[Jump](#jump-statements) |
+| **21.** | [Loops](#loops) | [For](#for),<br>[For Each](#for-each),<br>[While](#while),<br>[Do](#do) |
+| **22.** | [Functions](#functions) | [Function Declaration](#functions),<br>[Function Overloading](#function-overloading),<br>[Lambda Functions](#lambda-functions) |
+| **23.** | [Classes & Struts](#classes--struts) | [Class Definition](#class-definition--inline-methods),<br>[Inline Methods](#class-definition--inline-methods),<br>[Static Members](#class-definition--inline-methods),<br>[toString](#class-definition--inline-methods),<br>[Normal (Not-inline) Methods](#normal-not-inline-methods),<br>[Constructor](#constructor),<br>[explicit Keyword](#explicit-keyword),<br>[Destructor](#destructor),<br>[Copy Constructor vs Copy Assignment Operator](#copy-constructor-vs-copy-assignment-operator),<br>[Rule of 0 / 3 / 5](#rule-of-0--3--5),<br>[Move Semantics](#move-semantics-c11),<br>[Instantiation & Member Access](#instantiation--member-access),<br>[Inheritance](#inheritance),<br>[Polymorphism](#inheritance),<br>[Virtual Functions and Override](#virtual-functions-and-override),<br>[Friend Functions](#friend-functions),<br>[Operator Overloading](#operator-overloading),<br>[Templates](#templates),<br>[Structs](#structs) |
+| **24.** | [RAII (Resource Acquisition Is Initialisation)](#raii-resource-acquisition-is-initialisation) | |
+| **25.** | [Enums](#enums) | [Traditional Enum](#traditional-enums),<br>[Enum Class](#enum-class) |
+| **26.** | [Error Handling](#error-handling) | [Throw, Try..Catch](#throw-trycatch),<br>[Exception Rules](#exception-rules),<br>[noexcept](#noexcept),<br>[Types of Standard Exceptions](#types-of-standard-exceptions) |
+| **27.** | [Time](#time) | [Time](#time),<br>[Random Numbers](#random-numbers) |
+| **28.** | [Working With Files](#working-with-files) | [Writing](#working-with-files),<br>[Reading](#working-with-files),<br>[Modes](#modes),<br>[Parsing CSV Files](#parsing-csv-files) |
+| **28.** | [Logging / Writing Logs ](#logging--writing-logs) | |
+| **30.** | [ Unit Testing](#unit-testing-in-c) | |
+| **31.** | [Threads](#threads) | [Threads](#threads),<br>[Concurrency Basics](#concurrency-basics-for-future-reference) |
 
 <br>
 
@@ -120,6 +123,29 @@ e.g.:
 * It is also good practice to have a rule for `clean` which should remove the output files (but would require calling separately with `make clean`)  
 * CMakeList files can be used to configure and automatically build make files absracting away platform specific details  
 
+##### CMake Basics  
+
+* CMake is the most common build tool for modern C++ projects  
+
+```cmake
+# Create `CMakeLists.txt`:
+cmake_minimum_required(VERSION 3.10)
+project(MyApp)
+
+set(CMAKE_CXX_STANDARD 17)
+
+add_executable(MyApp main.cpp)
+```
+
+```bash
+# Usage in bash
+mkdir build
+cd build
+cmake ..
+make
+./MyApp
+```
+
 <br>
 
 [⬆ Table of Contents ⬆](#cpp-notes)    
@@ -158,6 +184,19 @@ e.g.:
 * GCC-specific header file that includes **almost all standard libraries**
 * Useful in coding competitions and quick testing
 * **Not recommended for production code** (not portable, slows down compile time)
+* In production code, **explicitly include only the headers you need**  
+For example:
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <map>
+/*
+* Improves compilation time
+* Ensures portability across compilers (e.g., MSVC, Clang)
+* Makes dependencies explicit, which aids readability and debugging
+*/
+```
 
 <br>  
 
@@ -239,7 +278,7 @@ C++ Boilerplate:
 
 [Reference](https://cplusplus.com/doc/tutorial/namespaces/#namespace)  
 
-`using namespace std;`
+`using namespace std;` - Not recommended in headers  
 * Can be included as shown at top of file, however **more common to use `std::`** in front of `cout` and `endl`, as `using namespace std;` **can cause issues** if libraries are also using the namespace  
 
 ##### Custom Namespaces  
@@ -292,10 +331,47 @@ C++ Boilerplate:
 [Reference](https://cplusplus.com/doc/tutorial/variables/)  
 [Type casting reference](https://cplusplus.com/doc/tutorial/typecasting/)  
 
+##### const keyword
 `const <type> VAR = val;` - Variables declared `const` are constants and cannot be modified once initialised. Typically declare `VAR` in **capitals** to denote constant. Note this is different to `#define` constants which are preprocessor directives, `const` are program constants  
 
+##### static keyword
 `static` [(storage specifier)](https://en.cppreference.com/w/cpp/language/storage_duration) - The storage for the object is allocated when the program begins and deallocated when the program ends. Only one instance of the object exists  
 
+##### auto keyword
+`auto var = expression;`  
+* Automatically infers type based on right-hand expression  
+* Reduces boilerplate, especially for iterators or templates  
+* Use cautiously for readability  
+* Use `typeid(var).name()` to check what type `auto` resolved to (for debugging) [see notes on typeid()](#finding-the-type-of-an-object-typeid)  
+
+```cpp
+auto x = 5;            // int
+auto name = "Andy";    // const char*
+auto it = map.begin(); // std::map<Key, Val>::iterator
+```
+
+##### Type Promotion and Conversion
+
+* **Integer Promotion** – smaller types (e.g., `char`, `short`) are promoted to `int` during expressions
+```cpp
+char a = 65;
+int b = a + 5;   // a promoted to int
+```
+* Usual Arithmetic Conversions – when types differ, the smaller or less precise type is promoted:  
+  * int + double → result is double
+  * float + long → result is float
+* Auto uses promotion logic when type deduction happens:  
+```cpp
+auto x = 5;       // int
+auto y = 5.0;     // double
+auto z = 'A';     // char promoted to int (if used in arithmetic)
+
+// Can explicitly control promotion using casting:
+int x = 5;
+double y = static_cast<double>(x);
+```  
+
+##### sizeof()  
 `sizeof(<type>)` - will return data type size in bytes 
 
 `#include <limits.h>` - Library which contains functions such as `INT_MAX` and `LONG_MIN` to retrieve min and max values  
@@ -310,6 +386,39 @@ C++ Boilerplate:
 |Double|double x = 5.234245252525;||longer number - up to 15 decimal places|8||
 |Unsigned|unsigned int y = 2;||Unsigned cannot be negative, but allows for twice the largest value of the number type used<br>Assigning to -1 will return the largest value|||
 |Boolean|bool old = false;|||1||
+
+<br>
+
+### Finding the Type of an Object (typeid)
+
+`#include <typeinfo>`  
+
+Use `typeid(obj).name()` to find an object's dynamic type (mostly for debugging):
+
+* `typeid(obj).name()` returns a `const char*`, but the **output string format is not standardised**  
+* For example, on GCC: `int` → "i", `std::string` → `NSt7__cxx1112basic_string...`  
+* On MSVC, it may return readable strings like `int`, `std::string`, etc    
+* **Use for debugging or tooling**, <u>not for logic</u>  
+
+```cpp
+#include <typeinfo>
+
+int a = 5;
+std::cout << typeid(a).name();  // Output: "i" (implementation-defined)
+
+// Use with pointers
+int* p = &a;
+std::cout << typeid(p).name();  // Output: "Pi"
+```
+
+For polymorphic types (with virtual functions), it shows the dynamic type:  
+```cpp
+class Base { public: virtual ~Base() = default; };
+class Derived : public Base {};
+
+Base* obj = new Derived;
+std::cout << typeid(*obj).name();  // Shows Derived
+```
 
 <br>
 
@@ -393,8 +502,9 @@ e.g.
 ##### Constant Pointers  
 
 `int x = 10;`  
-`const int* p = &x;` - non-constant pointer to constant integer: `p` points to x, but because it is declared `const`, it can read the value stored in `x`, but NOT modify it  
-`int* const p = &x;` - constant pointer to non-constant integer  
+`const int* ptr = &x;` – pointer to a **const int** (value cannot be changed)  
+`int* const ptr = &x;` – **const pointer** to an int (address cannot be changed)  
+`const int* const ptr = &x;` – const pointer to a const int (neither can change)  
 
 <br>  
 
@@ -493,7 +603,7 @@ e.g.
 * `val/var` is optional and only required if pointing to a specific pre-declared object or passing a specific value to the object constructor  
 * Unique pointers are a one-to-one relationship and grants exclusive ownership  
 * Unique pointers cannot be copied, although ownership can be moved:  
-&emsp;`std::unique_ptr<type> pointer_var2 = std::move(original_pointer_var);`  
+&emsp;`std::unique_ptr<type> pointer_var2 = std::move(original_pointer_var);` - `original_pointer_var` becomes **nullptr**  
 * The unique pointer will be deleted and freed once the object is deleted (such as exiting its scope)  
 
 <br>  
@@ -641,6 +751,10 @@ e.g.
 `var.push_back(<item>);`  
 * Appends item to var  
 
+`var.emplace_back(val);`   
+* Adds a new element at the end by **constructing it in-place**  
+* Slightly more efficient than `push_back` when the element is a complex object  
+
 `var.size();`  
 * Returns vector length  
 
@@ -735,6 +849,9 @@ Access:
 
 `var[key] = val;` - Add new key value pair or change value  
 `var.insert(std::pair<key_type, val_type>(key, val));` - First checks if key exists before inserting pair, does nothing if it does exist  
+`var.emplace(key, val);`  
+* Adds a new key–value pair like `insert` but **constructs in-place**  
+* Slightly more efficient than `insert` if constructing complex objects  
 
 `var.size();` - number of key-value pairs  
 `var.empty();` - returns true if empty, 0 = false, 1 = true  
@@ -756,6 +873,25 @@ OR:
 * Iterates map **keys**  
 * Iterate map **values** by changing `i->first` to **`i->second`**  
 * `auto` deduces type, can be better to use `std::map<key_type, value_type>::iterator var` to control type used  
+
+
+##### Multimaps
+
+`#include <map>`  
+`std::multimap<key_type, value_type> mmap;`  
+* Allows **multiple values per key** (unlike `map`)
+* Items are sorted by key, but **duplicate keys are allowed**  
+
+Insert:
+`mmap.insert({key, val});` or `mmap.emplace(key, val);`  
+
+Access all values for a key:  
+```cpp
+auto range = mmap.equal_range(key);  
+for (auto it = range.first; it != range.second; ++it) {  
+    std::cout << it->first << " => " << it->second << "\n";  
+}
+```  
 
 <br>
 
@@ -805,6 +941,12 @@ Access:
 
 Can use comparison operators for two pairs, it will **compare first elements**, if they are equal it then compares the second elements  
 
+`std::tie(var1, var2) = var;` – Unpacks the pair into two variables  
+* Requires `#include <tuple>` - [see below](#tuples)  
+
+Can compare two `pair`s using `==`, `<`, etc.  
+* Compares `.first`, then `.second` if equal
+
 <br>
 
 [⬆ Table of Contents ⬆](#cpp-notes)   
@@ -846,20 +988,163 @@ OR
 
 ### Algorithms Library  
 
-[Reference](https://cplusplus.com/reference/algorithm/)  
+[cplusplus.com](https://cplusplus.com/reference/algorithm/)  reference  
+[cppreference.com](https://en.cppreference.com/w/cpp/algorithm.html)  reference  
+[w3schools.com](https://www.w3schools.com/cpp/cpp_ref_algorithm.asp)  
+
+`#include <algorithm>`  
+
 * Collection of functions especially designed to be used on ranges of elements (sorting, merging, min/max, various tests ect.)  
 
-<br>  
+| Function          | Purpose                                  |
+|-------------------|------------------------------------------|
+| [std::sort](#stdsort)       | Sorts a range (e.g. vector)              |
+| [std::find](#stdfind)       | Finds first matching element             |
+| [std::count](#stdcount)      | Counts how many times a value appears    |
+| [std::for_each](#stdfor_each)   | Applies function/lambda to each element  |
+| [std::transform](#stdtransform)  | Applies function and writes result       |
+| [std::copy](#stdcopy)       | Copies one range to another              |
+| [std::remove_if](#stdremove_if)  | Removes items conditionally              |
+| [std::any_of](#stdany_of--all_of--none_of)     | Returns true if any element matches      |
+| [std::all_of](#stdany_of--all_of--none_of)     | Returns true if all elements match       |
+| [std::none_of](#stdany_of--all_of--none_of)    | Returns true if none match               |
+| [std::accumulate](#stdaccumulate) | Sums or combines values (from `<numeric>`) |
+| [std::equal](#stdequal)      | Compares ranges                         |
 
-<u>Sort</u>  
+##### std::sort  
 [Sort reference](https://cplusplus.com/reference/algorithm/sort/)  
-Also see [Sort](#sort)
+Also see [Sort](#sort) above  
 
 `std::sort(iterator_first, iterator_last, comparator);` - Sorts iterator (object pointing to some element in a range of elements) in ascending order from first to last  
 e.g.
 &emsp;`std::sort(vector.begin(), vector.end());`  
 * Modifies original variable  
-* `comparator` is **optional**, can be a function (incl lambdas) or strut/object  
+* `comparator` is **optional**, can be a function (incl [lambdas](#lambda-functions)) or strut/object  
+
+##### std::find  
+
+`find(iterator start, iterator end, <type> value);`  
+* Finds the **first element** of a data range with a specified value  
+* Returns an iterator pointing to the first occurrence of the specified value in the data range, or the end of the data range if the value was not found  
+
+```cpp
+std::vector<int> v = {1, 2, 3, 4};
+auto it = std::find(v.begin(), v.end(), 3);
+if (it != v.end()) std::cout << "Found 3";
+```
+
+##### std::count  
+
+`count(iterator start, iterator end, <type> value);`  
+* Counts the number of times that a value occurs in a data range  
+* Returns an integer representing the number of times the specified value appears in the data range  
+
+```cpp
+std::vector<int> v = {1, 2, 3, 3, 3};
+int n = std::count(v.begin(), v.end(), 3); // n = 3
+```
+
+##### std::for_each  
+
+`for_each(iterator start, iterator end, function fun);`  
+* Runs a function on every element in a data range  
+
+```cpp
+std::vector<int> v = {1, 2, 3};
+std::for_each(v.begin(), v.end(), [](int x){ std::cout << x << " "; });  // Prints elements
+
+
+// alternatively insert a call to a function 
+void add_one(int &value) {
+  value++;
+}
+for_each(numbers.begin(), numbers.end(), add_one);  // Increase each number by one
+```
+
+##### std::transform  
+
+`std::transform(start, end, dest_start, func);`  
+* Applies `func` to each element and stores in `dest_start`  
+* Often used with [lambda](#lambda-functions)  
+
+```cpp
+std::vector<int> a = {1, 2, 3};
+std::vector<int> b(a.size());
+
+//            source start, source end, dest start, [capture clause](params) {body}
+std::transform(a.begin(), a.end(), b.begin(), [](int x) {
+    return x * 2;
+});
+// b is now {2, 4, 6}
+```
+
+##### std::copy  
+
+`copy( iterator start, iterator end, iterator destination );`  
+* Copies the values from a data range into a different data range  
+* Returns an iterator pointing to the end of the destination data range  
+
+```cpp
+std::vector<int> v = {1, 2, 3};
+std::vector<int> out(3);  // out initialised to {0, 0, 0}
+std::copy(v.begin(), v.end(), out.begin());  // out now contains {1, 2, 3}
+```
+
+##### std::remove_if  
+
+`remove_if( iterator start, iterator end, function condition, <type> remove );`  
+* Removes all values in a data range that satisfy a condition  
+
+```cpp
+std::vector<int> v = {1, 2, 3, 4};
+v.erase(std::remove_if(v.begin(), v.end(), [](int x){ return x % 2 == 0; }), v.end());
+// Removes even numbers
+```
+
+##### std::any_of / all_of / none_of  
+
+`any_of(iterator start, iterator end, function condition);`  
+* Returns a boolean value:
+&emsp;`1` - if **any / all / none** of the elements matched the condition
+&emsp;`0` - otherwise  
+
+```cpp
+std::vector<int> v = {1, 2, 3};
+std::any_of(v.begin(), v.end(), [](int x){ return x > 2; });  // 1 (true)
+std::all_of(v.begin(), v.end(), [](int x){ return x > 0; });  // 1 (true)
+std::none_of(v.begin(), v.end(), [](int x){ return x < 0; }); // 1 (true)
+
+
+// Can also use with a function
+bool greater_than_5 (int value) {
+  return value > 5;
+}
+std::any_of(numbers.begin(), numbers.end(), greater_than_5);
+```
+
+##### std::accumulate  
+
+`std::accumulate(iterator start, iterator end, initial value, optional operation function - default is addition);`  
+* Finds the sum or other accumulated value on the elements in the given range  
+* Returns the accumulated value after performing the operation on each element  
+
+```cpp
+#include <numeric>
+std::vector<int> v = {1, 2, 3};
+int sum = std::accumulate(v.begin(), v.end(), 0);  // sum = 6
+```
+
+##### std::equal  
+
+`std::equal(iterator 1 start, iterator 1 end, iterator 2 start);`  
+* Tests whether two sets of element are equal or not  
+* Returns 1 (true) if all the element in the range of `iterator 1 start` to `iterator 1 end` are equal to those of the range starting at `iterator 2 start` otherwise it returns 0 (false)  
+
+```cpp
+std::vector<int> a = {1, 2, 3};
+std::vector<int> b = {1, 2, 3};
+bool same = std::equal(a.begin(), a.end(), b.begin()); // 1 (true)
+```
 
 <br>
 
@@ -1038,12 +1323,35 @@ e.g.
 
 `[capture_clause](parameters) -> return_type { method }`  
 * Unnamed function - used once  
-* `-> return_type` is optional and generally evaluated by the compiler so usually not required  
-* `capture_clause`:  
-&emsp;`[&]` : capture all external variables by reference  
-&emsp;`[=]` : capture all external variables by value   
-&emsp;`[a, &b]` : mixture, capture a by value and b by reference
+* `-> return_type` is optional and generally evaluated by the compiler so usually not required. Use when return type is not obvious or differs by condition. Though **required** if return type is ambiguous or varies    
+* `capture_clause` - for specifying how **external outer-scope variables** are captured:   
 &emsp;`[]` : Empty capture clause can only access variables which are local to it  
+&emsp;`[=]` : capture all external variables by value  
+&emsp;`[&]` : capture all external variables by reference  
+&emsp;`[a]`	Capture `a` by value only
+&emsp;`[&a]`	Capture `a` by reference only  
+&emsp;`[a, &b]` : mixture, capture `a` by value and `b` by reference  
+
+```cpp
+// Example
+auto add = [](int a, int b) { return a + b; };
+std::cout << add(2, 3);  // 5
+
+// Another example
+std::vector<int> v = {1, 2, 3};
+std::for_each(v.begin(), v.end(), [](int x){
+    std::cout << x << "\n";
+});
+
+// Example with capture clause and arrow return type
+int factor = 10;
+// Capture clause: [=] means capture 'factor' by value (the external variable)
+// Arrow -> double declares return type explicitly
+auto scale = [=](int x) -> double {
+    return x * factor * 0.5;
+};
+std::cout << scale(4);  // Output: 20
+```
 
 <br>
 
@@ -1056,7 +1364,10 @@ e.g.
 [Reference](https://cplusplus.com/doc/tutorial/classes/)  
 [Reference2](https://cplusplus.com/doc/tutorial/templates/)  
 
-##### Class Definition & Inline Methods
+##### Class Definition & Inline Methods  
+
+Use **class member objects** when an object **HAS-A**  
+Use [inheritance](#inheritance) when an object **IS-A**,  
 
 `Class <Class_name>{`  
 &emsp;&emsp;`<type> <attribute>;` - Define private attribute  
@@ -1111,20 +1422,24 @@ e.g.
 [Reference](https://cplusplus.com/doc/tutorial/classes2/)  
 
 **Define outside class:**  
-`<Class_name>::<Class_name>(<type optional_params>) {`  
+`<Class_name>::<Class_name>(<type optional_params>) :memberA(value), memberB(value) {`  
 &emsp;`//code`  
 `};`  
 **OR define in class:**  
 `class Example{`  
-&emsp;&emsp;`int private_number_attribute;`  
+&emsp;&emsp;`int private_number_attribute = default_value;`  
 &emsp;`public:`  
 &emsp;&emsp;`std::string public_string_attribute;`  
 
 &emsp;`// Constructor`
-&emsp;`Example() {`  
+&emsp;`Example() :memberA(value), memberB(value) {`  - showing initialiser list
 &emsp;&emsp;`this->private_number_attribute = 5;`  
 &emsp;`}`  
 `};`  
+* `:memberA(value), memberB(value)` shown above is the constructor initialiser list. This is optional, members can be set either as default values, in the initialiser list, or in the constructor body. But the **initialiser list is <u>preferred</u>**. `const` and **reference** members **MUST** be initialised in the initialiser list - they can't be assigned to in the constructor body  
+* Set members in the **order they are declared** to avoid bugs  
+* Order of priority for setting member values:  
+`[Highest priority] Constructor body > Initialiser list > Default member value`
 * **Must declare in class** even if defining outside  
 * Defines **constructor** which is automatically called whenever a new object of this class is created  
 * Optional to include a constructor at all  
@@ -1132,7 +1447,42 @@ e.g.
 * If no parameters, this will form the **default constructor**. Though note this is only called with:  
 &emsp;`<Class_name> var;`  
 If empty parenthesis are used, this **WILL NOT** call the default constructor  
-* Best practice to refer to attributes with `this->attribute ...;` Not required, but protects against unexpected behaviour
+* Best practice to refer to attributes with `this->attribute ...;` Not required, but protects against unexpected behaviour  
+
+```cpp
+/*
+When a constructor is called, the following rules apply:
+
+1. **Default values** in member declarations (e.g. `int x = 5;`)
+2. **Initialisation list** in constructor (`: x(10)`)
+3. **Assignments in the constructor body**
+
+Order of priority:  
+`Constructor body > Initialiser list > Default member value`
+*/
+
+class Example {
+    int a = 1;          // (1) default member init
+public:
+    Example() : a(2) {  // (2) constructor init list - overrides default value
+        a = 3;          // (3) constructor body - overrides all other init values
+    }
+};
+```
+
+##### explicit Keyword  
+
+Use `explicit` to <u>prevent</u> **implicit conversions** from one type to your class type  
+
+```cpp
+class MyClass {
+public:
+    explicit MyClass(int x) { ... }
+};
+
+MyClass obj1 = 10;        // error (implicit) - would be automatically converted without explicit
+MyClass obj2(10);         // ok (explicit)
+```
 
 <br>  
 
@@ -1164,6 +1514,106 @@ If empty parenthesis are used, this **WILL NOT** call the default constructor
 
 <br>  
 
+##### Copy Constructor vs Copy Assignment Operator
+
+```cpp
+class MyClass {
+    int* data;
+public:
+    // Simple constructor
+    MyClass(int val) {
+        data = new int(val);
+    }
+
+    // Copy constructor (deep copy)
+    MyClass(const MyClass& other) {
+        data = new int(*other.data);
+    }
+
+    // Copy assignment operator (deep copy)
+    MyClass& operator=(const MyClass& other) {
+        if (this != &other) {
+            delete data;
+            data = new int(*other.data);
+        }
+        return *this;
+    }
+
+    ~MyClass() { delete data; }
+};
+
+// Use copy constructor when creating a new object from an existing one:
+MyClass a(5);
+MyClass b = a;   // copy constructor
+
+// Use assignment operator when assigning to an existing object:
+MyClass a(5);
+MyClass b(10);
+b = a;           // copy assignment
+```
+* Use deep copies if the class owns a pointer or other resource  
+* If your class manages memory, always implement **[Rule of 3](#rule-of-0--3--5)**: destructor, copy constructor, and assignment operator  
+
+<br>  
+
+##### Rule of 0 / 3 / 5  
+###### Rule of 0
+If you don’t manage resources, let the compiler generate everything:  
+```cpp
+class MyStruct {
+    int x;
+    std::string name;
+    // Rule of 0: Compiler will auto-generate ctor/dtor/copy/move ops
+};
+```
+* Only use Rule of 3 or 5 if **deep copy**, **[RAII](#raii-resource-acquisition-is-initialisation)**, or **ownership semantics** apply  
+* Otherwise, prefer Rule of 0 – lean on smart pointers & STL  
+
+###### Rule of 3
+If your class manages a **resource** (e.g., <u>dynamic memory</u>, <u>file handle</u>, <u>pointer</u>), you should implement (**ALL**):  
+1. **Destructor**  
+2. **Copy Constructor**  
+3. **Copy Assignment Operator**  
+
+If you implement one, you almost always need all three:
+```cpp
+class MyClass {
+    int* data;
+public:
+    MyClass(int val);
+    ~MyClass();                         // Rule 3: Destructor
+    MyClass(const MyClass& other);     // Rule 3: Copy constructor
+    MyClass& operator=(const MyClass& other); // Rule 3: Copy assignment
+};
+```
+###### Rule of 5
+If your class also needs to support move semantics, implement:  
+1. Move Constructor  
+2. Move Assignment Operator  
+3. And all of [Rule of 3](#rule-of-3)  
+
+```cpp
+MyClass(MyClass&& other) noexcept;            // Move constructor
+MyClass& operator=(MyClass&& other) noexcept; // Move assignment
+```
+* Use [noexcept](#noexcept) in move operations when possible  
+
+<br>
+
+##### Move Semantics (C++11+)
+
+`std::move()`  
+* Moves resource ownership rather than copying
+* Useful for performance with **large objects** or **unique_ptrs**
+* For user-defined types, define [move constructor and move assignment operator](#rule-of-5) 
+
+```cpp
+std::vector<int> a = {1,2,3};
+std::vector<int> b = std::move(a); // a becomes empty
+```
+
+<br>
+
 ##### Instantiation & Member Access  
 
 `<Class> <var>;` - Instantiate a class  
@@ -1182,6 +1632,9 @@ If empty parenthesis are used, this **WILL NOT** call the default constructor
 ##### Inheritance  
 
 [Reference](https://cplusplus.com/doc/tutorial/inheritance/#inheritance)  
+
+Use **inheritance** when an object **IS-A**,  
+Use [class member objects](#class-definition--inline-methods) when an object **HAS-A**    
 
 `class <Derived_class_name> : <access_specifier> <Parent_class_name> {`  
 &emsp;`// code`  
@@ -1226,6 +1679,93 @@ If empty parenthesis are used, this **WILL NOT** call the default constructor
   * its private members  
 
 <br>  
+
+##### Virtual Functions and override  
+* Allow **runtime polymorphism**
+* Enables **dynamic dispatch**: method chosen by actual (derived) type, not pointer type
+
+```cpp
+class Animal {
+public:
+    virtual void speak() const {
+        std::cout << "Animal sound\n";
+    }
+};
+
+// Extends Animal
+class Dog : public Animal {
+public:
+    void speak() const override {  // override confirms match
+        std::cout << "Woof\n";
+    }
+};
+
+Animal* a = new Dog();
+a->speak();  // Woof — calls Dog's method, not Animal’s
+```
+
+* `override` Keyword ensures the method matches a virtual function in the base class - catches typos or signature mismatches at compile time  
+
+```cpp
+void speak() override;   // correct
+void speak(int) override; // error: no matching virtual
+```
+
+Pure Virtual Functions - Declare interface-like functions:  
+* Makes the class abstract (cannot instantiate)  
+
+```cpp
+class Shape {
+public:
+    virtual double area() const = 0;  // pure virtual
+};
+```
+
+Virtual Destructors
+* Always make **base class destructors virtual** when using inheritance  
+* Without virtual destructor: `delete basePtr` may not call derived destructor — leads to memory leaks  
+```cpp
+class Base {
+public:
+    virtual ~Base();  // ensures derived destructor is called
+};
+```
+
+Allows for the same interface to be used with different behaviours:  
+```cpp
+#include <iostream>
+#include <vector>
+#include <memory>
+
+class Animal {
+public:
+    virtual std::string speak() const { return "???"; }
+    virtual ~Animal() {}
+};
+
+class Dog : public Animal {
+public:
+    std::string speak() const override { return "Woof"; }
+};
+
+class Cat : public Animal {
+public:
+    std::string speak() const override { return "Meow"; }
+};
+
+int main() {
+    // Vector of Animals - will accept different types of animals
+    std::vector<std::unique_ptr<Animal>> pets;
+    
+    pets.push_back(std::make_unique<Dog>());
+    pets.push_back(std::make_unique<Cat>());
+
+    for (const auto& pet : pets)
+        std::cout << pet->speak() << "\n";  // Outputs: "Woof" "Meow"
+}
+```
+
+<br>
 
 ##### Friend Functions  
 
@@ -1292,12 +1832,39 @@ After declaring the functions, both member and non-member functions can be used 
 
 [Reference](https://cplusplus.com/doc/tutorial/functions2/#templates)  
 
-`template <class T>`  
-`T func_name(T var1, T var2) {`  
-&emsp;`// body using var1 and var2`  
-`}`  
+Use templates when your code:  
+  - Works for **multiple types**  
+  - Avoids code duplication  
+  - Requires **compile-time type safety**  
+
+```cpp
+template <typename T>
+class MyContainer {
+    T val;
+public:
+    MyContainer(T v) : val(v) {}
+    T get() const { return val; }
+};
+``` 
 * Avoids the need for multiple overloaded functions to define function to be used with different types but same body  
 * `T` is a class name variable, and can be named as you wish, though `T` is common  
+
+```cpp
+template<typename T>
+void mySwap(T& a, T& b) {
+    T temp = a;
+    a = b;
+    b = temp;
+}
+
+int main() {
+    int x = 1, y = 2;
+    mySwap(x, y);  // Works for int
+
+    std::string a = "Hi", b = "Bye";
+    mySwap(a, b);  // Works for string
+}
+```
 
 <br>  
 
@@ -1317,8 +1884,36 @@ After declaring the functions, both member and non-member functions can be used 
 
 ---  
 
+### RAII (Resource Acquisition Is Initialisation)
+
+* C++ idiom: tie resource lifetime to object lifetime
+* Constructor allocates resource
+* Destructor releases it
+* Avoids leaks. Handles exceptions safely (via stack unwinding)
+* Smart pointers are RAII wrappers for memory
+
+```cpp
+class FileWrapper {
+    std::fstream file;
+public:
+    FileWrapper(const std::string& path) {
+        file.open(path);
+    }
+    ~FileWrapper() {
+        file.close();
+    }
+};
+```
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)  
+
+---  
+
 ### Enums  
 
+##### Traditional Enums:  
 [Reference](https://cplusplus.com/doc/tutorial/other_data_types/#enumerated_types)  
 
 `enum <Enum_name> {`  
@@ -1336,17 +1931,43 @@ After declaring the functions, both member and non-member functions can be used 
 * Without specifying a value, list starts at value 0 and increments  
 * If specify a value, the following items continue from that value  
 * Enums are good to represent error codes as well as colour values  
-* Can be combined with switch or if statments  
+* Can be combined with switch or if statements  
+
+|Feature|Traditional Enum|Enum Class (see below)|
+|:--:|:--:|:--:|
+|Type Safety|No|Yes|
+|Scope|Global|Scoped|
+|Implicit Conversion|Converts to int|No implicit conversion|
+|Enumerator Conflicts|Possible|Not possible|x
+
+##### Enum Class:  
+`enum class COLOUR {`  
+&emsp;`RED,`  
+&emsp;`GREEN,`  
+&emsp;`BLUE };`  
+* Strongly typed and strongly scoped (unlike traditional enums) and allows for more control (**see table above**)  
+* **Scoped** enums – no implicit conversion to int  
+* **Safe from name collisions**
+* Access via `COLOUR::RED`  
+* enum class values cannot be implicitly converted to int  
+* You must use `static_cast<int>(Enum::Value)` to get the int  
+
+```cpp
+COLOUR c = COLOUR::GREEN;
+if (c == COLOUR::GREEN)
+```
 
 <br>
 
 [⬆ Table of Contents ⬆](#cpp-notes)    
 
----  
+---   
 
 ### Error Handling  
 
 [Reference](https://cplusplus.com/doc/tutorial/exceptions/)  
+
+##### Throw, Try..Catch
 
 `throw <exception>` - Throws an exception. Exception can be an int, string or other  
 
@@ -1361,6 +1982,71 @@ After declaring the functions, both member and non-member functions can be used 
 * Catch block is run if error occurs in try block  
 * Can chain catch blocks for different error types  
 * `catch(...)` can be used to catch all (majority) of errors, but bad practice  
+
+**Best practice**: only throw by value, catch by (const) reference
+```cpp
+try {
+    throw std::runtime_error("Oops");
+}
+catch (const std::exception& e) {
+    std::cerr << e.what();
+}
+```
+
+##### Exception Rules  
+
+* C++ uses **stack unwinding** – objects are destroyed in **reverse order of construction** when exception is thrown  
+* Destructors are always called before leaving the stack  
+* RAII ensures cleanup (e.g., smart pointers)  
+
+##### noexcept  
+
+* Marks a function as **not throwing exceptions**  
+* If exception is thrown from a noexcept function → `std::terminate()`  
+* Use `noexcept` only when **certain no exception will be thrown**  
+```cpp
+void func() noexcept;
+```
+
+##### Types of Standard Exceptions
+
+All inherit from `std::exception` (must include `<stdexcept>`):
+
+| Exception Type           | Description                              | When To Use |
+|:--|:--|:--|
+| `std::exception`         | Base class for all standard exceptions   | Can use it directly, but it is typically used in catch blocks, not for throwing. In practice, you’ll almost always throw a derived type because they let you attach a custom message |
+| `std::runtime_error`     | Errors detectable only at runtime        | file not found, network issues, corrupt input |
+| `std::logic_error`       | Errors in logic — should not happen at runtime | wrong algorithm assumption, invalid state |
+| `std::invalid_argument`  | Invalid parameter passed to function     | passing a null pointer or illegal value | accessing out-of-bounds index |
+| `std::out_of_range`      | Accessing beyond bounds (e.g., vector)   | accessing out-of-bounds index |
+| `std::length_error`      | Exceeding max allowed size               | trying to create a container that's too large |
+| `std::domain_error`      | Argument outside valid domain (e.g., sqrt(-1)) | illegal math inputs (like log(-1)) |
+| `std::bad_alloc`         | Memory allocation failure (e.g., `new`)  | system out of memory |
+
+Example:
+```cpp
+throw std::invalid_argument("Value must be > 0");
+
+try {
+    // Can be thrown directly (prints "std::exception"), 
+    // though typically use a derived type (such as shown above) to attach custom message
+    throw std::exception();  
+}
+catch (const std::exception& e) {
+    std::cout << e.what();  // Outputs: "std::exception"
+}
+
+
+try {
+    throw std::runtime_error("Something broke");
+}
+catch (const std::exception& e) {
+    std::cout << e.what();  // Output: Something broke
+}
+```
+
+* Best practice: **catch** exceptions **by reference**, **throw by value**    
+* Use `what()` to get error string  
 
 <br>
 
@@ -1399,22 +2085,22 @@ After declaring the functions, both member and non-member functions can be used 
 `#include <fstream>`  
 
 `std::ofstream stream_var;`  
-`stream_var.open("path.ext", mode);` - Opens file for **writting** (output)  
+`stream_var.open("path.ext", mode);` - Opens file for **<u>writting</u>** (output)  
 * Will create file if not exists  
 * Will overwrite if already exists  
 * Can put on same line as with `ifstream` below (optional)  
 * `mode` is optional, **default** `ios::out`  
   
-`std::ifstream stream_var("path.ext", mode);` - Opens file for **reading** (input)  
+`std::ifstream stream_var("path.ext", mode);` - Opens file for **<u>reading</u>** (input)  
 * Will not create file if does not exist  
 * `mode` is optional, **default** `ios::in`  
     
-`std::fstream stream_var("path.ext", mode);` - Opens file for **reading and writting**  
+`std::fstream stream_var("path.ext", mode);` - Opens file for **<u>reading AND writting</u>**  
 * `mode` is optional, **default** `ios::in | ios::out`
 
 <br>    
 
-`stream_var.close();` - **ALWAYS close file** once done  
+`stream_var.close();` - **<u>ALWAYS close</u> file** once done  
 
 `if(stream_var.is_open()){...}`
 * **Checks if file is open** (and permission to read/write)  
@@ -1446,9 +2132,71 @@ After declaring the functions, both member and non-member functions can be used 
 |std::ios::app|All output operations are performed at the end of the file, appending the content to the current content of the file|
 |std::ios::trunc|If the file is opened for output operations and it already existed, its previous content is deleted and replaced by the new one|
 
+##### Parsing CSV Files
+
+* Use `std::stringstream` to tokenise line by commas  
+* Watch out for quoted strings and embedded commas (use a CSV parser lib if needed)  
+```cpp
+#include <sstream>
+std::string line;
+while (std::getline(file, line)) {
+    std::stringstream ss(line);
+    std::string cell;
+
+    while (std::getline(ss, cell, ',')) {
+        std::cout << "Cell: " << cell << "\n";
+    }
+}
+```
+
 <br>
 
 [⬆ Table of Contents ⬆](#cpp-notes)    
+
+---  
+
+### Logging / Writing Logs  
+
+* Logging is typically done using file streams   
+* Prefer `std::ofstream` with append mode (see [working with files](#working-with-files))  
+
+```cpp
+#include <fstream>
+std::ofstream log("log.txt", std::ios::app);
+if (log.is_open()) {
+    log << "Log message: value = " << var << std::endl;
+}
+```  
+
+* Always open with ios::app to avoid overwriting  
+* Use timestamps (`<ctime>` or `<chrono>`) for tracking  
+* Wrap logging in a function or class if used often  
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)   
+
+---  
+
+### Unit Testing in C++
+
+```cpp
+// Basic Manual Approach
+#include <cassert>
+int add(int a, int b) { return a + b; }
+
+int main() {
+    assert(add(2, 3) == 5);
+    assert(add(-1, 1) == 0);
+    std::cout << "All tests passed.\n";
+}
+```
+
+* For more control and reporting (e.g., test cases, setup/teardown), use third-party frameworks like **Catch2** or **Google Test**  
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)   
 
 ---  
 
@@ -1480,6 +2228,15 @@ After declaring the functions, both member and non-member functions can be used 
 > Note to run a program containing threads, may need an updated version of gcc. Additionally **may** need to pass flag when compiling:  
 > `g++ -pthread program.cpp`  
 > flag `-lpthread` may be required instead  
+
+<br>
+
+### Concurrency Basics (for future reference)
+
+* C++11 adds `<thread>`, `<mutex>`, `<atomic>`, and more
+* Use `std::thread`, `std::lock_guard`, and `std::atomic` for safety
+* Consider thread safety when sharing data between threads
+
 
 <br>
 
