@@ -35,7 +35,7 @@
 | **27.** | [Control Statements & Flow](#control-statements--flow) | [If](#if-statement),<br>[Ternary Operator](#ternary-operator),<br>[Switch](#switch-statement),<br>[Comparison & Logic Operators](#comparison--logic-operators),<br>[Jump](#jump-statements) |
 | **28.** | [Loops](#loops) | [For](#for),<br>[For Each (Range-Based)](#for-each-range-based),<br>[While](#while),<br>[Do](#do) |
 | **29.** | [Functions](#functions) | [Function Declaration](#functions),<br>[Function Overloading](#function-overloading),<br>[Lambda Functions](#lambda-functions),<br>[Optional Return Values](#optional-return-values) |
-| **30.** | [Classes & Struts](#classes--struts) | [Class Definition](#class-definition--inline-methods),<br>[Inline Methods](#class-definition--inline-methods),<br>[Static Members](#class-definition--inline-methods),<br>[toString](#class-definition--inline-methods),<br>[Normal (Not-inline) Methods](#normal-not-inline-methods),<br>[Constructor](#constructor),<br>[default Keyword](#default-keyword),<br>[explicit Keyword](#explicit-keyword),<br>[Destructor](#destructor),<br>[Copy Constructor vs Copy Assignment Operator](#copy-constructor-vs-copy-assignment-operator),<br>[Rule of 0 / 3 / 5](#rule-of-0--3--5),<br>[Move Semantics](#move-semantics-c11),<br>[Instantiation & Member Access](#instantiation--member-access),<br>[Inheritance](#inheritance),<br>[Polymorphism](#inheritance),<br>[Virtual Functions and Override](#virtual-functions-and-override),<br>[Object Slicing](#object-slicing),<br>[Friend Functions](#friend-functions),<br>[Operator Overloading](#operator-overloading),<br>[Templates](#templates),<br>[Structs](#structs) |
+| **30.** | [Classes & Struts](#classes--struts) | [Class Definition](#class-definition--inline-methods),<br>[Inline Methods](#class-definition--inline-methods),<br>[Static Members](#class-definition--inline-methods),<br>[toString](#class-definition--inline-methods),<br>[Normal (Not-inline) Methods](#normal-not-inline-methods),<br>[Constructor](#constructor),<br>[default Keyword](#default-keyword),<br>[explicit Keyword](#explicit-keyword),<br>[Destructor](#destructor),<br>[Copy Constructor vs Copy Assignment Operator](#copy-constructor-vs-copy-assignment-operator),<br>[Disable Copying of Class](#disable-copying-of-class),<br>[Rule of 0 / 3 / 5](#rule-of-0--3--5),<br>[Move Semantics](#move-semantics-c11),<br>[Instantiation & Member Access](#instantiation--member-access),<br>[Inheritance](#inheritance),<br>[Polymorphism](#inheritance),<br>[Virtual Functions and Override](#virtual-functions-and-override),<br>[Object Slicing](#object-slicing),<br>[Friend Functions](#friend-functions),<br>[Operator Overloading](#operator-overloading),<br>[Templates](#templates),<br>[Structs](#structs) |
 | **31.** | [RAII (Resource Acquisition Is Initialisation)](#raii-resource-acquisition-is-initialisation) | |
 | **32.** | [Enums](#enums) | [Traditional Enum](#traditional-enums),<br>[Enum Class](#enum-class) |
 | **33.** | [Error Handling](#error-handling) | [Throw, Try..Catch](#throw-trycatch),<br>[Exception Rules](#exception-rules),<br>[noexcept](#noexcept),<br>[Types of Standard Exceptions](#types-of-standard-exceptions) |
@@ -612,6 +612,7 @@ e.g.
 [Reference](https://cplusplus.com/reference/memory/)  
 
 * Smart pointers manage memory allocation  
+* Smart pointers help avoid writing custom copy/move/destruct code (see [Rule of 0](#rule-of-0))
 
 <br>  
 
@@ -651,6 +652,7 @@ e.g.
 * Like **pointers** for [containers](#stl-container-comparison)  
 * Support `++`, `*`, `->` and can loop through container elements (see [pointer incrementing](#incrementing))  
 * STL algorithms use iterators (`begin()`, `end()`)  
+* Note `end()` points to **one past last valid element**  
 * Avoid index-based loops where possible — use range-based or iterators  
 
 ```cpp
@@ -763,6 +765,16 @@ if (std::regex_search(s, pattern)) {
 ### STL Container Comparison
 
 [CppReference.com](https://cppreference.com/w/cpp/container.html)  
+
+###### Container Quick Guide
+
+- Need fast random access? → Use [std::vector](#stl-vectors)  
+- Need frequent insert/remove in middle? → Use [std::list](#lists)  
+- Need key/value lookup (sorted)? → Use [std::map](#maps-dictionaries)  
+- Need fast key/value lookup (unsorted)? → Use [std::unordered_map](#stdunordered_map)  
+- Need FIFO queue? → Use [std::queue](#queues)  
+- Need LIFO stack? → Use [std::stack](#stacks)  
+
 
 | Container        | Fast Insert | Fast Lookup | Ordered | Allows Duplicates | Notes                          |
 |:--:|-------------|-------------|---------|--------------------|-------------------------------|
@@ -1856,7 +1868,7 @@ public:
         return *this;
     }
 
-    ~MyClass() { delete data; }
+    ~MyClass() { delete data; }  
 };
 
 // Use copy constructor when creating a new object from an existing one:
@@ -1871,20 +1883,44 @@ b = a;           // copy assignment
 * Use deep copies if the class owns a pointer or other resource  
 * If your class manages memory, always implement **[Rule of 3](#rule-of-0--3--5)**: destructor, copy constructor, and assignment operator  
 
+###### Disable Copying of Class  
+
+```cpp
+class MyClass {
+public:
+    MyClass(const MyClass&) = delete; // Copying not allowed
+};
+```
+If someone tries to write:  
+`MyClass b = a;`   
+or  
+`MyClass b(a);`  
+it will cause a compile-time error  
+
 <br>  
 
 ##### Rule of 0 / 3 / 5  
-###### Rule of 0
-If you don’t manage resources, let the compiler generate everything:  
+###### Rule of 0  
+* Using [smart pointers](#smart-pointers) - `std::unique_ptr` or `std::shared_ptr` allows you to rely on the Rule of 0 (no custom destructor/copy/move needed)  
+<br>
+* If you don’t manage resources, let the compiler generate everything:  
 ```cpp
-class MyStruct {
+class MyClass {
     int x;
     std::string name;
     // Rule of 0: Compiler will auto-generate ctor/dtor/copy/move ops
 };
 ```
+* OR use [= default](#default-keyword) keyword to explicitly request compiler-generated functions  
+* Use [= delete](#disable-copying-of-class) to prevent undesired operations (e.g., copying):
+```cpp
+MyClass(const MyClass&) = delete;
+MyClass() = default;
+```
+
 * Only use Rule of 3 or 5 if **deep copy**, **[RAII](#raii-resource-acquisition-is-initialisation)**, or **ownership semantics** apply  
 * Otherwise, prefer Rule of 0 – lean on smart pointers & STL  
+
 
 ###### Rule of 3
 If your class manages a **resource** (e.g., <u>dynamic memory</u>, <u>file handle</u>, <u>pointer</u>), you should implement (**ALL**):  
