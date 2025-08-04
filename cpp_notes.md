@@ -16,27 +16,36 @@
 | **8.** | [Scopes](#scopes) | Global,<br>Local |
 | **9.** | [Data Types](#data-types) | [const](#const-keyword),<br>[static](#static-keyword),<br>[auto Keyword](#auto-keyword),<br>[Type Promotion](#type-promotion-and-conversion),<br>[sizeof()](#sizeof),<br>[Data Types List](#data-types),<br>[Finding the Type of an Object (typeid)](#finding-the-type-of-an-object-typeid),<br>[Aliases](#aliases),<br>[#define (Macros)](#define-macros),<br>[Conditional Inclusions](#conditional-inclusions) |
 | **10.** | [Pointers](#pointers) | [Declare](#pointers),<br>[Address-of-Operator](#pointers),<br>[Dereference Operator](#pointers),<br>[Incrementing](#incrementing),<br>[Const Pointers](#constant-pointers),<br>[Void Pointers](#void-pointers),<br>[Invalid Pointers](#invalid-pointers),<br>[Null Pointers](#null-pointers),<br>[Dynamic Memory](#dynamic-memory),<br>[Checking Allocation](#check-allocation-successful),<br>[Smart Pointers](#smart-pointers) |  
-| **11.** | [Strings](#strings) | String Methods |
-| **12.** | [Arrays](#arrays) | [Standard arrays](#arrays),<br>[STL Arrays](#stl-arrays),<br>[STL Vectors](#stl-vectors),<br>[Sort](#sort) |
-| **13.** | [Lists](#lists) | |
-| **14.** | [Maps (Dictionaries)](#maps-dictionaries) | [Maps](#maps-dictionaries),<br>[Multimaps](#multimaps) |
-| **15.** | [Sets](#sets) | |
-| **16.** | [Pairs](#pairs) | |
-| **17.** | [Tuples](#tuples) | |
-| **18.** | [Algorithms Library](#algorithms-library) | [Algorithms List](#algorithms-library) |
-| **19.** | [Maths](#maths) | cmath |
-| **20.** | [Control Statements & Flow](#control-statements--flow) | [If](#if-statement),<br>[Ternary Operator](#ternary-operator),<br>[Switch](#switch-statement),<br>[Comparison & Logic Operators](#comparison--logic-operators),<br>[Jump](#jump-statements) |
-| **21.** | [Loops](#loops) | [For](#for),<br>[For Each](#for-each),<br>[While](#while),<br>[Do](#do) |
-| **22.** | [Functions](#functions) | [Function Declaration](#functions),<br>[Function Overloading](#function-overloading),<br>[Lambda Functions](#lambda-functions) |
-| **23.** | [Classes & Struts](#classes--struts) | [Class Definition](#class-definition--inline-methods),<br>[Inline Methods](#class-definition--inline-methods),<br>[Static Members](#class-definition--inline-methods),<br>[toString](#class-definition--inline-methods),<br>[Normal (Not-inline) Methods](#normal-not-inline-methods),<br>[Constructor](#constructor),<br>[explicit Keyword](#explicit-keyword),<br>[Destructor](#destructor),<br>[Copy Constructor vs Copy Assignment Operator](#copy-constructor-vs-copy-assignment-operator),<br>[Rule of 0 / 3 / 5](#rule-of-0--3--5),<br>[Move Semantics](#move-semantics-c11),<br>[Instantiation & Member Access](#instantiation--member-access),<br>[Inheritance](#inheritance),<br>[Polymorphism](#inheritance),<br>[Virtual Functions and Override](#virtual-functions-and-override),<br>[Friend Functions](#friend-functions),<br>[Operator Overloading](#operator-overloading),<br>[Templates](#templates),<br>[Structs](#structs) |
-| **24.** | [RAII (Resource Acquisition Is Initialisation)](#raii-resource-acquisition-is-initialisation) | |
-| **25.** | [Enums](#enums) | [Traditional Enum](#traditional-enums),<br>[Enum Class](#enum-class) |
-| **26.** | [Error Handling](#error-handling) | [Throw, Try..Catch](#throw-trycatch),<br>[Exception Rules](#exception-rules),<br>[noexcept](#noexcept),<br>[Types of Standard Exceptions](#types-of-standard-exceptions) |
-| **27.** | [Time](#time) | [Time](#time),<br>[Random Numbers](#random-numbers) |
-| **28.** | [Working With Files](#working-with-files) | [Writing](#working-with-files),<br>[Reading](#working-with-files),<br>[Modes](#modes),<br>[Parsing CSV Files](#parsing-csv-files) |
-| **28.** | [Logging / Writing Logs ](#logging--writing-logs) | |
-| **30.** | [ Unit Testing](#unit-testing-in-c) | |
-| **31.** | [Threads](#threads) | [Threads](#threads),<br>[Concurrency Basics](#concurrency-basics-for-future-reference) |
+| **11.** | [Iterators](#iterators) | |
+| **12.** | [Strings](#strings) | String Methods |
+| **13.** | [Regex](#regex) | Pattern Matching |
+| **14.** | [STL Container Comparison](#stl-container-comparison) |
+| **15.** | [Arrays](#arrays) | [Standard arrays](#arrays),<br>[STL Arrays](#stl-arrays),<br>[STL Vectors](#stl-vectors),<br>[Sort](#sort) |
+| **16.** | [Lists](#lists) | |
+| **17.** | [Deque](#deque) | |
+| **18.** | [Queues](#queues) | |
+| **19.** | [Stacks](#stacks) | |
+| **20.** | [Maps (Dictionaries)](#maps-dictionaries) | [Maps](#maps-dictionaries),<br>[Multimaps](#multimaps),<br>[std::unordered_map](#stdunordered_map) |
+| **21.** | [Sets](#sets) | [Sets](#sets),<br>[std::unordered_set](#stdunordered_set) |
+| **22.** | [Pairs](#pairs) | |
+| **23.** | [Tuples](#tuples) | |
+| **24.** | [Algorithms Library](#algorithms-library) | [Algorithms List](#algorithms-library) |
+| **25.** | [Maths](#maths) | cmath |
+| **26.** | [numeric](#numeric) | Reduction/aggregation operations |
+| **27.** | [Control Statements & Flow](#control-statements--flow) | [If](#if-statement),<br>[Ternary Operator](#ternary-operator),<br>[Switch](#switch-statement),<br>[Comparison & Logic Operators](#comparison--logic-operators),<br>[Jump](#jump-statements) |
+| **28.** | [Loops](#loops) | [For](#for),<br>[For Each (Range-Based)](#for-each-range-based),<br>[While](#while),<br>[Do](#do) |
+| **29.** | [Functions](#functions) | [Function Declaration](#functions),<br>[Function Overloading](#function-overloading),<br>[Lambda Functions](#lambda-functions),<br>[Optional Return Values](#optional-return-values) |
+| **30.** | [Classes & Struts](#classes--struts) | [Class Definition](#class-definition--inline-methods),<br>[Inline Methods](#class-definition--inline-methods),<br>[Static Members](#class-definition--inline-methods),<br>[toString](#class-definition--inline-methods),<br>[Normal (Not-inline) Methods](#normal-not-inline-methods),<br>[Constructor](#constructor),<br>[default Keyword](#default-keyword),<br>[explicit Keyword](#explicit-keyword),<br>[Destructor](#destructor),<br>[Copy Constructor vs Copy Assignment Operator](#copy-constructor-vs-copy-assignment-operator),<br>[Rule of 0 / 3 / 5](#rule-of-0--3--5),<br>[Move Semantics](#move-semantics-c11),<br>[Instantiation & Member Access](#instantiation--member-access),<br>[Inheritance](#inheritance),<br>[Polymorphism](#inheritance),<br>[Virtual Functions and Override](#virtual-functions-and-override),<br>[Object Slicing](#object-slicing),<br>[Friend Functions](#friend-functions),<br>[Operator Overloading](#operator-overloading),<br>[Templates](#templates),<br>[Structs](#structs) |
+| **31.** | [RAII (Resource Acquisition Is Initialisation)](#raii-resource-acquisition-is-initialisation) | |
+| **32.** | [Enums](#enums) | [Traditional Enum](#traditional-enums),<br>[Enum Class](#enum-class) |
+| **33.** | [Error Handling](#error-handling) | [Throw, Try..Catch](#throw-trycatch),<br>[Exception Rules](#exception-rules),<br>[noexcept](#noexcept),<br>[Types of Standard Exceptions](#types-of-standard-exceptions) |
+| **34.** | [Time](#time) | [Time](#time),<br>[Random Numbers](#random-numbers) |
+| **35.** | [Chrono Library](#chrono-library---time-and-duration) | Time and Duration |
+| **36.** | [Filesystem Library](#filesystem-library) | File checking, directory iteration, path manipulations |
+| **37.** | [Working With Files](#working-with-files) | [Writing](#working-with-files),<br>[Reading](#working-with-files),<br>[Modes](#modes),<br>[Parsing CSV Files](#parsing-csv-files) |
+| **38.** | [Logging / Writing Logs ](#logging--writing-logs) | |
+| **39.** | [ Unit Testing](#unit-testing-in-c) | |
+| **40.** | [Threads](#threads) | [Threads](#threads),<br>[Concurrency Basics](#concurrency-basics-for-future-reference) |
 
 <br>
 
@@ -475,6 +484,15 @@ e.g.
 
 [Reference](https://cplusplus.com/doc/tutorial/pointers/)  
 
+> ✅ Use pointers when:
+>  - You need **shared ownership** or lifetime control
+> - You are **passing large objects** to avoid copying
+> - You are dealing with **polymorphism** or dynamic allocation
+> 
+> ❌ Use regular variables when:
+> - The object has a clear lifetime
+> - You don’t need to share or pass by reference
+
 `type *pointer_var;` - Declare a pointer  
 
 `pointer_var = &var;` - Set pointer variable to store the address of var using **address-of operator** `&`  
@@ -541,10 +559,13 @@ e.g.
 ##### Dynamic Memory  
 
 [Reference](https://cplusplus.com/doc/tutorial/dynamic/)  
+
+[Smart pointers](#smart-pointers) are **<u>preferred</u>** to avoid memory leaks  
+
 [`<new>` Dynamic Memory Header Reference](https://cplusplus.com/reference/new/)  
 
 `pointer = new type(val);`  
-* Allocates memory to contain one single element of type `type` on the **heap**, you are responsible for memory management (a regular varaible would be allocated on the stack and memory management would be handled automatically)    
+* Allocates new memory on the **heap** to contain one single element of type `type` on the **heap**, you are responsible for memory management (a regular varaible would be allocated on the stack and memory management would be handled automatically)    
 * Useful if when you need memory that persists beyond the scope of the current block  
 * Defining `(val)` is optional when declaring the pointer, could be defined later  
   
@@ -623,7 +644,45 @@ e.g.
 
 [⬆ Table of Contents ⬆](#cpp-notes)    
 
----  
+---    
+
+### Iterators  
+
+* Like **pointers** for [containers](#stl-container-comparison)  
+* Support `++`, `*`, `->` and can loop through container elements (see [pointer incrementing](#incrementing))  
+* STL algorithms use iterators (`begin()`, `end()`)  
+* Avoid index-based loops where possible — use range-based or iterators  
+
+```cpp
+std::vector<int> v = {1, 2, 3};
+for (auto it = v.begin(); it != v.end(); ++it)
+    std::cout << *it;
+```
+
+```cpp
+// Define an iterator
+#include <vector>
+
+std::vector<int> v = {1, 2, 3};  // initialise vector
+
+std::vector<int>:: iterator it;  // initialise iterator
+
+it = v.begin();  // sets iterator to point to first element of the vector
+```
+
+* You can store the address of an iterator (not common, but possible)  
+* Usually avoid storing iterator addresses — iterators may become invalidated  
+
+```cpp
+auto it = v.begin();
+auto* ptrToIt = &it;
+```
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)    
+
+---   
 
 ### Strings  
 
@@ -674,12 +733,86 @@ e.g.
 
 ---  
 
+### Regex  
+
+[CPlusPlus.com](https://cplusplus.com/reference/regex/)  
+[GeeksForGeeks](https://www.geeksforgeeks.org/cpp/regex-regular-expression-in-c/)  
+
+`#include <regex>`
+
+* For pattern matching  
+* Use for string validation, search, and extraction  
+* Can be slow – avoid for frequent or performance-critical use  
+
+```cpp
+#include <regex>
+std::string s = "hello123";
+std::regex pattern("\\d+");
+
+if (std::regex_search(s, pattern)) {
+    std::cout << "Found number!";
+}
+```
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)    
+
+---  
+
+### STL Container Comparison
+
+[CppReference.com](https://cppreference.com/w/cpp/container.html)  
+
+| Container        | Fast Insert | Fast Lookup | Ordered | Allows Duplicates | Notes                          |
+|:--:|-------------|-------------|---------|--------------------|-------------------------------|
+| [C-style array](#arrays)<br>[STL Arrays](#stl-arrays)         | ✅ - fixed size at compile time         | ❌         | ✅ (fixed) | ✅          | C-style array, no size info<br><br>Elements can still be reassigned, but not added or removed<br><br>`push_back()` and `resize()` not supported         |
+| [vector](#stl-vectors)         | ✅ (end)    | ❌ (linear) | ✅ (in order added) | ✅ | Use when order matters and data is dense<br><br>Can be resized<br><br>Inserting in the middle may be expensive (requires shifting elements) |
+| [list](#lists)           | ✅          | ❌         | ✅     | ✅                 | Doubly linked list<br><br>Cannot have elements added in the middle without iterating through to obtain the position - cannot do `mylist[3]`<br><br>Inserting at any position is fast once you have the iterator (constant time)             |
+| [deque](#deque)          | ✅ (ends)   | ❌         | ✅     | ✅                 | Double-ended queue             |
+| [queue](#queues)          | ✅ (back)   | ❌         | FIFO   | ✅                 | FIFO – push/pop only           |
+| [stack](#stacks)          | ✅ (top)    | ❌         | LIFO   | ✅                 | LIFO – push/pop only           |
+| [map](#maps-dictionaries)            | ✅ (log n)  | ✅ (log n) | ✅     | ❌                 | Sorted key-value pairs         |
+| [multimap](#multimaps)       | ✅ (log n)  | ✅         | ✅     | ✅                 | Multiple values per key        |
+| [unordered_map](#stdunordered_map)  | ✅ (avg)    | ✅ (avg)   | ❌     | ❌                 | Fast key access                |
+| [set](#sets)            | ✅ (log n)  | ✅ (log n) | ✅     | ❌                 | BST-backed, sorted             |
+| [unordered_set](#stdunordered_set)  | ✅ (avg)    | ✅ (avg)   | ❌     | ❌                 | Hash table                     |
+
+
+**Notes on Object Slicing**  
+
+[See full example](#virtual-functions-and-override)  
+
+When storing derived objects by value in a base-type container (e.g. `std::vector<Animal>`), only the `Animal` portion is copied. The `Dog`/`Cat` parts are **sliced off**.
+
+```cpp
+std::vector<Animal> pets;
+pets.push_back(Dog()); // Sliced — becomes just Animal
+```
+
+Polymorphism only works through pointers or references
+Use `std::vector<std::unique_ptr<Animal>>` to avoid slicing
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)   
+
+---
+
 ### Arrays  
 
 > To use dynamic arrays (with **variables as size**), see [dynamic memory](#dynamic-memory) above  
 
 `<type> <arr_var>[<size>] = {<item1>, <item2>, ...};` - Declare array and populate  
 * Declaring size of array is optional  
+* Size is **fixed** at compile time (elements can still be reassigned, but not added or removed)
+* `push_back()` and `resize()` not supported    
+* No bounds checking available  
+* Can't resize or use standard container methods  
+* See [STL Arrays](#stl-arrays) for a safer and more robust alternative  
+<br>
+* Use when fixed size is known and performance is critical  
+* Avoid for most use cases — prefer `std::array` or `std::vector`
 
 `<arr_var>[<index>];` - Access items by index  
 
@@ -698,7 +831,14 @@ e.g.
 ##### STL Arrays  
 [Library Reference](https://cplusplus.com/reference/array/)  
 [Class Reference](https://cplusplus.com/reference/array/array/)  
+
 * Standard template library arrays  
+* Fixed size wrapper around [c-style array](#arrays)  
+* Elements can still be reassigned, but not added or removed  
+* `push_back()` and `resize()` not supported    
+* Maintains its size information (unlike c-style), more robust and safer interface  
+* Offers value semantics so it can be passed by value to functions and copied   
+* Provided member functions for common array operations `size()`, `empty()`, `at()`, `front()`, `back()`, `data()`
   
 `#include <array>`  
 
@@ -729,6 +869,11 @@ e.g.
 [Library Reference](https://cplusplus.com/reference/vector/)  
 [Class Reference](https://cplusplus.com/reference/vector/vector/)  
 * Vectors are like arrays but know their size  
+* Can be resized  
+* Supports `resize()`, `push_back()`, `pop_back()`, and `insert()`/`erase()` operations  
+* **Automatically resizes** when capacity is exceeded  
+* Random access is fast (O(1))  
+* **Inserting in the middle may be expensive** (requires shifting elements)  
 
 `#include <vector>`  
 
@@ -809,7 +954,9 @@ Custom sorting:
 
 ### Lists  
 
-Ordered sequence of variables of **the same type**.  
+* Ordered sequence of variables of **the same type**  
+* Cannot have elements added in the middle without iterating through to obtain the position - cannot do `mylist[3]`  
+* Inserting at any position is fast once you have the iterator (constant time)  
 
 `#include <list>`  
 `list<type> var({ele1, ele2...});`  
@@ -819,6 +966,72 @@ Ordered sequence of variables of **the same type**.
 `var.push_front(ele)` add element to beginning of list  
 `var.push_back(ele)` add element to end of list  
 `var.insert(position_to_insert, args)`  `args` can either be a value, or number of values to insert then the value to fill with, or iterator start and end positions (e.g. another list)  
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)
+
+---  
+
+### Deque
+
+* Double-ended queue (pronounced "deck")  
+* Fast insert/remove from both front and back  
+* Slower random access than `vector`  
+* Slightly heavier than vector due to dynamic block allocation  
+* Use when you need **fast front/back operations**  
+
+```cpp
+#include <deque>
+std::deque<int> dq;
+dq.push_back(1);
+dq.push_front(0);
+dq.pop_back();    // removes 1
+```
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)
+
+---  
+
+### Queues  
+
+* FIFO (First-In, First-Out) container adaptor  
+* Built on top of [deque](#deque) by default  
+* Use when items must be processed in order  
+* **No iterator access**; only `front()` and `back()` are exposed  
+
+```cpp
+#include <queue>
+std::queue<int> q;
+q.push(1);
+q.push(2);
+q.pop();           // removes 1 but does not return the value  
+std::cout << q.front(); // prints 2, accesses value but does not remove
+```
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)
+
+---  
+
+### Stacks
+
+* LIFO (Last-In, First-Out) container adaptor  
+* Built on top of [deque](#deque) by default  
+* Use when you **only need push/pop from one side**  
+* No access to elements below top  
+
+```cpp
+#include <stack>
+std::stack<int> s;
+s.push(1);
+s.push(2);
+s.pop();             // removes 2
+std::cout << s.top(); // prints 1
+```
 
 <br>
 
@@ -839,7 +1052,7 @@ Ordered sequence of variables of **the same type**.
 &emsp;`...`  - Last key/val pair is not followed by comma  
 `};`    
 * Map **keys** are **ordered** and **unique**  
-* **Sorted by key**  
+* **Sorted by key** (ascending by default, can change by calling a function as 3rd initialisation argument)  
 
 `std::map<key_type, value_type> var = { {key1, val1}, {key2, val2}... };` Add items when initialising  
 
@@ -878,9 +1091,10 @@ OR:
 ##### Multimaps
 
 `#include <map>`  
-`std::multimap<key_type, value_type> mmap;`  
+`std::multimap<key_type, value_type> mmap;` - instantiate  
 * Allows **multiple values per key** (unlike `map`)
 * Items are sorted by key, but **duplicate keys are allowed**  
+* Use when multiple values need to be stored under the same key (e.g. logs, categories, lookup with synonyms)  
 
 Insert:
 `mmap.insert({key, val});` or `mmap.emplace(key, val);`  
@@ -892,6 +1106,29 @@ for (auto it = range.first; it != range.second; ++it) {
     std::cout << it->first << " => " << it->second << "\n";  
 }
 ```  
+
+Example:
+```cpp
+// Multimap: mapping error codes to multiple messages
+std::multimap<int, std::string> errorLog;
+errorLog.insert({404, "Not Found"});
+errorLog.insert({404, "Missing image"});
+errorLog.insert({500, "Internal Error"});
+
+for (auto [code, msg] : errorLog)
+    std::cout << code << ": " << msg << "\n";
+```
+
+
+##### std::unordered_map  
+
+`#include <unordered_map>`  
+* Like `std::map`, but uses **hash table** instead of binary search tree  
+* No ordering – keys appear in arbitrary order  
+* Faster for large datasets or frequent insert/find  
+* Faster average-case lookup  
+
+
 
 <br>
 
@@ -920,6 +1157,18 @@ Iterating:
 `var.erase(ele);` - Removes element from set  
 
 `var.find(ele);` - Searches container `var` and returns an iterator to it if found, otherwise returns iterator to `set::end` (theoretical  element that would follow the last element in the set container)  
+
+
+##### std::unordered_set
+
+* Like `std::set`, but elements are **unordered**  
+* Backed by hash table, not tree  
+* Use when you don't need order and want faster lookups  
+
+```cpp
+#include <unordered_set>
+std::unordered_set<int> nums = {3, 1, 4, 1}; 
+```
 
 <br>
 
@@ -1094,11 +1343,24 @@ std::copy(v.begin(), v.end(), out.begin());  // out now contains {1, 2, 3}
 
 `remove_if( iterator start, iterator end, function condition, <type> remove );`  
 * Removes all values in a data range that satisfy a condition  
+* Returns pointer to **new end()**  
+* **Must** be used with `erase()` as `remove_if` just moves non-matched elements (those we want to keep) to the front. The old elements remain and the length of the container remains the same as the original  
 
 ```cpp
-std::vector<int> v = {1, 2, 3, 4};
-v.erase(std::remove_if(v.begin(), v.end(), [](int x){ return x % 2 == 0; }), v.end());
 // Removes even numbers
+// v without using v.erase() = {1, 3, 3, 4}
+#include <vector>
+#include <algorithm>
+
+std::vector<int> v = {1, 2, 3, 4};
+v.erase(
+  // Moves '1' and '3' to positions [0] and [1] - the non matched items to keep
+  // Returns pointer to new end which erase() uses as its begin()
+  std::remove_if(v.begin(), v.end(), [](int x){ return x % 2 == 0; }), 
+  
+  // erase() removes elements from the returned new end to v.end() 
+  v.end()
+);
 ```
 
 ##### std::any_of / all_of / none_of  
@@ -1165,6 +1427,31 @@ bool same = std::equal(a.begin(), a.end(), b.begin()); // 1 (true)
 `ceil(x)`  = rounds **up**  
 `fmax(x, y)`  = returns highest value  
 `fmin(x, y)`  = returns lowest value  
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)    
+
+---  
+
+### numeric
+
+`#include <numeric>`  
+
+Useful for reduction/aggregation operations  
+
+* `std::accumulate` - sum or combine values in a range  
+* `std::inner_product` - dot product  
+* `std::partial_sum` - running total  
+* `std::adjacent_difference` - differences between adjacent values  
+
+#### Example: accumulate
+
+```cpp
+#include <numeric>
+std::vector<int> v = {1, 2, 3};
+int sum = std::accumulate(v.begin(), v.end(), 0);
+```
 
 <br>
 
@@ -1258,7 +1545,9 @@ bool same = std::equal(a.begin(), a.end(), b.begin()); // 1 (true)
 * Iterates an array  
 * Can be combined with break and continue statements  
 
-##### For Each  
+##### For Each (Range-Based)  
+
+* Simplified loop that uses iterators internally  
 
 `for(<type> <var> : <array>) {`  
 &emsp;`std::cout << <var> << std::endl;`  
@@ -1351,6 +1640,22 @@ auto scale = [=](int x) -> double {
     return x * factor * 0.5;
 };
 std::cout << scale(4);  // Output: 20
+```
+
+##### Optional Return Values  
+
+`#include <optional>`
+
+* Better than sentinel values (e.g., -1)  
+* Check with if (opt) before accessing  
+
+```cpp
+#include <optional>
+
+std::optional<int> maybeDivide(int a, int b) {
+    if (b == 0) return std::nullopt;
+    return a / b;
+}
 ```
 
 <br>
@@ -1467,6 +1772,18 @@ public:
     Example() : a(2) {  // (2) constructor init list - overrides default value
         a = 3;          // (3) constructor body - overrides all other init values
     }
+};
+```
+
+##### default Keyword
+
+* Auto-generates default constructor/operator  
+* Use when your class doesn't manage resources but still needs to be constructible/copyable  
+
+```cpp
+class Foo {
+public:
+    Foo() = default;  // compiler provides default constructor
 };
 ```
 
@@ -1765,6 +2082,18 @@ int main() {
 }
 ```
 
+##### Object Slicing  
+
+When storing derived objects by value in a base-type container (e.g. `std::vector<Animal>`), only the `Animal` portion is copied. The `Dog`/`Cat` parts are **sliced off**.
+
+```cpp
+std::vector<Animal> pets;
+pets.push_back(Dog()); // Sliced — becomes just Animal
+```
+
+Polymorphism only works through pointers or references
+Use `std::vector<std::unique_ptr<Animal>>` to avoid slicing  
+
 <br>
 
 ##### Friend Functions  
@@ -2059,6 +2388,8 @@ catch (const std::exception& e) {
 [Library Reference](https://cplusplus.com/reference/ctime/)  
 [Function Reference](https://cplusplus.com/reference/ctime/time)  
 
+See [Chrono Library](#chrono-library---time-and-duration) as an alternative  
+
 `#include <ctime>` - includes time library  
 `time(0)` - number of seconds passed since 1st Jan 1970  
 
@@ -2071,6 +2402,49 @@ catch (const std::exception& e) {
 `std::rand()` - Generates random number  
 `std::rand() % 10` - Defines random numbers between 0 and **9** (+ 1 if wanting 1 - 10)  
 **Alternatively** use `<random>` library - [See here](https://cplusplus.com/reference/random/)
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)    
+
+---  
+
+### Chrono Library - Time and Duration  
+
+`#include <chrono>`  
+
+* Used for measuring durations and timestamps  
+* Use steady_clock for durations, system_clock for real time  
+
+```cpp
+#include <chrono>
+auto start = std::chrono::steady_clock::now();
+// ... code ...
+auto end = std::chrono::steady_clock::now();
+std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+```
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)    
+
+---  
+
+### Filesystem Library  
+
+`#include <filesystem>` 
+
+* For files and paths  
+* Great for file checking, directory iteration, path manipulations  
+
+```cpp
+#include <filesystem>
+namespace fs = std::filesystem;
+
+if (fs::exists("file.txt")) {
+    std::cout << "File exists!";
+}
+```
 
 <br>
 
