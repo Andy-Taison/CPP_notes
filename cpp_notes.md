@@ -113,6 +113,8 @@
 * Output name is optional, default is a.exe (extension does not need specifying)  
 * If compiling **multiple files**, list all in same place `<filename>`. Note **only c++** files require compiling (not header files)  
 
+* Use `-c` flag in front of `filename` to compile to object file. Call again on object files without `-c` to link into an executable  
+
 `.\<filename>`  
 * Runs compiled file
 * Can compile and run in one line using `&&`  
@@ -344,7 +346,7 @@ C++ Boilerplate:
 `const <type> VAR = val;` - Variables declared `const` are constants and cannot be modified once initialised. Typically declare `VAR` in **capitals** to denote constant. Note this is different to `#define` constants which are preprocessor directives, `const` are program constants  
 
 ##### static keyword
-`static` [(storage specifier)](https://en.cppreference.com/w/cpp/language/storage_duration) - The storage for the object is allocated when the program begins and deallocated when the program ends. Only one instance of the object exists  
+`static` [(storage specifier)](https://en.cppreference.com/w/cpp/language/storage_duration) - The storage for the object is allocated when the program begins and deallocated when the program ends. Only one instance of the object exists. `static` variables in classes are identical and shared across all instances of the class, whereas in functions the value persists across calls   
 
 ##### auto keyword
 `auto var = expression;`  
