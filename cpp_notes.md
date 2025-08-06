@@ -10,11 +10,11 @@
 | **2.** | [Compile](#compile) | [Compiling](#compile),<br>[Makefiles](#makefiles),<br>[CMake Basics](#cmake-basics) |
 | **3.** | [Include Libraries/Files](#include-librariesfiles) | [#include](#include-librariesfiles),<br>[Custom Header Files](#custom-header-files),<br>[bits/stdc++.h](#bitsstdch) |
 | **4.** | [Command Line Arguments](#command-line-arguments) | argc,<br>argv |
-| **5.** | [Outputs](#outputs) | cout,<br>printf |
+| **5.** | [Outputs](#outputs) | [std::cout](#stdcout),<br>[printf](#printf),<br>[std::cerr - Standard Error Stream](#stdcerr--standard-error-stream) |
 | **6.** | [User Input](#user-input) | cin,<br>get,<br>getline |
 | **7.** | [Namespaces](#namespaces) | [Using namespace](#namespaces),<br>[Namespace Functions](#custom-namespaces) |
 | **8.** | [Scopes](#scopes) | Global,<br>Local |
-| **9.** | [Data Types](#data-types) | [const](#const-keyword),<br>[static](#static-keyword),<br>[auto Keyword](#auto-keyword),<br>[Type Promotion](#type-promotion-and-conversion),<br>[sizeof()](#sizeof),<br>[Data Types List](#data-types),<br>[Finding the Type of an Object (typeid)](#finding-the-type-of-an-object-typeid),<br>[Aliases](#aliases),<br>[#define (Macros)](#define-macros),<br>[Conditional Inclusions](#conditional-inclusions) |
+| **9.** | [Data Types](#data-types) | [const](#const-keyword),<br>[static](#static-keyword),<br>[auto Keyword](#auto-keyword),<br>[Type Promotion](#type-promotion-and-conversion),<br>[size() - Runtime Size of Containers](#size---runtime-size-of-containers),<br>[sizeof()](#sizeof),<br>[size_t - unsigned type for sizes](#size_t--unsigned-type-for-sizes),<br>[limits.h](#limitsh),<br>[Data Types List](#data-types---list),<br>[Finding the Type of an Object (typeid)](#finding-the-type-of-an-object-typeid),<br>[Aliases](#aliases),<br>[#define (Macros)](#define-macros),<br>[Conditional Inclusions](#conditional-inclusions) |
 | **10.** | [Pointers](#pointers) | [Declare](#pointers),<br>[Address-of-Operator](#pointers),<br>[Dereference Operator](#pointers),<br>[Incrementing](#incrementing),<br>[Const Pointers](#constant-pointers),<br>[Void Pointers](#void-pointers),<br>[Invalid Pointers](#invalid-pointers),<br>[Null Pointers](#null-pointers),<br>[Dynamic Memory](#dynamic-memory),<br>[Checking Allocation](#check-allocation-successful),<br>[Smart Pointers](#smart-pointers) |  
 | **11.** | [Iterators](#iterators) | |
 | **12.** | [Strings](#strings) | String Methods |
@@ -42,7 +42,7 @@
 | **34.** | [Time](#time) | [Time](#time),<br>[Random Numbers](#random-numbers) |
 | **35.** | [Chrono Library](#chrono-library---time-and-duration) | Time and Duration |
 | **36.** | [Filesystem Library](#filesystem-library) | File checking, directory iteration, path manipulations |
-| **37.** | [Working With Files](#working-with-files) | [Writing](#working-with-files),<br>[Reading](#working-with-files),<br>[Modes](#modes),<br>[Parsing CSV Files](#parsing-csv-files) |
+| **37.** | [Working With Files](#working-with-files) | [Writing](#working-with-files),<br>[Reading](#working-with-files),<br>[Modes](#modes),<br>[std::stringstream](#stdstringstream),<br>[Parsing CSV Files](#parsing-csv-files) |
 | **38.** | [Logging / Writing Logs ](#logging--writing-logs) | |
 | **39.** | [ Unit Testing](#unit-testing-in-c) | |
 | **40.** | [Threads](#threads) | [Threads](#threads),<br>[Concurrency Basics](#concurrency-basics-for-future-reference) |
@@ -243,11 +243,15 @@ C++ Boilerplate:
 
 ### Outputs  
 
+##### std::cout
+
 `std::cout << "Hello" << <int data> << std::endl;`  
 * Output to console whatever follows the insertion operator `<<` ("put to")  
 * Part of iostream library `#include <iostream>`  
 * `<int data>` above is example of adding a number or variable to output  
 * Optionally follow with `<< std::endl` to add new line (can also use `"\n"` )  
+
+##### printf()  
 
 `printf("Hello %i", <int data>);`
 * c method to output to console  
@@ -258,7 +262,26 @@ C++ Boilerplate:
 |:--:|:--:|:--:|
 |int|`%i`||
 |float|`%f`||
-|string|`%s`|Must first convert to character using `c_str()`: `printf("%s", var.c_str());`|
+|string|`%s`|Must first convert to character using `c_str()`: `printf("%s", var.c_str());`| 
+
+
+##### std::cerr – Standard Error Stream
+
+* Used to output **error messages** and diagnostics  
+* Writes to **standard error (stderr)** — typically shown in console but separate from `std::cout`  
+* **Unbuffered** by default (immediate output), making it **useful for crash/debug logging**  
+* Use `std::clog` (buffered error stream) if you want errors with performance buffering  
+* Can be redirected separately from `std::cout`  
+
+```cpp
+std::cerr << "Error: file not found" << std::endl;
+```
+
+Redirecting output in terminal (bash):
+```bash
+# Here, '1>' redirects 'stdout' and '2>' redirects 'stderr'  
+./app 1>output.txt 2>errors.txt
+```
 
 <br>
 
@@ -344,6 +367,14 @@ C++ Boilerplate:
 
 ##### const keyword
 `const <type> VAR = val;` - Variables declared `const` are constants and cannot be modified once initialised. Typically declare `VAR` in **capitals** to denote constant. Note this is different to `#define` constants which are preprocessor directives, `const` are program constants  
+Different positioning of `const`:  
+```cpp
+void foo() const	        \\ Member function that does not modify the object
+const int x	                \\ x is immutable inside the function
+const std::string&	        \\ Reference that can’t be modified
+std::string&	                \\ Reference that can be modified
+const std::string& bar() const	\\ Returns read-only string, and doesn't modify this
+```
 
 ##### static keyword
 `static` [(storage specifier)](https://en.cppreference.com/w/cpp/language/storage_duration) - The storage for the object is allocated when the program begins and deallocated when the program ends. Only one instance of the object exists. `static` variables in classes are identical and shared across all instances of the class, whereas in functions the value persists across calls   
@@ -382,11 +413,68 @@ int x = 5;
 double y = static_cast<double>(x);
 ```  
 
-##### sizeof()  
-`sizeof(<type>)` - will return data type size in bytes 
+##### size() - Runtime Size of Containers  
 
+* Returns the **number of elements** in a [container](#container-quick-guide) like `std::vector`, `std::string`, `std::array`, etc.  
+* Returns a [size_t](#size_t--unsigned-type-for-sizes)  
+* Safe and preferred for loops instead of hardcoding lengths  
+* Can be used with `.empty()` for safe checks  
+
+```cpp
+std::vector<int> v = {10, 20, 30};
+std::cout << v.size(); // Outputs 3
+
+// can be used with .empty()
+if (!v.empty()) {
+    std::cout << "First element: " << v[0];
+}
+```
+
+##### sizeof()  
+`sizeof(<type>)`  
+* Returns the **size in bytes** of a type or variable **at compile time**  
+* Always returns a [size_t](#size_t--unsigned-type-for-sizes) value  
+* Works on both primitive and user-defined types (though user-defined types may include padding)  
+* Use parentheses for types: `sizeof(int)`, but optional for variables: `sizeof var`  
+* Not to be confused with [size()](#size---runtime-size-of-containers), which is a runtime function for containers  
+
+```cpp
+int x = 5;
+std::cout << sizeof(int) << '\n'; // Size of int type: 4 (bytes)
+std::cout << sizeof x << '\n';    // Size of variable x: 4 (bytes)
+```
+
+##### size_t – Unsigned Type for Sizes
+
+* `size_t` is the standard unsigned integer type used for sizes and indices in C++.
+* It is returned by functions like `.size()`, `sizeof()`, and used for indexing STL containers.
+* Defined in `<cstddef>`, but also available via most STL headers.  
+<br>
+
+* **Avoid mixing** `int` and `size_t` in comparisons — it can cause compiler warnings   
+* **Prefer** `size_t` **when iterating over** `.size()` or indexing containers  
+* It's an unsigned type, so avoid negative comparisons like `i >= 0` with `size_t`  
+* `size_t` is platform-dependent:  
+  * On 64-bit systems, it’s typically `unsigned long long`  
+  * On 32-bit systems, it’s typically `unsigned int`  
+
+```cpp
+#include <vector>
+#include <iostream>
+
+int main() {
+    std::vector<int> v = {10, 20, 30};
+
+    for (size_t i = 0; i < v.size(); ++i) {
+        std::cout << "Element " << i << ": " << v[i] << '\n';
+    }
+}
+```
+
+##### limits.h  
 `#include <limits.h>` - Library which contains functions such as `INT_MAX` and `LONG_MIN` to retrieve min and max values  
 
+##### Data Types - List
 |Type|How to declare & define|Example|Note|Size (RAM used bytes)|MAX value(signed)|
 |:--:|:--:|:--:|:--:|:--:|:--:|
 |Char|char letter = 'b';|'a'|Must use single quotes<br>Can be used to store ascii values when assigned to a number|1|127 (ASCII)|
@@ -693,6 +781,8 @@ auto* ptrToIt = &it;
 [Library Reference](https://cplusplus.com/reference/string/)  
 [Class Reference](https://cplusplus.com/reference/string/string/)  
 
+Also see [std::stringstream](#stdstringstream), which allows strings to be treated as streams. Useful for tokenising or converting between types  
+
 `#include <string>`  
 
 * Most methods below can be combined,  
@@ -726,7 +816,7 @@ auto* ptrToIt = &it;
 
 `<string>.insert(<index>, <str>)` inserts `str` at `index` in `string`  
 
-`std::stoi(<string>);` Converts string to integer  
+`std::stoi(<string>);` Converts string to integer - **Wrap in `try...catch`**. Also see [std::stringstream](#stdstringstream)  
 
 `#include <string>`  
 `std::to_string(int_val);` Converts int to string  
@@ -922,6 +1012,20 @@ e.g.
 
 `var.assign(<new_size>, <initialise_to_value>);`  
 * Resizes vector to `new_size` and initialises each to value passed  
+
+`var.erase(<iterator position>);`  
+* This will erase the element at the position pointed to by the iterator  
+* NOTE you should **reassign the iterator** as can invalidate the iterator causing undefined behaviour  
+```cpp
+// Erase example showing people less than or equal to 30 being removed from the people vector
+for (auto it = people.begin(); it != people.end(); ) {
+    if (std::stoi(it->age) <= 30) {
+        it = people.erase(it); // Don't increment
+    } else {
+        ++it;
+    }
+}
+```
 
 `var.clear();`  
 * Destroys elements and clears array (size = 0)  
@@ -1262,6 +1366,7 @@ OR
 | Function          | Purpose                                  |
 |-------------------|------------------------------------------|
 | [std::sort](#stdsort)       | Sorts a range (e.g. vector)              |
+| [std::stable_sort](#stdstable_sort)        | Like `std::sort`, but **preserves relative order** of equal elements     |
 | [std::find](#stdfind)       | Finds first matching element             |
 | [std::count](#stdcount)      | Counts how many times a value appears    |
 | [std::for_each](#stdfor_each)   | Applies function/lambda to each element  |
@@ -1283,6 +1388,36 @@ e.g.
 &emsp;`std::sort(vector.begin(), vector.end());`  
 * Modifies original variable  
 * `comparator` is **optional**, can be a function (incl [lambdas](#lambda-functions)) or strut/object  
+
+##### std::stable_sort  
+`#include <algorithm>`
+
+* Like `std::sort`, but **preserves relative order** of equal elements  
+* Useful when **secondary criteria** are not explicitly coded but meaningful  
+* Slower than `std::sort` (O(n log² n) worst case vs O(n log n))  
+* Use [std::sort](#stdsort) unless **stable ordering is essential**  
+
+```cpp
+// The "Bob" and "Alice (25)" entries retain their original order because the sort is stable
+
+#include <algorithm>
+#include <vector>
+#include <string>
+
+struct Person {
+    std::string name;
+    int age;
+};
+
+std::vector<Person> people = {
+    {"Alice", 30}, {"Bob", 25}, {"Alice", 25}, {"Charlie", 30}
+};
+
+std::stable_sort(people.begin(), people.end(), [](const Person& a, const Person& b) {
+    return a.age < b.age;
+});
+// {"Bob", 25}, {"Alice", 25}, {"Alice", 30}, {"Charlie", 30}
+```
 
 ##### std::find  
 
@@ -2037,7 +2172,8 @@ Use [class member objects](#class-definition--inline-methods) when an object **H
 
 ##### Virtual Functions and override  
 * Allow **runtime polymorphism**
-* Enables **dynamic dispatch**: method chosen by actual (derived) type, not pointer type
+* Enables **dynamic dispatch**: method chosen by actual (derived) type, not pointer type  
+* Use `const` for when the method does not change the state of the object and does not modify member variables  
 
 ```cpp
 class Animal {
@@ -2544,6 +2680,61 @@ if (fs::exists("file.txt")) {
 |std::ios::app|All output operations are performed at the end of the file, appending the content to the current content of the file|
 |std::ios::trunc|If the file is opened for output operations and it already existed, its previous content is deleted and replaced by the new one|
 
+##### std::stringstream  
+
+`#include <sstream>`  
+
+* `std::stringstream` is used to treat strings like streams. Useful for tokenising or converting between types  
+* `std::stringstream` - input and output  
+* `std::istringstream` - input only  
+* `std::ostringstream` - output only  
+* Use `clear()` and `str("")` to reset a stream  
+* Safer alternative to `stoi()` when parsing formatted strings  
+<br>
+
+* `seekg(pos)` – sets the read (**get**) position  
+* `seekp(pos)` – sets the write (**put**) position  
+* Common usage: `ss.seekg(0)` to rewind to the beginning for reading again  
+
+
+```cpp
+#include <sstream>
+
+std::string line = "42 hello";
+std::stringstream ss(line);  // Create stream object called ss
+
+int num; std::string word;
+ss >> num >> word; // read from buffer, num = 42, word = "hello"
+```
+
+Important gotcha:
+```cpp
+std::stringstream ss;
+ss << 42 << " " << "hello";  // Buffer: "42 hello" 
+
+int num; std::string word;
+ss >> num >> word;           // Reads to separate variables: 42, "hello"
+
+ss << " next";               // Appends to buffer → now: "42 hello next"
+ss >> word;                  // Nothing happens — still at end
+std::cout << word;           // Still prints "hello"
+
+
+// Fix it by resetting the stream properly
+ss.clear();       // Clear eof or fail flags
+ss.seekg(0);      // Reset read position (get pointer) to beginning -> without this and only clear() " next" will be printed
+std::getline(ss, word);  // Read entire line into "word"
+ss >> word;        // Now reads from start again -> "42 hello next"
+
+
+// Or wipe the buffer entirely and reuse
+ss.str("");       // Clear the internal string buffer
+ss.clear();       // Clear flags
+ss << "next";     // Now safe to write fresh content
+ss >> word;       // word = "next"
+```
+
+
 ##### Parsing CSV Files
 
 * Use `std::stringstream` to tokenise line by commas  
@@ -2551,11 +2742,11 @@ if (fs::exists("file.txt")) {
 ```cpp
 #include <sstream>
 std::string line;
-while (std::getline(file, line)) {
-    std::stringstream ss(line);
+while (std::getline(file, line)) {  // Read each line from file
+    std::stringstream ss(line);  // Create stream object called ss
     std::string cell;
 
-    while (std::getline(ss, cell, ',')) {
+    while (std::getline(ss, cell, ',')) {  // Read from ss, deliminate by ',' and store result in cell
         std::cout << "Cell: " << cell << "\n";
     }
 }
@@ -2569,6 +2760,7 @@ while (std::getline(file, line)) {
 
 ### Logging / Writing Logs  
 
+* Consider using [cerr](#stdcerr--standard-error-stream)  
 * Logging is typically done using file streams   
 * Prefer `std::ofstream` with append mode (see [working with files](#working-with-files))  
 
