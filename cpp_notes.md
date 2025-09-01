@@ -9,43 +9,44 @@
 | **1.** | [Comments](#comments) | Single,<br>Multi,<br>Document |
 | **2.** | [Compile](#compile) | [Compiling](#compile),<br>[Makefiles](#makefiles),<br>[CMake Basics](#cmake-basics) |
 | **3.** | [Include Libraries/Files](#include-librariesfiles) | [#include](#include-librariesfiles),<br>[Custom Header Files](#custom-header-files),<br>[bits/stdc++.h](#bitsstdch) |
-| **4.** | [Command Line Arguments](#command-line-arguments) | argc,<br>argv |
-| **5.** | [Outputs](#outputs) | [std::cout](#stdcout),<br>[printf](#printf),<br>[std::cerr - Standard Error Stream](#stdcerr--standard-error-stream) |
-| **6.** | [User Input](#user-input) | cin,<br>get,<br>getline |
-| **7.** | [Namespaces](#namespaces) | [Using namespace](#namespaces),<br>[Namespace Functions](#custom-namespaces) |
-| **8.** | [Scopes](#scopes) | Global,<br>Local |
-| **9.** | [Data Types](#data-types) | [const](#const-keyword),<br>[static](#static-keyword),<br>[auto Keyword](#auto-keyword),<br>[Type Promotion](#type-promotion-and-conversion),<br>[size() - Runtime Size of Containers](#size---runtime-size-of-containers),<br>[sizeof()](#sizeof),<br>[size_t - unsigned type for sizes](#size_t--unsigned-type-for-sizes),<br>[limits.h](#limitsh),<br>[Data Types List](#data-types---list),<br>[Finding the Type of an Object (typeid)](#finding-the-type-of-an-object-typeid),<br>[Aliases](#aliases),<br>[#define (Macros)](#define-macros),<br>[Conditional Inclusions](#conditional-inclusions) |
-| **10.** | [Pointers](#pointers) | [Declare](#pointers),<br>[Address-of-Operator](#pointers),<br>[Dereference Operator](#pointers),<br>[Incrementing](#incrementing),<br>[Const Pointers](#constant-pointers),<br>[Void Pointers](#void-pointers),<br>[Invalid Pointers](#invalid-pointers),<br>[Null Pointers](#null-pointers),<br>[Dynamic Memory](#dynamic-memory),<br>[Checking Allocation](#check-allocation-successful),<br>[Smart Pointers](#smart-pointers) |  
-| **11.** | [Iterators](#iterators) | |
-| **12.** | [Strings](#strings) | String Methods |
-| **13.** | [Regex](#regex) | Pattern Matching |
-| **14.** | [STL Container Comparison](#stl-container-comparison) |
-| **15.** | [Arrays](#arrays) | [Standard arrays](#arrays),<br>[STL Arrays](#stl-arrays),<br>[STL Vectors](#stl-vectors),<br>[Sort](#sort) |
-| **16.** | [Lists](#lists) | |
-| **17.** | [Deque](#deque) | |
-| **18.** | [Queues](#queues) | |
-| **19.** | [Stacks](#stacks) | |
-| **20.** | [Maps (Dictionaries)](#maps-dictionaries) | [Maps](#maps-dictionaries),<br>[Multimaps](#multimaps),<br>[std::unordered_map](#stdunordered_map) |
-| **21.** | [Sets](#sets) | [Sets](#sets),<br>[std::unordered_set](#stdunordered_set) |
-| **22.** | [Pairs](#pairs) | |
-| **23.** | [Tuples](#tuples) | |
-| **24.** | [Algorithms Library](#algorithms-library) | [Algorithms List](#algorithms-library) |
-| **25.** | [Maths](#maths) | cmath |
-| **26.** | [numeric](#numeric) | Reduction/aggregation operations |
-| **27.** | [Control Statements & Flow](#control-statements--flow) | [If](#if-statement),<br>[Ternary Operator](#ternary-operator),<br>[Switch](#switch-statement),<br>[Comparison & Logic Operators](#comparison--logic-operators),<br>[Jump](#jump-statements) |
-| **28.** | [Loops](#loops) | [For](#for),<br>[For Each (Range-Based)](#for-each-range-based),<br>[While](#while),<br>[Do](#do) |
-| **29.** | [Functions](#functions) | [Function Declaration](#functions),<br>[Function Overloading](#function-overloading),<br>[Lambda Functions](#lambda-functions),<br>[Optional Return Values](#optional-return-values) |
-| **30.** | [Classes & Struts](#classes--struts) | [Class Definition](#class-definition--inline-methods),<br>[Inline Methods](#class-definition--inline-methods),<br>[Static Members](#class-definition--inline-methods),<br>[toString](#class-definition--inline-methods),<br>[Normal (Not-inline) Methods](#normal-not-inline-methods),<br>[Constructor](#constructor),<br>[default Keyword](#default-keyword),<br>[explicit Keyword](#explicit-keyword),<br>[Destructor](#destructor),<br>[Copy Constructor vs Copy Assignment Operator](#copy-constructor-vs-copy-assignment-operator),<br>[Disable Copying of Class](#disable-copying-of-class),<br>[Rule of 0 / 3 / 5](#rule-of-0--3--5),<br>[Move Semantics](#move-semantics-c11),<br>[Instantiation & Member Access](#instantiation--member-access),<br>[Inheritance](#inheritance),<br>[Polymorphism](#inheritance),<br>[Virtual Functions and Override](#virtual-functions-and-override),<br>[Object Slicing](#object-slicing),<br>[Friend Functions](#friend-functions),<br>[Operator Overloading](#operator-overloading),<br>[Templates](#templates),<br>[Structs](#structs) |
-| **31.** | [RAII (Resource Acquisition Is Initialisation)](#raii-resource-acquisition-is-initialisation) | |
-| **32.** | [Enums](#enums) | [Traditional Enum](#traditional-enums),<br>[Enum Class](#enum-class) |
-| **33.** | [Error Handling](#error-handling) | [Throw, Try..Catch](#throw-trycatch),<br>[Exception Rules](#exception-rules),<br>[noexcept](#noexcept),<br>[Types of Standard Exceptions](#types-of-standard-exceptions) |
-| **34.** | [Time](#time) | [Time](#time),<br>[Random Numbers](#random-numbers) |
-| **35.** | [Chrono Library](#chrono-library---time-and-duration) | Time and Duration |
-| **36.** | [Filesystem Library](#filesystem-library) | File checking, directory iteration, path manipulations |
-| **37.** | [Working With Files](#working-with-files) | [Writing](#working-with-files),<br>[Reading](#working-with-files),<br>[Modes](#modes),<br>[std::stringstream](#stdstringstream),<br>[Parsing CSV Files](#parsing-csv-files) |
-| **38.** | [Logging / Writing Logs ](#logging--writing-logs) | |
-| **39.** | [ Unit Testing](#unit-testing-in-c) | |
-| **40.** | [Threads](#threads) | [Threads](#threads),<br>[Concurrency Basics](#concurrency-basics-for-future-reference) |
+| **4.** | [Standard Libraries and Functions](#standard-libraries-and-functions) | |
+| **5.** | [Command Line Arguments](#command-line-arguments) | argc,<br>argv |
+| **6.** | [Outputs](#outputs) | [std::cout](#stdcout),<br>[printf](#printf),<br>[std::cerr - Standard Error Stream](#stdcerr--standard-error-stream) |
+| **7.** | [User Input](#user-input) | cin,<br>get,<br>getline |
+| **8.** | [Namespaces](#namespaces) | [Using namespace](#namespaces),<br>[Namespace Functions](#custom-namespaces) |
+| **9.** | [Scopes](#scopes) | Global,<br>Local |
+| **10.** | [Data Types](#data-types) | [const](#const-keyword),<br>[static](#static-keyword),<br>[auto Keyword](#auto-keyword),<br>[Type Promotion](#type-promotion-and-conversion),<br>[size() - Runtime Size of Containers](#size---runtime-size-of-containers),<br>[sizeof()](#sizeof),<br>[size_t - unsigned type for sizes](#size_t--unsigned-type-for-sizes),<br>[limits.h](#limitsh),<br>[Data Types List](#data-types---list),<br>[Finding the Type of an Object (typeid)](#finding-the-type-of-an-object-typeid),<br>[Aliases](#aliases),<br>[#define (Macros)](#define-macros),<br>[Conditional Inclusions](#conditional-inclusions) |
+| **11.** | [Pointers](#pointers) | [Declare](#pointers),<br>[Address-of-Operator](#pointers),<br>[Dereference Operator](#pointers),<br>[Incrementing](#incrementing),<br>[Const Pointers](#constant-pointers),<br>[Void Pointers](#void-pointers),<br>[Invalid Pointers](#invalid-pointers),<br>[Null Pointers](#null-pointers),<br>[Dynamic Memory](#dynamic-memory),<br>[Checking Allocation](#check-allocation-successful),<br>[Smart Pointers](#smart-pointers) |  
+| **12.** | [Iterators](#iterators) | |
+| **13.** | [Strings](#strings) | String Methods |
+| **14.** | [Regex](#regex) | Pattern Matching |
+| **15.** | [STL Container Comparison](#stl-container-comparison) |
+| **16.** | [Arrays](#arrays) | [Standard arrays](#arrays),<br>[STL Arrays](#stl-arrays),<br>[STL Vectors](#stl-vectors),<br>[Sort](#sort) |
+| **17.** | [Lists](#lists) | |
+| **18.** | [Deque](#deque) | |
+| **19.** | [Queues](#queues) | |
+| **20.** | [Stacks](#stacks) | |
+| **21.** | [Maps (Dictionaries)](#maps-dictionaries) | [Maps](#maps-dictionaries),<br>[Multimaps](#multimaps),<br>[std::unordered_map](#stdunordered_map) |
+| **22.** | [Sets](#sets) | [Sets](#sets),<br>[std::unordered_set](#stdunordered_set) |
+| **23.** | [Pairs](#pairs) | |
+| **24.** | [Tuples](#tuples) | |
+| **25.** | [Algorithms Library](#algorithms-library) | [Algorithms List](#algorithms-library) |
+| **26.** | [Maths](#maths) | cmath |
+| **27.** | [numeric](#numeric) | Reduction/aggregation operations |
+| **28.** | [Control Statements & Flow](#control-statements--flow) | [If](#if-statement),<br>[Ternary Operator](#ternary-operator),<br>[Switch](#switch-statement),<br>[Comparison & Logic Operators](#comparison--logic-operators),<br>[Jump](#jump-statements) |
+| **29.** | [Loops](#loops) | [For](#for),<br>[For Each (Range-Based)](#for-each-range-based),<br>[While](#while),<br>[Do](#do) |
+| **30.** | [Functions](#functions) | [Function Declaration](#functions),<br>[Function Overloading](#function-overloading),<br>[Lambda Functions](#lambda-functions),<br>[Optional Return Values](#optional-return-values) |
+| **31.** | [Classes & Struts](#classes--struts) | [Class Definition](#class-definition--inline-methods),<br>[Inline Methods](#class-definition--inline-methods),<br>[Static Members](#class-definition--inline-methods),<br>[toString](#class-definition--inline-methods),<br>[Normal (Not-inline) Methods](#normal-not-inline-methods),<br>[Constructor](#constructor),<br>[default Keyword](#default-keyword),<br>[explicit Keyword](#explicit-keyword),<br>[Destructor](#destructor),<br>[Copy Constructor vs Copy Assignment Operator](#copy-constructor-vs-copy-assignment-operator),<br>[Disable Copying of Class](#disable-copying-of-class),<br>[Rule of 0 / 3 / 5](#rule-of-0--3--5),<br>[Move Semantics](#move-semantics-c11),<br>[Instantiation & Member Access](#instantiation--member-access),<br>[Inheritance](#inheritance),<br>[Polymorphism](#inheritance),<br>[Virtual Functions and Override](#virtual-functions-and-override),<br>[Object Slicing](#object-slicing),<br>[Friend Functions](#friend-functions),<br>[Operator Overloading](#operator-overloading),<br>[Templates](#templates),<br>[Structs](#structs) |
+| **32.** | [RAII (Resource Acquisition Is Initialisation)](#raii-resource-acquisition-is-initialisation) | |
+| **33.** | [Enums](#enums) | [Traditional Enum](#traditional-enums),<br>[Enum Class](#enum-class) |
+| **34.** | [Error Handling](#error-handling) | [Throw, Try..Catch](#throw-trycatch),<br>[Exception Rules](#exception-rules),<br>[noexcept](#noexcept),<br>[Types of Standard Exceptions](#types-of-standard-exceptions) |
+| **35.** | [Time](#time) | [Time](#time),<br>[Random Numbers](#random-numbers) |
+| **36.** | [Chrono Library](#chrono-library---time-and-duration) | Time and Duration |
+| **37.** | [Filesystem Library](#filesystem-library) | File checking, directory iteration, path manipulations |
+| **38.** | [Working With Files](#working-with-files) | [Writing](#working-with-files),<br>[Reading](#working-with-files),<br>[Modes](#modes),<br>[std::stringstream](#stdstringstream),<br>[Parsing CSV Files](#parsing-csv-files) |
+| **39.** | [Logging / Writing Logs ](#logging--writing-logs) | |
+| **40.** | [ Unit Testing](#unit-testing-in-c) | |
+| **41.** | [Threads](#threads) | [Threads](#threads),<br>[Concurrency Basics](#concurrency-basics-for-future-reference) |
 
 <br>
 
@@ -215,6 +216,112 @@ For example:
 
 ---  
 
+### Standard Libraries and Functions  
+
+##### `<iostream>` - Input/Output  
+* `std::cin` — Reads input from standard input (keyboard)  
+* `std::cout` — Writes output to standard output (screen)  
+* `std::cerr` — Writes error messages to standard error  
+* `std::endl` — Inserts a newline and flushes the output stream  
+See [User Input](#user-input) and [Outputs](#outputs)  
+
+##### `<iomanip>` — I/O Formatting  
+* `std::setw` — Sets the width of the next input/output field  
+* `std::setprecision` — Sets the decimal precision for floating-point output  
+* `std::fixed` — Displays floating-point numbers in fixed-point notation  
+* `std::quoted` — Wraps strings in quotes and escapes special characters  
+* `std::boolalpha` — Prints bool values as `true` or `false` instead of `1`/`0`
+
+##### `<cstdlib>` — General Utilities  
+* `EXIT_SUCCESS` — Indicates successful program termination  
+* `EXIT_FAILURE` — Indicates unsuccessful program termination  
+* `std::rand` — Generates a pseudo-random integer  
+* `std::abs` — Computes the absolute value of an integer  
+* `std::atoi` — Converts a C-string to an integer  
+See [Random Numbers](#random-numbers)  
+
+##### `<string>` — Strings  
+* `std::string` — Represents a sequence of characters (dynamic string)  
+* `std::stoi` — Converts a string to an integer  
+* `std::to_string` — Converts a number to a string  
+See [Strings](#strings)  
+
+##### `<vector>` — Containers  
+* `std::vector` — Dynamic array that resizes automatically  
+See [STL Container Comparison](#stl-container-comparison) and [Vectors](#stl-vectors)  
+
+##### `<array>` — Containers  
+* `std::array` — Fixed-size array with STL interface  
+See [STL Container Comparison](#stl-container-comparison) and [Arrays](#arrays)  
+
+##### `<map>` — Associative Containers  
+* `std::map` — Stores key-value pairs sorted by key  
+* `std::multimap` — Like map, but allows duplicate keys  
+See [STL Container Comparison](#stl-container-comparison) and [Maps](#maps-dictionaries)  
+
+##### `<unordered_map>` — Hash Containers  
+* `std::unordered_map` — Stores key-value pairs with fast lookup using hashing  
+See [STL Container Comparison](#stl-container-comparison) and [Maps](#maps-dictionaries)  
+
+##### `<set>` — Containers  
+* `std::set` — Stores unique values in sorted order  
+See [STL Container Comparison](#stl-container-comparison) and [Sets](#sets)  
+
+##### `<algorithm>` — Algorithms  
+* `std::sort` — Sorts elements in a range  
+* `std::find` — Finds an element in a range  
+* `std::count` — Counts occurrences of a value in a range  
+* `std::copy` — Copies elements from one range to another  
+* `std::transform` — Applies a function to a range and stores the result  
+See [Algorithms Library](#algorithms-library)  
+
+##### `<numeric>` — Algorithms  
+* `std::accumulate` — Computes the sum (or other result) of a range  
+* `std::iota` — Fills a range with sequentially increasing values  
+* `std::inner_product` — Computes the inner (dot) product of two ranges  
+See [numeric](#numeric) and [Maths](#maths)  
+
+##### `<utility>` — Utilities  
+* `std::pair` — Holds two values of possibly different types  
+* `std::make_pair` — Creates a pair object without specifying types  
+* `std::move` — Enables move semantics (transfers resources)  
+* `std::swap` — Swaps the values of two objects  
+See [Pairs](#pairs)  
+
+##### `<memory>` — Memory Management  
+* `std::unique_ptr` — Smart pointer with sole ownership of a resource  
+* `std::shared_ptr` — Smart pointer with shared ownership  
+* `std::make_unique` — Creates a unique_ptr safely and efficiently  
+See [Smart Pointers](#smart-pointers)  
+
+##### `<functional>` — Function Utilities  
+* `std::function` — Type-erased wrapper for callable objects  
+* `std::bind` — Binds arguments to a function to create a new callable  
+* `std::mem_fn` — Creates a callable object from a member function pointer  
+
+##### `<thread>` — Multithreading  
+* `std::thread` — Represents and controls a thread  
+* `std::this_thread` — Namespace with utilities for the current thread  
+* `std::mutex` — Mutual exclusion for thread-safe code  
+See [Threads](#threads)  
+
+##### `<chrono>` — Time  
+* `std::chrono::duration` — Represents a span of time  
+* `std::chrono::seconds` — Represents a duration in seconds  
+* `std::this_thread::sleep_for` — Blocks the current thread for a duration  
+See [Chrono Library](#chrono-library---time-and-duration) and [Time](#time)  
+
+##### `<type_traits>` — Type Info & Templates  
+* `std::is_same` — Checks if two types are the same  
+* `std::enable_if` — Enables/Disables function overloads based on types  
+* `std::remove_reference` — Removes reference qualifiers from a type  
+
+<br>  
+
+[⬆ Table of Contents ⬆](#cpp-notes)    
+
+---  
+
 ### Command Line Arguments
 
 C++ Boilerplate:
@@ -234,6 +341,9 @@ C++ Boilerplate:
 
 * `argc` = **number** of arguments passed in, note the executable is always passed in as first argument  
 * Access arguments by indexing `argv` (0 indexed). Note other things are passed in (environment variables and such). So if index more than custom passed in, then may return something unexpected  
+  * `argv[0]` is always the program name  
+  * `argv[1]` to `argv[argc-1]` are any additional arguments  
+  * `argv[argc]` is always a nullptr  
 
 <br>
 
@@ -2093,7 +2203,8 @@ MyClass& operator=(MyClass&& other) noexcept; // Move assignment
 ##### Move Semantics (C++11+)
 
 `std::move()`  
-* Moves resource ownership rather than copying
+* Moves resource ownership rather than copying  
+* Transfers the pointer to its heap memory avoiding unnecessary copies  
 * Useful for performance with **large objects** or **unique_ptrs**
 * For user-defined types, define [move constructor and move assignment operator](#rule-of-5) 
 
