@@ -7,47 +7,48 @@
 |Item|Heading|   Sub Contents|
 |:---:|:---:|:---:|
 | **1.** | [Comments](#comments) | Single,<br>Multi,<br>Document |
-| **2.** | [Compile](#compile) | [Compiling](#compile),<br>[Makefiles](#makefiles),<br>[CMake Basics](#cmake-basics) |
-| **3.** | [Headerfiles and Include Libraries/Files](#headerfiles-and-include-librariesfiles) | [#include](#include-librariesfiles),<br>[Custom Header Files](#custom-header-files),<br>[bits/stdc++.h](#bitsstdch),<br>[#define (Macros)](#define-macros),<br>[#pragma once](#pragma-once),<br>[extern Keyword](#extern-keyword) |
-| **4.** | [Standard Libraries and Functions](#standard-libraries-and-functions) | |
-| **5.** | [Command Line Arguments](#command-line-arguments) | argc,<br>argv |
-| **6.** | [Outputs](#outputs) | [std::cout](#stdcout),<br>[printf](#printf),<br>[std::cerr - Standard Error Stream](#stdcerr--standard-error-stream) |
-| **7.** | [User Input](#user-input) | cin,<br>get,<br>getline |
-| **8.** | [Namespaces](#namespaces) | [Using namespace](#namespaces),<br>[Namespace Functions](#custom-namespaces) |
-| **9.** | [Scopes](#scopes) | Global,<br>Local |
-| **10.** | [Data Types](#data-types) | [const](#const-keyword),<br>[constexpr Keyword](#constexpr-keyword),<br>[static](#static-keyword),<br>[auto Keyword](#auto-keyword),<br>[Type Promotion](#type-promotion-and-conversion),<br>[decltype Keyword](#decltype-keyword),<br>[size() - Runtime Size of Containers](#size---runtime-size-of-containers),<br>[sizeof()](#sizeof),<br>[size_t - unsigned type for sizes](#size_t--unsigned-type-for-sizes),<br>[limits.h](#limitsh),<br>[Data Types List](#data-types---list),<br>[Finding the Type of an Object (typeid)](#finding-the-type-of-an-object-typeid),<br>[Aliases](#aliases),<br>[Conditional Inclusions](#conditional-inclusions) |
-| **11.** | [Pointers](#pointers) | [Declare](#pointers),<br>[Address-of-Operator](#pointers),<br>[Dereference Operator](#pointers),<br>[Incrementing](#incrementing),<br>[Const Pointers](#constant-pointers),<br>[Void Pointers](#void-pointers),<br>[Invalid Pointers](#invalid-pointers),<br>[Null Pointers](#null-pointers),<br>[Dynamic Memory](#dynamic-memory),<br>[Checking Allocation](#check-allocation-successful),<br>[Smart Pointers](#smart-pointers) |  
-| **12.** | [Stack vs Heap](#stack-vs-heap) | |
-| **12.** | [Iterators](#iterators) | |
-| **13.** | [Strings](#strings) | String Methods |
-| **14.** | [Regex](#regex) | Pattern Matching |
-| **15.** | [STL Container Comparison](#stl-container-comparison) |
-| **16.** | [Arrays](#arrays) | [Standard arrays](#arrays),<br>[STL Arrays](#stl-arrays),<br>[STL Vectors](#stl-vectors),<br>[Sort](#sort) |
-| **17.** | [Lists](#lists) | |
-| **18.** | [Deque](#deque) | |
-| **19.** | [Queues](#queues) | |
-| **20.** | [Stacks](#stacks) | |
-| **21.** | [Maps (Dictionaries)](#maps-dictionaries) | [Maps](#maps-dictionaries),<br>[Multimaps](#multimaps),<br>[std::unordered_map](#stdunordered_map) |
-| **22.** | [Sets](#sets) | [Sets](#sets),<br>[std::unordered_set](#stdunordered_set) |
-| **23.** | [Pairs](#pairs) | |
-| **24.** | [Tuples](#tuples) | |
-| **25.** | [Algorithms Library](#algorithms-library) | [Algorithms List](#algorithms-library) |
-| **26.** | [Maths](#maths) | cmath |
-| **27.** | [numeric](#numeric) | Reduction/aggregation operations |
-| **28.** | [Control Statements & Flow](#control-statements--flow) | [If](#if-statement),<br>[Ternary Operator](#ternary-operator),<br>[Switch](#switch-statement),<br>[Comparison & Logic Operators](#comparison--logic-operators),<br>[Jump](#jump-statements) |
-| **29.** | [Loops](#loops) | [For](#for),<br>[For Each (Range-Based)](#for-each-range-based),<br>[While](#while),<br>[Do](#do) |
-| **30.** | [Functions](#functions) | [Function Declaration](#functions),<br>[Function Overloading](#function-overloading),<br>[Lambda Functions](#lambda-functions),<br>[Optional Return Values](#optional-return-values) |
-| **31.** | [Classes & Struts](#classes--struts) | [Class Definition](#class-definition--inline-methods),<br>[Inline Methods](#class-definition--inline-methods),<br>[Static Members](#class-definition--inline-methods),<br>[toString](#class-definition--inline-methods),<br>[Normal (Not-inline) Methods](#normal-not-inline-methods),<br>[Constructor](#constructor),<br>[default Keyword](#default-keyword),<br>[explicit Keyword](#explicit-keyword),<br>[Destructor](#destructor),<br>[Copy Constructor vs Copy Assignment Operator](#copy-constructor-vs-copy-assignment-operator),<br>[Disable Copying of Class](#disable-copying-of-class),<br>[Rule of 0 / 3 / 5](#rule-of-0--3--5),<br>[Move Semantics](#move-semantics-c11),<br>[Instantiation & Member Access](#instantiation--member-access),<br>[Inheritance](#inheritance),<br>[Polymorphism](#inheritance),<br>[Virtual Functions and Override](#virtual-functions-and-override),<br>[Object Slicing](#object-slicing),<br>[Friend Functions](#friend-functions),<br>[Operator Overloading](#operator-overloading),<br>[Templates](#templates),<br>[Structs](#structs) |
-| **32.** | [RAII (Resource Acquisition Is Initialisation)](#raii-resource-acquisition-is-initialisation) | |
-| **33.** | [Enums](#enums) | [Traditional Enum](#traditional-enums),<br>[Enum Class](#enum-class) |
-| **34.** | [Error Handling](#error-handling) | [Throw, Try..Catch](#throw-trycatch),<br>[Exception Rules](#exception-rules),<br>[noexcept](#noexcept),<br>[Types of Standard Exceptions](#types-of-standard-exceptions) |
-| **35.** | [Time](#time) | [Time](#time),<br>[Random Numbers](#random-numbers) |
-| **36.** | [Chrono Library](#chrono-library---time-and-duration) | Time and Duration |
-| **37.** | [Filesystem Library](#filesystem-library) | File checking, directory iteration, path manipulations |
-| **38.** | [Working With Files](#working-with-files) | [Writing](#working-with-files),<br>[Reading](#working-with-files),<br>[Modes](#modes),<br>[std::stringstream](#stdstringstream),<br>[Parsing CSV Files](#parsing-csv-files) |
-| **39.** | [Logging / Writing Logs ](#logging--writing-logs) | |
-| **40.** | [ Unit Testing](#unit-testing-in-c) | |
-| **41.** | [Threads](#threads) | [Threads](#threads),<br>[Concurrency Basics](#concurrency-basics-for-future-reference) |
+| **2.** | [Build Process](#build-process) | [Build Stages Overview](#build-stages-overview),<br>[Headers Vs Link Libraries](#headers-vs-link-libraries),<br>[Compile](#compile) |
+| **3.** | [Build Systems](#build-systems) | [Make](#make),<br>[CMake](#cmake) |
+| **4.** | [Headerfiles and Include Libraries/Files](#headerfiles-and-include-librariesfiles) | [#include](#include-librariesfiles),<br>[Custom Header Files](#custom-header-files),<br>[bits/stdc++.h](#bitsstdch),<br>[#define (Macros)](#define-macros),<br>[#pragma once](#pragma-once),<br>[extern Keyword](#extern-keyword) |
+| **5.** | [Standard Libraries and Functions](#standard-libraries-and-functions) | |
+| **6.** | [Command Line Arguments](#command-line-arguments) | argc,<br>argv |
+| **7.** | [Outputs](#outputs) | [std::cout](#stdcout),<br>[printf](#printf),<br>[std::cerr - Standard Error Stream](#stdcerr--standard-error-stream) |
+| **8.** | [User Input](#user-input) | cin,<br>get,<br>getline |
+| **9.** | [Namespaces](#namespaces) | [Using namespace](#namespaces),<br>[Namespace Functions](#custom-namespaces) |
+| **10.** | [Scopes](#scopes) | Global,<br>Local |
+| **11.** | [Data Types](#data-types) | [const](#const-keyword),<br>[constexpr Keyword](#constexpr-keyword),<br>[static](#static-keyword),<br>[auto Keyword](#auto-keyword),<br>[Type Promotion](#type-promotion-and-conversion),<br>[decltype Keyword](#decltype-keyword),<br>[size() - Runtime Size of Containers](#size---runtime-size-of-containers),<br>[sizeof()](#sizeof),<br>[size_t - unsigned type for sizes](#size_t--unsigned-type-for-sizes),<br>[limits.h](#limitsh),<br>[Data Types List](#data-types---list),<br>[Finding the Type of an Object (typeid)](#finding-the-type-of-an-object-typeid),<br>[Aliases](#aliases),<br>[Conditional Inclusions](#conditional-inclusions) |
+| **12.** | [Pointers](#pointers) | [Declare](#pointers),<br>[Address-of-Operator](#pointers),<br>[Dereference Operator](#pointers),<br>[Incrementing](#incrementing),<br>[Const Pointers](#constant-pointers),<br>[Void Pointers](#void-pointers),<br>[Invalid Pointers](#invalid-pointers),<br>[Null Pointers](#null-pointers),<br>[Dynamic Memory](#dynamic-memory),<br>[Checking Allocation](#check-allocation-successful),<br>[Smart Pointers](#smart-pointers) |  
+| **13.** | [Stack vs Heap](#stack-vs-heap) | |
+| **14.** | [Iterators](#iterators) | |
+| **15.** | [Strings](#strings) | String Methods |
+| **16.** | [Regex](#regex) | Pattern Matching |
+| **17.** | [STL Container Comparison](#stl-container-comparison) |
+| **18.** | [Arrays](#arrays) | [Standard arrays](#arrays),<br>[STL Arrays](#stl-arrays),<br>[STL Vectors](#stl-vectors),<br>[Sort](#sort) |
+| **19.** | [Lists](#lists) | |
+| **20.** | [Deque](#deque) | |
+| **21.** | [Queues](#queues) | |
+| **22.** | [Stacks](#stacks) | |
+| **23.** | [Maps (Dictionaries)](#maps-dictionaries) | [Maps](#maps-dictionaries),<br>[Multimaps](#multimaps),<br>[std::unordered_map](#stdunordered_map) |
+| **24.** | [Sets](#sets) | [Sets](#sets),<br>[std::unordered_set](#stdunordered_set) |
+| **25.** | [Pairs](#pairs) | |
+| **26.** | [Tuples](#tuples) | |
+| **27.** | [Algorithms Library](#algorithms-library) | [Algorithms List](#algorithms-library) |
+| **28.** | [Maths](#maths) | cmath |
+| **29.** | [numeric](#numeric) | Reduction/aggregation operations |
+| **30.** | [Control Statements & Flow](#control-statements--flow) | [If](#if-statement),<br>[Ternary Operator](#ternary-operator),<br>[Switch](#switch-statement),<br>[Comparison & Logic Operators](#comparison--logic-operators),<br>[Jump](#jump-statements) |
+| **31.** | [Loops](#loops) | [For](#for),<br>[For Each (Range-Based)](#for-each-range-based),<br>[While](#while),<br>[Do](#do) |
+| **32.** | [Functions](#functions) | [Function Declaration](#functions),<br>[Function Overloading](#function-overloading),<br>[Lambda Functions](#lambda-functions),<br>[Optional Return Values](#optional-return-values) |
+| **33.** | [Classes & Struts](#classes--struts) | [Class Definition](#class-definition--inline-methods),<br>[Inline Methods](#class-definition--inline-methods),<br>[Static Members](#class-definition--inline-methods),<br>[toString](#class-definition--inline-methods),<br>[Normal (Not-inline) Methods](#normal-not-inline-methods),<br>[Constructor](#constructor),<br>[default Keyword](#default-keyword),<br>[explicit Keyword](#explicit-keyword),<br>[Destructor](#destructor),<br>[Copy Constructor vs Copy Assignment Operator](#copy-constructor-vs-copy-assignment-operator),<br>[Disable Copying of Class](#disable-copying-of-class),<br>[Rule of 0 / 3 / 5](#rule-of-0--3--5),<br>[Move Semantics](#move-semantics-c11),<br>[Instantiation & Member Access](#instantiation--member-access),<br>[Inheritance](#inheritance),<br>[Polymorphism](#inheritance),<br>[Virtual Functions and Override](#virtual-functions-and-override),<br>[Object Slicing](#object-slicing),<br>[Friend Functions](#friend-functions),<br>[Operator Overloading](#operator-overloading),<br>[Templates](#templates),<br>[Structs](#structs) |
+| **34.** | [RAII (Resource Acquisition Is Initialisation)](#raii-resource-acquisition-is-initialisation) | |
+| **35.** | [Enums](#enums) | [Traditional Enum](#traditional-enums),<br>[Enum Class](#enum-class) |
+| **36.** | [Error Handling](#error-handling) | [Throw, Try..Catch](#throw-trycatch),<br>[Exception Rules](#exception-rules),<br>[noexcept](#noexcept),<br>[Types of Standard Exceptions](#types-of-standard-exceptions) |
+| **37.** | [Time](#time) | [Time](#time),<br>[Random Numbers](#random-numbers) |
+| **38.** | [Chrono Library](#chrono-library---time-and-duration) | Time and Duration |
+| **39.** | [Filesystem Library](#filesystem-library) | File checking, directory iteration, path manipulations |
+| **40.** | [Working With Files](#working-with-files) | [Writing](#working-with-files),<br>[Reading](#working-with-files),<br>[Modes](#modes),<br>[std::stringstream](#stdstringstream),<br>[Parsing CSV Files](#parsing-csv-files) |
+| **41.** | [Logging / Writing Logs ](#logging--writing-logs) | |
+| **42.** | [ Unit Testing](#unit-testing-in-c) | |
+| **43.** | [Threads](#threads) | [Threads](#threads),<br>[Concurrency Basics](#concurrency-basics-for-future-reference) |
 
 <br>
 
@@ -108,7 +109,48 @@
 
 ---  
 
-### Compile  
+### Build Process
+
+#### Build Stages Overview
+
+* **Preprocessing** – Handles `#include`, `#define`, and macros (text substitution)  
+  * Expands macros and includes header files before compilation  
+  * `#include` literally pastes the content of the header into your file  
+  * `#define` and macros are substituted with their values  
+  * Conditional compilation (`#ifdef`, `#endif`) decides which code is kept  
+    ```console
+    # Error example 
+    fatal error: myheader.h: No such file or directory  
+    ```
+* **Compilation** – Translates each `.cpp` file into an object file (`.o`/`.obj`). Needs headers for declarations  
+    ```console
+    # Error example
+    error: 'foo' was not declared in this scope
+    ```  
+
+* **Linking** – Combines object files and libraries into an executable Needs link libraries for definitions  
+    ```console
+    # Error example
+    undefined reference to 'foo()'
+    ```  
+
+* **Runtime** – The program executes - runtime errors can occur here (segfaults, exceptions)  
+    ```console
+    # Error example
+    Segmentation fault (core dumped)
+    ```
+
+<br>  
+
+#### Headers Vs Link Libraries
+
+* **Headers (`#include`)** provide *declarations* at compile time (what functions/classes exist)  
+* **Link libraries (`target_link_libraries`)** provide *definitions* at link time (the actual compiled code)  
+* Both are usually required: headers let you compile, libraries let you link  
+
+<br>
+
+#### Compile  
 
 `g++ <filename> -o <output_name>`  
 * gcc can be used instead of g++  
@@ -121,42 +163,113 @@
 * Runs compiled file
 * Can compile and run in one line using `&&`  
 
-##### Makefiles  
+<br>
 
-`target_rule: dependencies_list`  
-&emsp;&emsp;`tab_indented_commands`  
-e.g.:  
-`output: main.o Vector.o`  
-&emsp;&emsp;`g++ main.o Vector.o -o output`  
-* Makefiles make compilation easy by calling `make`  
-* **Filename** should be `Makefile`  
-* A list of rules followed by dependencies and below should be tab indented commands to run  
-* Makefiles check modification times of the files involved and only executes commands to bring target up to date based on dependencies  
-* Each object file dependencie should have its own rule for compiling  
-* It is also good practice to have a rule for `clean` which should remove the output files (but would require calling separately with `make clean`)  
-* CMakeList files can be used to configure and automatically build make files absracting away platform specific details  
+[⬆ Table of Contents ⬆](#cpp-notes)    
 
-##### CMake Basics  
+---  
 
-* CMake is the most common build tool for modern C++ projects  
+### Build Systems  
 
-```cmake
-# Create `CMakeLists.txt`:
-cmake_minimum_required(VERSION 3.10)
-project(MyApp)
+- Use [Make](#make) for small/legacy projects  
+- Use [CMake](#cmake) for all modern, cross-platform projects  
 
-set(CMAKE_CXX_STANDARD 17)
-
-add_executable(MyApp main.cpp)
+#### Make
+- **Make** is one of the oldest build automation tools  
+- **Filename** should be `Makefile`  
+- Uses a **Makefile** to define how files depend on each other and how to build them  
+- `make` compares timestamps → only recompiles changed files  
+- A list of rules followed by dependencies and below should be tab indented commands to run  
+- Makefiles check modification times of the files involved and only executes commands to bring target up to date based on dependencies  
+- Each object file dependency should have its own rule for compiling  
+- It is also good practice to have a rule for `clean` which should remove the output files (but would require calling separately with `make clean`)  
+- CMakeList files can be used to configure and automatically build make files abstracting away platform specific details  
+- **Strengths**: simple, efficient  
+- **Weakness**: manual, error-prone for large projects → prefer **CMake** for scalability  
+ 
+```makefile
+# Basic syntax
+target: dependencies  
+    # (commands must start with a **tab**, not spaces)
+    command  
 ```
 
+```makefile
+# Example Makefile
+app: main.o utils.o
+    g++ main.o utils.o -o app
+
+main.o: main.cpp utils.h
+    g++ -c main.cpp
+
+utils.o: utils.cpp utils.h
+    g++ -c utils.cpp
+```
+
+###### Run with:  
 ```bash
-# Usage in bash
-mkdir build
-cd build
-cmake ..
-make
-./MyApp
+make        # builds default target (first in file)  
+make clean  # if a 'clean' target exists  
+```
+
+<br>
+
+#### CMake
+[Reference](https://cmake.org/cmake/help/latest/index.html)  
+[Tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)  
+- **CMake** is a meta build system → generates platform-specific build files (Makefiles, Ninja, Visual Studio solutions)  
+- Portable, scalable, and widely used in modern C++ projects  
+- Reads configuration from `CMakeLists.txt`  
+
+**Best practices / pitfalls:**
+- Prefer `target_*` commands over global (`include_directories()`, `link_libraries()`)
+  - `include_directories(include)` → prefer: `target_include_directories(my_target PUBLIC include)`   
+- Prefer lowercase commands  
+- Use `PRIVATE` if dependency is internal, `PUBLIC` if headers expose it, `INTERFACE` for header-only  
+- Keep one `CMakeLists.txt` per folder → modular projects  
+- Avoid hard-coding compiler flags → use `target_compile_features`  
+- Use `find_package()` or `FetchContent` for dependencies instead of manual copying  
+
+```bash
+# Workflow - terminal commands inside project directory
+cmake -S . -B build      # configure (source dir = current dir, build dir = ./build)  
+cmake --build build -j   # build (build in that directory - parallel jobs)  
+```
+
+Unlike Make’s `make clean`, you usually just delete the `build/` folder and rerun `cmake -S . -B build`  
+
+```cmake
+# Minimal `CMakeLists.txt` configuration file - normally root of project
+# Filename MUST BE `CMakeLists.txt`
+cmake_minimum_required(VERSION 3.20)  # must be specified in top most `CMakeLists.txt` file
+project(demo LANGUAGES CXX)  # sets project name
+
+add_executable(app main.cpp)  # tells CMake to create an executable using the specified source code files
+target_compile_features(app PRIVATE cxx_std_20)
+```
+
+```cmake
+# Adding a library and linking it (inside `CMakeLists.txt` - or a `CMakeLists.txt` inside a src/ or lib/ folder if you split by module)
+add_library(core src/core.cpp include/core.hpp)
+target_include_directories(core PUBLIC include)
+target_link_libraries(app PRIVATE core)
+```
+
+```cmake
+# Common commands (inside `CMakeLists.txt` files)
+# Each target (executable or library) should be declared in the `CMakeLists.txt` of its own directory
+add_executable(name src.cpp)  # build an executable  
+add_library(name …)  # build a library  
+target_include_directories(tgt PUBLIC include)  # add headers  
+target_link_libraries(tgt PRIVATE lib)`  # link a library  
+target_compile_features(tgt PUBLIC cxx_std_20)  # enforce C++ standard  
+```
+
+```cmake
+# Example: Linking Boost
+find_package(Boost REQUIRED COMPONENTS filesystem)
+add_executable(app main.cpp)
+target_link_libraries(app PRIVATE Boost::filesystem)
 ```
 
 <br>
@@ -960,7 +1073,7 @@ OR
 
 ---    
 
-### Stack vs Heap  
+### Stack Vs Heap  
 
 ##### Stack  
 * Memory automatically managed (function calls, local variables)  
@@ -2236,7 +2349,7 @@ MyClass obj2(10);         // ok (explicit)
 
 <br>  
 
-##### Copy Constructor vs Copy Assignment Operator
+##### Copy Constructor Vs Copy Assignment Operator
 
 ```cpp
 class MyClass {
