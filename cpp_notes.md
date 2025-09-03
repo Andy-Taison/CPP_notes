@@ -9,46 +9,47 @@
 | **1.** | [Comments](#comments) | Single,<br>Multi,<br>Document |
 | **2.** | [Build Process](#build-process) | [Build Stages Overview](#build-stages-overview),<br>[Headers Vs Link Libraries](#headers-vs-link-libraries),<br>[Compile](#compile) |
 | **3.** | [Build Systems](#build-systems) | [Make](#make),<br>[CMake](#cmake) |
-| **4.** | [Headerfiles and Include Libraries/Files](#headerfiles-and-include-librariesfiles) | [#include](#include-librariesfiles),<br>[Custom Header Files](#custom-header-files),<br>[bits/stdc++.h](#bitsstdch),<br>[#define (Macros)](#define-macros),<br>[#pragma once](#pragma-once),<br>[extern Keyword](#extern-keyword) |
-| **5.** | [Standard Libraries and Functions](#standard-libraries-and-functions) | |
-| **6.** | [Command Line Arguments](#command-line-arguments) | argc,<br>argv |
-| **7.** | [Outputs](#outputs) | [std::cout](#stdcout),<br>[printf](#printf),<br>[std::cerr - Standard Error Stream](#stdcerr--standard-error-stream) |
-| **8.** | [User Input](#user-input) | cin,<br>get,<br>getline |
-| **9.** | [Namespaces](#namespaces) | [Using namespace](#namespaces),<br>[Namespace Functions](#custom-namespaces) |
-| **10.** | [Scopes](#scopes) | Global,<br>Local |
-| **11.** | [Data Types](#data-types) | [const](#const-keyword),<br>[constexpr Keyword](#constexpr-keyword),<br>[static](#static-keyword),<br>[auto Keyword](#auto-keyword),<br>[Type Promotion](#type-promotion-and-conversion),<br>[decltype Keyword](#decltype-keyword),<br>[size() - Runtime Size of Containers](#size---runtime-size-of-containers),<br>[sizeof()](#sizeof),<br>[size_t - unsigned type for sizes](#size_t--unsigned-type-for-sizes),<br>[limits.h](#limitsh),<br>[Data Types List](#data-types---list),<br>[Finding the Type of an Object (typeid)](#finding-the-type-of-an-object-typeid),<br>[Aliases](#aliases),<br>[Conditional Inclusions](#conditional-inclusions) |
-| **12.** | [Pointers](#pointers) | [Declare](#pointers),<br>[Address-of-Operator](#pointers),<br>[Dereference Operator](#pointers),<br>[Incrementing](#incrementing),<br>[Const Pointers](#constant-pointers),<br>[Void Pointers](#void-pointers),<br>[Invalid Pointers](#invalid-pointers),<br>[Null Pointers](#null-pointers),<br>[Dynamic Memory](#dynamic-memory),<br>[Checking Allocation](#check-allocation-successful),<br>[Smart Pointers](#smart-pointers) |  
-| **13.** | [Stack vs Heap](#stack-vs-heap) | |
-| **14.** | [Iterators](#iterators) | |
-| **15.** | [Strings](#strings) | String Methods |
-| **16.** | [Regex](#regex) | Pattern Matching |
-| **17.** | [STL Container Comparison](#stl-container-comparison) |
-| **18.** | [Arrays](#arrays) | [Standard arrays](#arrays),<br>[STL Arrays](#stl-arrays),<br>[STL Vectors](#stl-vectors),<br>[Sort](#sort) |
-| **19.** | [Lists](#lists) | |
-| **20.** | [Deque](#deque) | |
-| **21.** | [Queues](#queues) | |
-| **22.** | [Stacks](#stacks) | |
-| **23.** | [Maps (Dictionaries)](#maps-dictionaries) | [Maps](#maps-dictionaries),<br>[Multimaps](#multimaps),<br>[std::unordered_map](#stdunordered_map) |
-| **24.** | [Sets](#sets) | [Sets](#sets),<br>[std::unordered_set](#stdunordered_set) |
-| **25.** | [Pairs](#pairs) | |
-| **26.** | [Tuples](#tuples) | |
-| **27.** | [Algorithms Library](#algorithms-library) | [Algorithms List](#algorithms-library) |
-| **28.** | [Maths](#maths) | cmath |
-| **29.** | [numeric](#numeric) | Reduction/aggregation operations |
-| **30.** | [Control Statements & Flow](#control-statements--flow) | [If](#if-statement),<br>[Ternary Operator](#ternary-operator),<br>[Switch](#switch-statement),<br>[Comparison & Logic Operators](#comparison--logic-operators),<br>[Jump](#jump-statements) |
-| **31.** | [Loops](#loops) | [For](#for),<br>[For Each (Range-Based)](#for-each-range-based),<br>[While](#while),<br>[Do](#do) |
-| **32.** | [Functions](#functions) | [Function Declaration](#functions),<br>[Function Overloading](#function-overloading),<br>[Lambda Functions](#lambda-functions),<br>[Optional Return Values](#optional-return-values) |
-| **33.** | [Classes & Struts](#classes--struts) | [Class Definition](#class-definition--inline-methods),<br>[Inline Methods](#class-definition--inline-methods),<br>[Static Members](#class-definition--inline-methods),<br>[toString](#class-definition--inline-methods),<br>[Normal (Not-inline) Methods](#normal-not-inline-methods),<br>[Constructor](#constructor),<br>[default Keyword](#default-keyword),<br>[explicit Keyword](#explicit-keyword),<br>[Destructor](#destructor),<br>[Copy Constructor vs Copy Assignment Operator](#copy-constructor-vs-copy-assignment-operator),<br>[Disable Copying of Class](#disable-copying-of-class),<br>[Rule of 0 / 3 / 5](#rule-of-0--3--5),<br>[Move Semantics](#move-semantics-c11),<br>[Instantiation & Member Access](#instantiation--member-access),<br>[Inheritance](#inheritance),<br>[Polymorphism](#inheritance),<br>[Virtual Functions and Override](#virtual-functions-and-override),<br>[Object Slicing](#object-slicing),<br>[Friend Functions](#friend-functions),<br>[Operator Overloading](#operator-overloading),<br>[Templates](#templates),<br>[Structs](#structs) |
-| **34.** | [RAII (Resource Acquisition Is Initialisation)](#raii-resource-acquisition-is-initialisation) | |
-| **35.** | [Enums](#enums) | [Traditional Enum](#traditional-enums),<br>[Enum Class](#enum-class) |
-| **36.** | [Error Handling](#error-handling) | [Throw, Try..Catch](#throw-trycatch),<br>[Exception Rules](#exception-rules),<br>[noexcept](#noexcept),<br>[Types of Standard Exceptions](#types-of-standard-exceptions) |
-| **37.** | [Time](#time) | [Time](#time),<br>[Random Numbers](#random-numbers) |
-| **38.** | [Chrono Library](#chrono-library---time-and-duration) | Time and Duration |
-| **39.** | [Filesystem Library](#filesystem-library) | File checking, directory iteration, path manipulations |
-| **40.** | [Working With Files](#working-with-files) | [Writing](#working-with-files),<br>[Reading](#working-with-files),<br>[Modes](#modes),<br>[std::stringstream](#stdstringstream),<br>[Parsing CSV Files](#parsing-csv-files) |
-| **41.** | [Logging / Writing Logs ](#logging--writing-logs) | |
-| **42.** | [ Unit Testing](#unit-testing-in-c) | |
-| **43.** | [Threads](#threads) | [Threads](#threads),<br>[Concurrency Basics](#concurrency-basics-for-future-reference) |
+| **4.** | [LLVM Polly (polyhedral loop optimiser)](#llvm-polly-polyhedral-loop-optimiser) | |
+| **5.** | [Headerfiles and Include Libraries/Files](#headerfiles-and-include-librariesfiles) | [#include](#include-librariesfiles),<br>[Custom Header Files](#custom-header-files),<br>[bits/stdc++.h](#bitsstdch),<br>[#define (Macros)](#define-macros),<br>[#pragma once](#pragma-once),<br>[extern Keyword](#extern-keyword) |
+| **6.** | [Standard Libraries and Functions](#standard-libraries-and-functions) | |
+| **7.** | [Command Line Arguments](#command-line-arguments) | argc,<br>argv |
+| **8.** | [Outputs](#outputs) | [std::cout](#stdcout),<br>[printf](#printf),<br>[std::cerr - Standard Error Stream](#stdcerr--standard-error-stream) |
+| **9.** | [User Input](#user-input) | cin,<br>get,<br>getline |
+| **10.** | [Namespaces](#namespaces) | [Using namespace](#namespaces),<br>[Namespace Functions](#custom-namespaces) |
+| **11.** | [Scopes](#scopes) | Global,<br>Local |
+| **12.** | [Data Types](#data-types) | [const](#const-keyword),<br>[constexpr Keyword](#constexpr-keyword),<br>[static](#static-keyword),<br>[auto Keyword](#auto-keyword),<br>[decltype Keyword](#decltype-keyword),<br>[size() - Runtime Size of Containers](#size---runtime-size-of-containers),<br>[sizeof()](#sizeof),<br>[size_t - unsigned type for sizes](#size_t--unsigned-type-for-sizes),<br>[limits.h](#limitsh),<br>[Data Types List](#data-types---list),<br>[Literal Suffixes](#literal-suffixes-control-the-literals-type),<br>[Type Promotion and Conversion](#type-promotion-and-conversion),<br>[Finding the Type of an Object (typeid)](#finding-the-type-of-an-object-typeid),<br>[Aliases](#aliases),<br>[Conditional Inclusions](#conditional-inclusions) |
+| **13.** | [Pointers](#pointers) | [Declare](#pointers),<br>[Address-of-Operator](#pointers),<br>[Dereference Operator](#pointers),<br>[Incrementing](#incrementing),<br>[Const Pointers](#constant-pointers),<br>[Void Pointers](#void-pointers),<br>[Invalid Pointers](#invalid-pointers),<br>[Null Pointers](#null-pointers),<br>[Dynamic Memory](#dynamic-memory),<br>[Checking Allocation](#check-allocation-successful),<br>[Smart Pointers](#smart-pointers) |  
+| **14.** | [Stack vs Heap](#stack-vs-heap) | |
+| **15.** | [Iterators](#iterators) | |
+| **16.** | [Strings](#strings) | String Methods |
+| **17.** | [Regex](#regex) | Pattern Matching |
+| **18.** | [STL Container Comparison](#stl-container-comparison) |
+| **19.** | [Arrays](#arrays) | [Standard arrays](#arrays),<br>[STL Arrays](#stl-arrays),<br>[STL Vectors](#stl-vectors),<br>[Sort](#sort) |
+| **20.** | [Lists](#lists) | |
+| **21.** | [Deque](#deque) | |
+| **22.** | [Queues](#queues) | |
+| **23.** | [Stacks](#stacks) | |
+| **24.** | [Maps (Dictionaries)](#maps-dictionaries) | [Maps](#maps-dictionaries),<br>[Multimaps](#multimaps),<br>[std::unordered_map](#stdunordered_map) |
+| **25.** | [Sets](#sets) | [Sets](#sets),<br>[std::unordered_set](#stdunordered_set) |
+| **26.** | [Pairs](#pairs) | |
+| **27.** | [Tuples](#tuples) | |
+| **28.** | [Algorithms Library](#algorithms-library) | [Algorithms List](#algorithms-library) |
+| **29.** | [Maths](#maths) | cmath |
+| **30.** | [numeric](#numeric) | Reduction/aggregation operations |
+| **31.** | [Control Statements & Flow](#control-statements--flow) | [If](#if-statement),<br>[Ternary Operator](#ternary-operator),<br>[Switch](#switch-statement),<br>[Comparison & Logic Operators](#comparison--logic-operators),<br>[Jump](#jump-statements) |
+| **32.** | [Loops](#loops) | [For](#for),<br>[For Each (Range-Based)](#for-each-range-based),<br>[While](#while),<br>[Do](#do) |
+| **33.** | [Functions](#functions) | [Function Declaration](#functions),<br>[Function Overloading](#function-overloading),<br>[Lambda Functions](#lambda-functions),<br>[Optional Return Values](#optional-return-values) |
+| **34.** | [Classes & Struts](#classes--struts) | [Class Definition](#class-definition--inline-methods),<br>[Inline Methods](#class-definition--inline-methods),<br>[Static Members](#class-definition--inline-methods),<br>[toString](#class-definition--inline-methods),<br>[Normal (Not-inline) Methods](#normal-not-inline-methods),<br>[Constructor](#constructor),<br>[default Keyword](#default-keyword),<br>[explicit Keyword](#explicit-keyword),<br>[Destructor](#destructor),<br>[Copy Constructor vs Copy Assignment Operator](#copy-constructor-vs-copy-assignment-operator),<br>[Disable Copying of Class](#disable-copying-of-class),<br>[Rule of 0 / 3 / 5](#rule-of-0--3--5),<br>[Move Semantics](#move-semantics-c11),<br>[Instantiation & Member Access](#instantiation--member-access),<br>[Inheritance](#inheritance),<br>[Polymorphism](#inheritance),<br>[Virtual Functions and Override](#virtual-functions-and-override),<br>[Object Slicing](#object-slicing),<br>[Friend Functions](#friend-functions),<br>[Operator Overloading](#operator-overloading),<br>[Templates](#templates),<br>[Structs](#structs) |
+| **35.** | [RAII (Resource Acquisition Is Initialisation)](#raii-resource-acquisition-is-initialisation) | |
+| **36.** | [Enums](#enums) | [Traditional Enum](#traditional-enums),<br>[Enum Class](#enum-class) |
+| **37.** | [Error Handling](#error-handling) | [Throw, Try..Catch](#throw-trycatch),<br>[Exception Rules](#exception-rules),<br>[noexcept](#noexcept),<br>[Types of Standard Exceptions](#types-of-standard-exceptions) |
+| **38.** | [Time](#time) | [Time](#time),<br>[Random Numbers](#random-numbers) |
+| **39.** | [Chrono Library](#chrono-library---time-and-duration) | Time and Duration |
+| **40.** | [Filesystem Library](#filesystem-library) | File checking, directory iteration, path manipulations |
+| **41.** | [Working With Files](#working-with-files) | [Writing](#working-with-files),<br>[Reading](#working-with-files),<br>[Modes](#modes),<br>[std::stringstream](#stdstringstream),<br>[Parsing CSV Files](#parsing-csv-files) |
+| **42.** | [Logging / Writing Logs ](#logging--writing-logs) | |
+| **43.** | [ Unit Testing](#unit-testing-in-c) | |
+| **44.** | [Threads](#threads) | [Threads](#threads),<br>[Concurrency Basics](#concurrency-basics-for-future-reference) |
 
 <br>
 
@@ -128,7 +129,7 @@
     error: 'foo' was not declared in this scope
     ```  
 
-* **Linking** – Combines object files and libraries into an executable Needs link libraries for definitions  
+* **Linking** – Combines object files and libraries into an executable. Needs link libraries for definitions  
     ```console
     # Error example
     undefined reference to 'foo()'
@@ -261,7 +262,7 @@ target_link_libraries(app PRIVATE core)
 add_executable(name src.cpp)  # build an executable  
 add_library(name …)  # build a library  
 target_include_directories(tgt PUBLIC include)  # add headers  
-target_link_libraries(tgt PRIVATE lib)`  # link a library  
+target_link_libraries(tgt PRIVATE lib)  # link a library  
 target_compile_features(tgt PUBLIC cxx_std_20)  # enforce C++ standard  
 ```
 
@@ -271,6 +272,96 @@ find_package(Boost REQUIRED COMPONENTS filesystem)
 add_executable(app main.cpp)
 target_link_libraries(app PRIVATE Boost::filesystem)
 ```
+
+<br>
+
+[⬆ Table of Contents ⬆](#cpp-notes)    
+
+---  
+
+### LLVM Polly (polyhedral loop optimiser)  
+
+#### What it is  
+- **Polly** is an LLVM optimisation pass that analyzes **loop nests** and transforms them to improve **data locality, vectorisation, and parallelism** (e.g., tiling, fusion, OpenMP)  
+- Works best on **regular (affine)** loops that index arrays with linear expressions  
+- **LLVM** (Low Level Virtual Machine) is umbrella project(set of libraries) it is a brand name with different projects(IR - Intermediate Representation, debug tool...) and now it is not acronym of Virtual Machine. It is used to build compilers and/or language oriented software and is more "modular and reusable compiler and toolchain technologies" to alternatives such as GCC  
+
+#### When to use  
+- Hot numeric kernels, image/signal processing, linear algebra—code with **tight, nested loops** over arrays  
+- When the loop body is pure (no hidden side-effects) and memory access patterns are predictable  
+
+#### How to try it (Clang)  
+- Build out-of-source, then enable Polly on compile:  
+  
+    Terminal:
+    ```console
+    cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+    cmake --build build -j
+    ```
+    Rebuild with Polly (common flags - exact flags vary by LLVM version):  
+    ```console
+    clang++ -O3 -fopenmp \
+            -fexperimental-new-pass-manager \
+            -mllvm -polly \
+            -mllvm -polly-vectorizer=stripmine \
+            -mllvm -polly-parallel \
+            src/main.cpp -o app
+    ```
+
+- If using CMake, you can add compile options to your target for quick experiments:  
+    ```console
+    # These are experiment flags - remove for normal builds
+    target_compile_options(app PRIVATE
+        -O3                              # High optimisation level
+        -fopenmp                         # Enable OpenMP (parallel loops)
+        -fexperimental-new-pass-manager  # Use LLVM’s new pass manager (needed for Polly in newer versions)
+        -mllvm -polly                    # Enable Polly loop optimiser
+        -mllvm -polly-vectorizer=stripmine # Vectorise loops (strip-mining: splits loops into chunks for SIMD)
+        -mllvm -polly-parallel           # Enable parallel execution of loops
+    )
+    ```
+
+*(Note: Flags differ by LLVM release; if Polly isn’t recognised, check your Clang/LLVM version or packages.)*  
+
+#### Minimal example  
+- A simple, affine loop that Polly can optimise:  
+
+    ```cpp
+    // mat-vec multiply
+    void mv(const float* __restrict A, const float* __restrict x, float* __restrict y,
+            int N, int M) {
+        for (int i = 0; i < N; ++i) {
+            float acc = 0.f;
+            for (int j = 0; j < M; ++j) {
+                acc += A[i*M + j] * x[j];
+            }
+            y[i] = acc;
+        }
+    }
+    ```
+> **Note on `__restrict`**  
+> `__restrict` is a pointer qualifier that promises the compiler this pointer is the **only reference** to that memory region    
+> - Helps the compiler apply stronger optimisations (e.g. vectorisation)  
+> - Use only when you are sure pointers **do not alias** - otherwise behavior is undefined  
+> - Standard in C, supported in C++ as `__restrict` (compiler extension)  
+
+
+- Tips for the compiler:
+  - Use `__restrict` (or compiler-specific equivalents) to hint **no aliasing**  
+  - Keep loop bounds and indexing **simple and linear**  
+
+#### How to measure (always verify)
+- Time before/after with [chrono](#chrono-library---time-and-duration) or a micro-benchmark harness  
+- Inspect IR (optional) to see Polly’s transformations:
+    ```console
+    clang++ -O3 -S -emit-llvm -mllvm -polly src/main.cpp -o main.ll
+    ```
+
+#### Limitations / gotchas
+- Irregular access (pointer chasing, data-dependent indexing) reduces benefits  
+- Side-effects (I/O, volatile, atomics in loops) can block transformations  
+- Speedups depend on hardware, cache, and compiler version—**measure on target**  
+- Polly is part of LLVM; availability depends on your **Clang/LLVM build** (some distro packages disable certain Polly features)  
 
 <br>
 
@@ -748,27 +839,6 @@ auto name = "Andy";    // const char*
 auto it = map.begin(); // std::map<Key, Val>::iterator
 ```
 
-##### Type Promotion and Conversion
-
-* **Integer Promotion** – smaller types (e.g., `char`, `short`) are promoted to `int` during expressions
-```cpp
-char a = 65;
-int b = a + 5;   // a promoted to int
-```
-* Usual Arithmetic Conversions – when types differ, the smaller or less precise type is promoted:  
-  * int + double → result is double
-  * float + long → result is float
-* Auto uses promotion logic when type deduction happens:  
-```cpp
-auto x = 5;       // int
-auto y = 5.0;     // double
-auto z = 'A';     // char promoted to int (if used in arithmetic)
-
-// Can explicitly control promotion using casting:
-int x = 5;
-double y = static_cast<double>(x);
-```  
-
 ##### decltype Keyword
 
 * Inspects the type of an expression at compile time and uses it for declaration  
@@ -844,16 +914,95 @@ int main() {
 `#include <limits.h>` - Library which contains functions such as `INT_MAX` and `LONG_MIN` to retrieve min and max values  
 
 ##### Data Types - List
+[Reference](https://en.cppreference.com/w/cpp/language/types.html)  
+
 |Type|How to declare & define|Example|Note|Size (RAM used bytes)|MAX value(signed)|
 |:--:|:--:|:--:|:--:|:--:|:--:|
 |Char|char letter = 'b';|'a'|Must use single quotes<br>Can be used to store ascii values when assigned to a number|1|127 (ASCII)|
-|String|std::string myName = "Andy";|"Dave"|Must use double quotes|24||
+|String|std::string myName = "Andy";|"Dave"|Must use double quotes|N/A (implementation-defined; use `size()` not `sizeof`)||
 |Int|int age = 24;|5||4|2 147 483 647|
 |Long Long|long long num = 2257483647;||long also availiable, but appears to behave similar to int|8|9 223 372 036 854 775 807|
 |Float|float num = 3.14159;||Up to 7 decimal places|4||
 |Double|double x = 5.234245252525;||longer number - up to 15 decimal places|8||
 |Unsigned|unsigned int y = 2;||Unsigned cannot be negative, but allows for twice the largest value of the number type used<br>Assigning to -1 will return the largest value|||
 |Boolean|bool old = false;|||1||
+
+> **Note platform differences**  
+> Typical integer widths (common ABIs, not guaranteed)
+> - Linux (LP64): `int=32`, `long=64`, `long long=64`
+> - Windows (LLP64): `int=32`, `long=32`, `long long=64`
+> → Prefer fixed-width types for interfaces: `std::int32_t`, `std::int64_t`
+
+##### Literal Suffixes (control the literal’s type)
+Use suffixes to avoid unintended conversions.
+
+| Suffix | Example       | Type Produced       | Notes |
+|-------------|---------------|---------------------|-------|
+| None - int  | `42`          | `int`               | Default integer literal |
+| `u`         | `42u`         | `unsigned int`      | Unsigned integer |
+| `l` / `ll`  | `42l` / `42ll`| `long` / `long long`| Wider signed integers |
+| `ul`        | `42ul`        | `unsigned long`     | Unsigned long |
+| None - decimal | `3.14`        | `double`            | Default floating-point literal |
+| `f`         | `3.14f`       | `float`             | Float literal |
+| `L`         | `3.14L`       | `long double`       | Extended precision |
+| None - char | `'a'`         | `char`              | Character literal |
+| None - string | `"hello"`     | `const char[]`      | String literal |
+| None - bool | `true`/`false`| `bool`              | Boolean literals |
+
+##### Type Promotion and Conversion
+
+> Default rules:  
+> - Integers default to `int`  
+> - Floating-point defaults to `double`  
+> - Use [suffixes](#literal-suffixes-control-the-literals-type) (`f`, `u`, `ll`, etc.) to match the type you intend and avoid hidden conversions  
+
+> **Narrowing warning**  
+> Assigning a wider or more precise type to a narrower one may silently lose data:
+> ```cpp
+> float a = 3.1415926535;   // double literal → float: precision lost
+> float b = 3.1415927f;     // float literal: no extra truncation
+> int   n = 3.9;            // fractional part discarded → n == 3
+> ```
+> List-initialisation **forbids** narrowing at compile time:
+> ```cpp
+> float x{3.1415926535};    // error (narrowing)
+> int   y{3.9};             // error (narrowing)
+> ```
+> Use list-init `{}` to have the compiler catch narrowing at compile time
+
+###### Integer Promotion  
+Smaller types (e.g., `char`, `short`) are promoted to `int` (or `unsigned int` if `int` can’t represent all values) during expressions before the operation  
+* `bool`, `char`, `signed char`, `unsigned char`, `short`, `unsigned short` → usually **promoted to `int`**  
+```cpp
+char a = 65;
+int b = a + 5;   // a promoted to int
+
+char c = 'A';
+auto v = +c;      // promotes to int before unary +
+```
+###### Usual Arithmetic Conversions (binary ops: `+` `-` `*` `/` `%` `<` `>` ...)  
+Operands are converted to a common type before the operation when types differ, the smaller or less precise type is promoted:  
+> int → float → double → long double
+  * int + double → result is double
+  * float + long → result is float
+* Auto uses promotion logic when type deduction happens:  
+```cpp
+auto x = 5;       // int
+auto y = 5.0;     // double
+auto z = 'A';     // char promoted to int (if used in arithmetic)
+
+// Can explicitly control promotion using casting:
+int x = 5;
+double y = static_cast<double>(x);
+```  
+If different ranks (widths):  
+* If the unsigned type’s rank `≥` signed type’s rank → convert both to the unsigned type  
+* Otherwise, convert both to the signed type that can represent all values of both. If none exists, convert both to the unsigned version of the signed type with higher rank  
+```cpp
+unsigned int u = 4000000000u;
+int          i = -1;
+bool b = (i < u);     // true, but due to conversion: i → unsigned → large positive
+```
 
 <br>
 
